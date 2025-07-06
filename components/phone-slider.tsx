@@ -7,17 +7,17 @@ import { motion } from "framer-motion"
 const slides = [
   {
     id: 1,
-    image: "/images/onboarding-1.png",
+    image: "/images/shot-1.png",
     alt: "AI Skin Analysis - Understand Your Skin",
   },
   {
     id: 2,
-    image: "/images/onboarding-2.png",
+    image: "/images/shot-2.png",
     alt: "Routine Recommendations - Personalized skincare routines",
   },
   {
     id: 3,
-    image: "/images/onboarding-3.png",
+    image: "/images/shot-3.png",
     alt: "Track Progress - Before and after results",
   },
 ]
@@ -50,10 +50,10 @@ export default function PhoneSlider() {
         <div
           className="absolute overflow-hidden rounded-[42px] bg-black"
           style={{
-            top: "5px",
-            left: "14px",
-            right: "14px",
-            bottom: "10px",
+            top: "20px",
+            left: "22px",
+            right: "22px",
+            bottom: "20px",
           }}
         >
           {/* Sliding Images - Improved without black screens */}
@@ -80,7 +80,7 @@ export default function PhoneSlider() {
                   src={slide.image || "/placeholder.svg"}
                   alt={slide.alt}
                   fill
-                  className="object-cover "
+                  className="object-contain "
                   priority={index === 0}
                 />
               </motion.div>
@@ -110,7 +110,7 @@ export default function PhoneSlider() {
       {/* Transparent Phone Frame Overlay */}
       <div className="absolute inset-0 z-20 pointer-events-none">
         <Image
-          src="/images/phone-frame-transparent.png"
+          src="/images/iphon-pro-max-frame.png"
           alt="iPhone Frame"
           fill
           className="object-contain drop-shadow-2xl"

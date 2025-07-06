@@ -6,10 +6,10 @@ import { fadeIn, staggerContainer, staggerItem } from "@/lib/variants"
 import Image from "next/image"
 
 const skinMetrics = [
-  { label: "Spots", score: 86, color: "#6b88eb", bgColor: "#e9edfc" },
-  { label: "Wrinkles", score: 45, color: "#8B5CF6", bgColor: "#F3E8FF" },
-  { label: "Pores", score: 64, color: "#FCD34D", bgColor: "#FEF3C7" },
-  { label: "Dark Circles", score: 88, color: "#10B981", bgColor: "#D1FAE5" },
+  { label: "Leke", score: 86, color: "#6b88eb", bgColor: "#e9edfc" },
+  { label: "Kırışıklık", score: 45, color: "#8B5CF6", bgColor: "#F3E8FF" },
+  { label: "Gözenek", score: 64, color: "#FCD34D", bgColor: "#FEF3C7" },
+  { label: "Göz Altı Morluğu", score: 88, color: "#10B981", bgColor: "#D1FAE5" },
 ]
 
 const suggestedProducts = [
@@ -29,11 +29,11 @@ export default function DashboardSection() {
             <motion.div variants={staggerItem()  as Variants}  className="grid grid-cols-2 gap-8">
               <div className="space-y-1 md:flex md:items-center md:gap-x-4">
                 <p className="text-4xl font-bold text-[#FF6B6B] font-sans">80</p>
-                <p className="text-lg text-[#323232]/60 font-sans">Skin Score</p>
+                <p className="text-lg text-[#323232]/60 font-sans">Cilt Skoru</p>
               </div>
               <div className="space-y-1 md:flex md:items-center md:gap-x-4">
                 <p className="text-4xl font-bold text-[#323232] font-sans">27</p>
-                <p className="text-lg text-[#323232]/60 font-sans">Skin Age</p>
+                <p className="text-lg text-[#323232]/60 font-sans">Cilt Yaşı</p>
               </div>
             </motion.div>
 
@@ -72,7 +72,7 @@ export default function DashboardSection() {
 
             {/* Suggested Products */}
             <motion.div variants={staggerItem() as Variants} className="space-y-4">
-              <h4 className="text-xl font-semibold text-[#323232] font-sans">Suggested Products</h4>
+              <h4 className="text-xl font-semibold text-[#323232] font-sans">Önerilen Ürünler</h4>
               <div className="grid grid-cols-3 gap-4">
                 {suggestedProducts.map((product, index) => (
                   <div

@@ -1,19 +1,19 @@
 "use client"
 
 import { motion, type Variants, AnimatePresence } from "framer-motion"
-import { Sparkles, Star, Brain, Camera, ArrowRight } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
+import { Sparkles } from "lucide-react"
 import PhoneSlider from "@/components/phone-slider"
 import AnimatedCard from "@/components/animated-card"
 import AnimatedButton from "@/components/animated-button"
-import { fadeIn, staggerContainer, staggerItem } from "@/lib/variants"
+import { fadeIn, staggerContainer } from "@/lib/variants"
 import Image from "next/image"
 
 export default function HeroSection() {
   const fadeUpAnimation = fadeIn("up", 0.3) as Variants
   const fadeUpDelayedAnimation = fadeIn("up", 0.4) as Variants
   const staggerAnimation = staggerContainer(0.1, 1.2) as Variants
-  const itemAnimation = staggerItem() as Variants
+  // const itemAnimation = staggerItem() as Variants
 
   return (
     <AnimatePresence mode="wait">
@@ -66,7 +66,7 @@ className="absolute top-24  transform  translate-x-40 w-[350px] h-[450px] bg-gra
           {/* Left Floating Card - Cleanser */}
           <AnimatedCard delay={0.6} direction="left" className="absolute left-1/2 top-75 transform -translate-x-1/2 z-10 hidden md:block">
             <div className="bg-white rounded-2xl p-2 shadow-brand-lg max-w-xs -mr-20 ">
-            <Image src="/images/left-card-2.png" alt="Serum" width={203} height={350} />
+            <Image src="/images/card-left.png" alt="Serum" width={203} height={350} />
             </div>
           </AnimatedCard>
 
@@ -77,7 +77,7 @@ className="absolute top-24  transform  translate-x-40 w-[350px] h-[450px] bg-gra
             className="absolute right-1/2 top-75 transform translate-x-1/2 z-10 hidden md:block"
           >
             <div className="bg-white rounded-2xl p-2 shadow-brand-lg max-w-xs -ml-20">
-              <Image src="/images/card-right.png" alt="Serum" width={203} height={350} />
+              <Image src="/images/card-right-2.png" alt="Serum" width={203} height={350} />
             </div>
           </AnimatedCard>
 
@@ -95,24 +95,26 @@ className="absolute top-24  transform  translate-x-40 w-[350px] h-[450px] bg-gra
           whileInView="show"
           viewport={{ once: true }}
         >
-          {[
-            { icon: Brain, text: "AI Skin Analysis", bg: "bg-[#1E63A3]/10", text_color: "text-[#1E63A3]" },
-            { icon: Sparkles, text: "Personalized Routine", bg: "bg-[#1BCEE0]/10", text_color: "text-[#1BCEE0]" },
-            { icon: Camera, text: "Progress Tracking", bg: "bg-[#6B88EB]/10", text_color: "text-[#6B88EB]" },
-            { icon: Star, text: "Expert Recommendations", bg: "bg-[#C838F8]/10", text_color: "text-[#C838F8]" },
-            { icon: ArrowRight, text: "Real Results", bg: "bg-amber-500/10", text_color: "text-amber-500" },
-          ].map((badge) => (
-            <motion.div 
-              key={badge.text} 
-              variants={itemAnimation}
-              whileHover={{ scale: 1.05 }}
-            >
-              <Badge className={`${badge.bg} ${badge.text_color} px-6 py-2 rounded-full text-sm font-medium border-0`}>
-                <badge.icon className="w-4 h-4 mr-2" />
-                {badge.text}
-              </Badge>
-            </motion.div>
-          ))}
+         <div className="flex flex-wrap justify-center gap-4  px-4">
+          <Link href="/">
+          <Image
+                  src="/images/store-btn.svg"
+                  alt="Download on the App Store"
+                  className="h-14 w-auto"
+                  width={180}
+                  height={60}
+                />
+          </Link>
+          <Link href="/">
+          <Image
+                  src="/images/google-btn.svg"
+                  alt="Download on the App Store"
+                  className="h-14 w-auto"
+                  width={180}
+                  height={60}
+                />
+          </Link>
+         </div>
         </motion.div>
       </section>
     </AnimatePresence>
