@@ -2,6 +2,7 @@ import { Star } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import AnimatedSection from "@/components/animated-section"
+import Image from "next/image"
 
 const testimonials = [
   {
@@ -10,6 +11,7 @@ const testimonials = [
     content:
       "Skiny completely transformed my skincare routine. The AI recommendations were spot-on and my skin has never looked better!",
     rating: 5,
+    image: "/images/ava1.png",
   },
   {
     name: "Michael Chen",
@@ -17,6 +19,7 @@ const testimonials = [
     content:
       "As someone with limited time, Skiny's personalized routine made skincare simple and effective. Highly recommend!",
     rating: 5,
+    image: "/images/ava2.png",
   },
   {
     name: "Emma Davis",
@@ -24,12 +27,13 @@ const testimonials = [
     content:
       "The progress tracking feature is amazing. I can actually see the improvements in my skin over time. Love this app!",
     rating: 5,
+    image: "/images/ava3.png",
   },
 ]
 
 export default function TestimonialsSection() {
   return (
-    <AnimatedSection id="testimonials" className="container-padding section-padding">
+    <AnimatedSection id="testimonials" className="container-padding  py-48">
       <div className="text-center space-y-4 mb-16">
         <Badge className="bg-[#6B88EB]/10 text-[#6B88EB] font-medium border-0">Testimonials</Badge>
         <h2 className="text-4xl font-bold font-sans text-[#323232]">
@@ -39,7 +43,7 @@ export default function TestimonialsSection() {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {testimonials.map((testimonial, index) => (
-          <Card key={index} className="p-6 border-0 shadow-lg hover-lift">
+          <Card key={index} className="p-6 border-0 shadow-sm">
             <CardContent className="p-0 space-y-4">
               <div className="flex space-x-1">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -48,7 +52,15 @@ export default function TestimonialsSection() {
               </div>
               <p className="text-[#323232]/70 italic font-sans leading-relaxed">&quot;{testimonial.content}&quot;</p>
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-r from-[#1BCEE0] to-[#6B88EB] rounded-full shadow-sm" />
+                <div className="relative h-10 w-10 overflow-hidden rounded-full">
+                  <Image 
+                    src={testimonial.image} 
+                    alt={`${testimonial.name}'s avatar`} 
+                    width={40} 
+                    height={40}
+                    className="object-cover"
+                  />
+                </div>
                 <div>
                   <p className="font-semibold text-[#323232] font-sans">{testimonial.name}</p>
                   <p className="text-sm text-[#323232]/60 font-sans">{testimonial.role}</p>
