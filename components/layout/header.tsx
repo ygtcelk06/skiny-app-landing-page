@@ -1,19 +1,34 @@
+"use client"
 
+import { useState, useEffect } from "react"
 import MobileMenu from "@/components/layout/mobile-menu"
 import DesktopNav from "./desktop-nav"
 import AnimatedButton from "@/components/animated-button"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
-    <header className="container-padding  relative ">
-      <nav className="flex items-center justify-between">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? "bg-white/70 backdrop-blur-md shadow-sm py-1" : "bg-transparent py-2"
+    }`}>
+      <nav className="container-padding flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className=" flex items-center justify-center">
-            <Image src="/images/skiny-logo.svg" alt="Skiny" width={150} height={119} />
+          <div className="flex items-center justify-center">
+            <Image src="/images/skiny-logo.svg" alt="Skiny" width={100} height={80} />
           </div>
-          
         </div>
 
         {/* Desktop Navigation */}
@@ -22,7 +37,9 @@ export default function Header() {
         {/* Desktop Download Button */}
         <div className="hidden md:flex">
           <AnimatedButton className="gradient-primary hover:opacity-90 text-white font-medium">
-            Download App
+            <Link href="https://apps.apple.com/us/app/new-skin-scan-stop-wrinkles/id6739453891" target="_blank">       
+              Download App
+            </Link>
           </AnimatedButton>
         </div>
 

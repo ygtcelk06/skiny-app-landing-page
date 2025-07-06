@@ -6,16 +6,16 @@ import { fadeIn, staggerContainer, staggerItem } from "@/lib/variants"
 import Image from "next/image"
 
 const skinMetrics = [
-  { label: "Spots", score: 86, color: "#FF6B6B", bgColor: "#FFE5E5" },
+  { label: "Spots", score: 86, color: "#6b88eb", bgColor: "#e9edfc" },
   { label: "Wrinkles", score: 45, color: "#8B5CF6", bgColor: "#F3E8FF" },
-  { label: "Texture", score: 64, color: "#FCD34D", bgColor: "#FEF3C7" },
+  { label: "Pores", score: 64, color: "#FCD34D", bgColor: "#FEF3C7" },
   { label: "Dark Circles", score: 88, color: "#10B981", bgColor: "#D1FAE5" },
 ]
 
 const suggestedProducts = [
-  { image: "/placeholder.svg?height=80&width=60", bgColor: "#F3E8FF" },
-  { image: "/placeholder.svg?height=80&width=60", bgColor: "#FED7CC" },
-  { image: "/placeholder.svg?height=80&width=60", bgColor: "#DBEAFE" },
+  { image: "/images/product3.png?height=80&width=60", bgColor: "rgba(254, 215, 204, 0.3)" },
+  { image: "/images/product1.png?height=80&width=60", bgColor: "rgba(243, 232, 255, 0.3)" },
+  { image: "/images/product2.png?height=80&width=60", bgColor: "rgba(219, 234, 254, 0.3)" },
 ]
 
 export default function DashboardSection() {
@@ -24,12 +24,12 @@ export default function DashboardSection() {
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Dashboard Analytics */}
-          <motion.div className="space-y-8" variants={staggerContainer(0.1, 0.2)} initial="hidden" animate="show" >
+          <motion.div className="space-y-8 bg-white p-8 rounded-2xl shadow-sm" variants={staggerContainer(0.1, 0.2)} initial="hidden" animate="show" >
             {/* Header Metrics */}
             <motion.div variants={staggerItem()  as Variants}  className="grid grid-cols-2 gap-8">
               <div className="space-y-1 md:flex md:items-center md:gap-x-4">
-                <p className="text-4xl font-bold text-[#FF6B6B] font-sans">57</p>
-                <p className="text-lg text-[#323232]/60 font-sans">Skin Health</p>
+                <p className="text-4xl font-bold text-[#FF6B6B] font-sans">80</p>
+                <p className="text-lg text-[#323232]/60 font-sans">Skin Score</p>
               </div>
               <div className="space-y-1 md:flex md:items-center md:gap-x-4">
                 <p className="text-4xl font-bold text-[#323232] font-sans">27</p>
@@ -83,7 +83,7 @@ export default function DashboardSection() {
                     <Image
                       src={product.image || "/placeholder.svg"}
                       alt={`Product ${index + 1}`}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover"
                       width={100}
                       height={100}
                     />
@@ -94,14 +94,14 @@ export default function DashboardSection() {
           </motion.div>
 
           {/* Right Side - Feature Image */}
-          <motion.div className="relative " variants={fadeIn("left", 0.4) as Variants} initial="hidden" animate="show">
+          <motion.div className="relative shadow-sm  rounded-2xl " variants={fadeIn("left", 0.4) as Variants} initial="hidden" animate="show">
 
                 <Image
                   src="/images/model.jpg"
                   alt="AI Skin Analysis Dashboard"
-                  className="w-full h-auto rounded-2xl transform scale-x-[-1]"
-                  width={400}
-                  height={350}
+                  className="w-full h-full rounded-2xl transform scale-x-[-1] object-cover object-top max-h-[600px]"
+                  width={350}
+                  height={400}
                 />
           </motion.div>
         </div>

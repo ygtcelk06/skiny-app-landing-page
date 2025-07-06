@@ -17,7 +17,7 @@ export default function HeroSection() {
 
   return (
     <AnimatePresence mode="wait">
-      <section className="container-padding py-12 relative overflow-hidden">
+      <section id="hero" className="container-padding py-12 relative overflow-hidden mt-10">
         {/* Try Products Button */}
         <motion.div 
           className="text-center mb-8" 

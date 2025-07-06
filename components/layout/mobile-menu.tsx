@@ -5,13 +5,15 @@ import { motion, AnimatePresence, type Variants } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import AnimatedButton from "@/components/animated-button"
 import { mobileMenuAnimation, staggerContainer, staggerItem } from "@/lib/variants"
+import { Link } from 'react-scroll'
+import NextLink from 'next/link'
 
 const navItems = [
-  { label: "Features", href: "#features" },
-  { label: "How it Works", href: "#how-it-works" },
-  { label: "Reviews", href: "#testimonials" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Home", href: "hero" },
+  { label: "How it Works", href: "features" },
+  { label: "Reviews", href: "testimonials" },
+  { label: "Pricing", href: "pricing" },
+  { label: "FAQ", href: "faq" },
 ]
 
 export default function MobileMenu() {
@@ -44,7 +46,7 @@ export default function MobileMenu() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg rounded-lg mt-2 mx-4 py-4 z-50"
+            className="md:hidden absolute top-full left-0 right-0 bg-white/70 backdrop-blur-sm shadow-sm mt-2 mx-4 py-4 z-50 rounded-2xl"
             variants={mobileMenuAnimation() as Variants}
             initial="hidden"
             animate="show"
@@ -57,16 +59,23 @@ export default function MobileMenu() {
               animate="show"
             >
               {navItems.map((item) => (
-                <motion.a
+                <motion.div
                   key={item.label}
-                  href={item.href}
-                  className="text-[#323232] hover:text-[#1E63A3] transition-colors py-2 font-medium"
-                  onClick={() => setIsOpen(false)}
                   variants={staggerItem() as Variants}
                   whileHover={{ x: 5 }}
                 >
-                  {item.label}
-                </motion.a>
+                  <Link
+                    to={item.href}
+                    smooth={true}
+                    spy={true}
+                    offset={-70}
+                    duration={500}
+                    className="text-[#323232] hover:text-[#1E63A3] transition-colors py-2 font-medium block cursor-pointer"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </motion.div>
               ))}
               <hr className="border-gray-200" />
               <motion.div variants={staggerItem() as Variants}>
@@ -74,7 +83,9 @@ export default function MobileMenu() {
                   className="gradient-primary hover:opacity-90 text-white w-full"
                   onClick={() => setIsOpen(false)}
                 >
-                  Download App
+                  <NextLink href="https://apps.apple.com/us/app/new-skin-scan-stop-wrinkles/id6739453891" target="_blank">
+                    Download App
+                  </NextLink>
                 </AnimatedButton>
               </motion.div>
             </motion.div>
