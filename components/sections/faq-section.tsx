@@ -59,7 +59,7 @@ export default function FAQSection() {
   return (
     <AnimatedSection
       id="faq"
-      className="container-padding section-padding bg-gradient-to-br from-[#6B88EB]/5 to-[#1BCEE0]/5 rounded-3xl"
+      className="container-padding py-10 md:py-20 bg-gradient-to-br from-[#6B88EB]/5 to-[#1BCEE0]/5 rounded-3xl"
     >
       <div className="max-w-4xl mx-auto">
         <div className="text-center space-y-4 mb-16">

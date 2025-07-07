@@ -1,59 +1,56 @@
-import AnimatedSection from "@/components/animated-section"
 import Image from "next/image"
 
 const footerSections = [
   {
-    title: "Product",
-    links: ["Features", "How it Works", "Pricing", "FAQ"],
+    title: "Ürün",
+    links: ["Özellikler", "Nasıl Çalışır", "Fiyatlandırma", "SSS"],
   },
   {
-    title: "Company",
-    links: ["About Us", "Blog", "Careers", "Contact"],
+    title: "Şirket",
+    links: ["Hakkımızda", "Blog", "Kariyer", "İletişim"],
   },
   {
-    title: "Support",
-    links: ["Help Center", "Privacy Policy", "Terms of Service", "Contact Support"],
+    title: "Destek",
+    links: ["Yardım Merkezi", "Gizlilik Politikası", "Hizmet Şartları", "Destek ile İletişime Geçin"],
   },
 ]
 
 export default function Footer() {
   return (
-    <AnimatedSection>
-      <footer className="bg-[#323232] text-white py-12">
-        <div className="container-padding">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <Image 
-                  src="/images/skiny-logo.svg" 
-                  alt="Skiny" 
-                  width={120} 
-                  height={95}
-                  className=" "
-                />
-              </div>
-              <p className="text-white/70 font-sans">AI-powered skincare analysis for your best skin ever.</p>
+    <footer className="bg-[#323232] text-white py-12">
+      <div className="container-padding">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="space-y-4 text-center sm:text-left">
+            <div className="flex items-center justify-center sm:justify-start">
+              <Image 
+                src="/images/skiny-logo.svg" 
+                alt="Skiny" 
+                width={120} 
+                height={95}
+                className=" "
+              />
             </div>
+            <p className="text-white/70 font-sans">En iyi cildin için yapay zeka destekli cilt analizi.</p>
+          </div>
 
-            {footerSections.map((section) => (
-              <div key={section.title} className="space-y-4">
-                <h4 className="font-semibold font-sans">{section.title}</h4>
-                <div className="space-y-2 text-white/70">
-                  {section.links.map((link) => (
-                    <p key={link} className="cursor-pointer hover:text-white transition-colors font-sans">
-                      {link}
-                    </p>
-                  ))}
-                </div>
+          {footerSections.map((section) => (
+            <div key={section.title} className="space-y-4 text-center sm:text-left">
+              <h4 className="font-semibold font-sans">{section.title}</h4>
+              <div className="space-y-2 text-white/70">
+                {section.links.map((link) => (
+                  <p key={link} className="cursor-pointer hover:text-white transition-colors font-sans">
+                    {link}
+                  </p>
+                ))}
               </div>
-            ))}
-          </div>
-
-          <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/70">
-            <p className="font-sans">&copy; 2025 Skiny. All rights reserved.</p>
-          </div>
+            </div>
+          ))}
         </div>
-      </footer>
-    </AnimatedSection>
+
+        <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/70">
+          <p className="font-sans">&copy; 2025 Skiny. Tüm hakları saklıdır.</p>
+        </div>
+      </div>
+    </footer>
   )
 }
