@@ -12,22 +12,29 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
+      setIsScrolled(window.scrollY > 0)
     }
 
-    window.addEventListener("scroll", handleScroll)
+    // Initial check
+    handleScroll()
+    
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-white/70 backdrop-blur-md shadow-sm py-1" : "bg-transparent py-2"
-    }`}>
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? "bg-white/70 backdrop-blur-md shadow-sm py-3 md:py-5" 
+          : "bg-transparent py-5 md:py-8"
+      }`}
+    >
       <nav className="container-padding flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className="flex items-center justify-center">
-            <Image src="/images/skiny-logo.svg" alt="Skiny" width={100} height={80} />
+          <div className="flex items-center justify-center ">
+            <Image src="/images/skiny-logo.svg" alt="Skiny" width={100} height={40} />
           </div>
         </div>
 

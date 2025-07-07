@@ -47,7 +47,7 @@ export default function MobileMenu() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden absolute top-full left-0 right-0 bg-white  shadow-sm mt-2 mx-4 py-4 z-50 rounded-2xl"
+            className="md:hidden absolute top-full left-0 right-0 bg-white  shadow-sm mt-1 mx-4 py-4 z-50 rounded-2xl"
             variants={mobileMenuAnimation() as Variants}
             initial="hidden"
             animate="show"
