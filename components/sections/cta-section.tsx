@@ -16,7 +16,7 @@ export default function CTASection() {
 
             {/* App Store Badges */}
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-              <Link href="/" className="inline-block w-[180px]">
+              <Link href="https://apps.apple.com/us/app/new-skin-scan-stop-wrinkles/id6739453891" target="_blank" className="inline-block w-[180px]">
                 <Image
                   src="/images/store-btn.svg"
                   alt="Download on the App Store"
@@ -25,7 +25,7 @@ export default function CTASection() {
                   className="h-[53px] w-auto hover:opacity-90 transition-opacity"
                 />
               </Link>
-              <Link href="/" className="inline-block w-[180px]">
+              <Link href="https://apps.apple.com/us/app/new-skin-scan-stop-wrinkles/id6739453891" target="_blank" className="inline-block w-[180px]">
                 <Image
                   src="/images/google-btn.svg"
                   alt="Get it on Google Play"

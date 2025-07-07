@@ -101,7 +101,7 @@ className="absolute top-24  transform  translate-x-40 w-[350px] h-[450px] bg-gra
         
         >
          <div className="flex flex-wrap justify-center gap-4  px-4">
-          <Link href="/">
+          <Link href="https://apps.apple.com/us/app/new-skin-scan-stop-wrinkles/id6739453891" target="_blank">
           <Image
                   src="/images/store-btn.svg"
                   alt="Download on the App Store"
@@ -110,7 +110,7 @@ className="absolute top-24  transform  translate-x-40 w-[350px] h-[450px] bg-gra
                   height={60}
                 />
           </Link>
-          <Link href="/">
+          <Link href="https://apps.apple.com/us/app/new-skin-scan-stop-wrinkles/id6739453891" target="_blank">
           <Image
                   src="/images/google-btn.svg"
                   alt="Download on the App Store"
