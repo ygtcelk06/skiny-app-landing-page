@@ -38,9 +38,9 @@ const faqs = [
       "7 günlük ücretsiz deneme süresi, tüm Premium özelliklere tam erişim sunar: sınırsız cilt analizi, kişiselleştirilmiş öneriler, gelişim takibi ve öncelikli destek. Denemeye başlamak için kredi kartı gerekmez.",
   },
   {
-    question: "Hassas cildim varsa Skiny'i kullanabilir miyim?",
+    question: "Hassas cildim varsa Skinly'i kullanabilir miyim?",
     answer:
-      "Skiny, hassas cilt dahil olmak üzere tüm cilt tipleri için tasarlanmıştır. Önerilerimiz özellikle hassasiyet seviyelerini dikkate alır ve nazik, hipoalerjenik ürünler sunar. Ayrıca, tahrişe neden olabilecek içeriklerden kaçınmanız için içerik analizleri de sağlıyoruz.",
+      "Skinly, hassas cilt dahil olmak üzere tüm cilt tipleri için tasarlanmıştır. Önerilerimiz özellikle hassasiyet seviyelerini dikkate alır ve nazik, hipoalerjenik ürünler sunar. Ayrıca, tahrişe neden olabilecek içeriklerden kaçınmanıza yardımcı oluruz.",
   },
   {
     question: "Dermatolog danışmanlığı sunuyor musunuz?",
@@ -70,7 +70,7 @@ export default function FAQSection() {
             Sıkça Sorulan <span className="text-gradient-primary">Sorular</span>
           </h2>
           <p className="text-xl text-[#323232]/70 max-w-2xl mx-auto font-sans">
-            Skiny’nin yapay zeka destekli cilt analizi hakkında bilmeniz gereken
+            Skinly&apos;nin yapay zeka destekli cilt analizi hakkında bilmeniz gereken
             her şey.
           </p>
         </div>
@@ -132,7 +132,7 @@ export default function FAQSection() {
             Hala sorularınız mı var?
           </h3>
           <p className="text-[#323232]/70 font-sans mb-4">
-            Destek ekibimiz, Skiny’den en iyi şekilde faydalanmanız için burada.
+            Destek ekibimiz, Skinly&apos;den en iyi şekilde faydalanmanız için burada.
           </p>
           <motion.button
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#1BCEE0] to-[#6B88EB] text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-200"

@@ -9,7 +9,7 @@ const testimonials = [
     name: "Elif Yılmaz",
     role: "Cilt Bakım Meraklısı",
     content:
-      "Skiny cilt bakım rutinimi tamamen değiştirdi. Yapay zeka önerileri tam isabetti ve cildim hiç bu kadar iyi görünmemişti!",
+      "Skinly cilt bakım rutinimi tamamen değiştirdi. Yapay zeka önerileri tam isabetti ve cildim hiç bu kadar iyi görünmemişti!",
     rating: 5,
     image: "/images/ava1.png",
   },
@@ -17,7 +17,7 @@ const testimonials = [
     name: "Mehmet Kaya",
     role: "Yoğun Bir Profesyonel",
     content:
-      "Zamanı kısıtlı biri olarak, Skiny'nin kişiselleştirilmiş rutini cilt bakımını benim için basit ve etkili hale getirdi. Kesinlikle tavsiye ederim!",
+      "Zamanı kısıtlı biri olarak, Skinly'nin kişiselleştirilmiş rutini cilt bakımını benim için basit ve etkili hale getirdi. Kesinlikle tavsiye ederim!",
     rating: 5,
     image: "/images/ava2.png",
   },

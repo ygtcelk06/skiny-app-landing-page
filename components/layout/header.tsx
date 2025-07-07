@@ -34,7 +34,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <div className="flex items-center justify-center ">
-            <Image src="/images/skiny-logo.svg" alt="Skiny" width={100} height={40} />
+            <Image src="/images/skiny-logo.svg" alt="Skinly" width={100} height={40} />
           </div>
         </div>
 

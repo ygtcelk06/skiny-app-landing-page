@@ -24,7 +24,7 @@ export default function Footer() {
             <div className="flex items-center justify-center sm:justify-start">
               <Image 
                 src="/images/skiny-logo.svg" 
-                alt="Skiny" 
+                alt="Skinly" 
                 width={120} 
                 height={95}
                 className=" "
