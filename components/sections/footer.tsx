@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/70">
-          <p className="font-sans">&copy; 2025 Skiny. Tüm hakları saklıdır.</p>
+          <p className="font-sans">&copy; 2025 Skinly. Tüm hakları saklıdır.</p>
         </div>
       </div>
     </footer>
