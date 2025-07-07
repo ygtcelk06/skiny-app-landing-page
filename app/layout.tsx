@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Skiny – AI-Powered Skincare Analysis",
-  description: "Skiny helps you understand and improve your skin using advanced AI technology. Get personalized routines, track progress, and discover the best skincare for your needs.",
+  title: "Skinly - Yapay Zeka Destekli Cilt Bakım Asistanı",
+  description: "Skinly, gelişmiş yapay zekâ teknolojisiyle cildinizi tanımanıza ve geliştirmenize yardımcı olur. Kişiye özel bakım rutinleri oluşturun, ilerlemenizi takip edin ve cildiniz için en uygun ürünleri keşfedin.",
 };
 
 export default function RootLayout({
