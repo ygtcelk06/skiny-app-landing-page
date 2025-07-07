@@ -1,23 +1,26 @@
 "use client"
 
-import { motion, type Variants, AnimatePresence } from "framer-motion"
+import { motion, type Variants, AnimatePresence, useInView } from "framer-motion"
 import Link from "next/link"
 import { Sparkles } from "lucide-react"
 import PhoneSlider from "@/components/phone-slider"
 import AnimatedCard from "@/components/animated-card"
 import AnimatedButton from "@/components/animated-button"
-import { fadeIn, staggerContainer } from "@/lib/variants"
+import { fadeIn,  } from "@/lib/variants"
 import Image from "next/image"
+import { useRef } from "react"
 
 export default function HeroSection() {
   const fadeUpAnimation = fadeIn("up", 0.3) as Variants
   const fadeUpDelayedAnimation = fadeIn("up", 0.4) as Variants
-  const staggerAnimation = staggerContainer(0.1, 1.2) as Variants
-  // const itemAnimation = staggerItem() as Variants
+
+
+  const buttonsRef = useRef(null)
+  const isButtonsInView = useInView(buttonsRef, { once: true, margin: "-100px" })
 
   return (
     <AnimatePresence mode="wait">
-      <section id="hero" className="container-padding py-12 relative overflow-hidden mt-10">
+      <section id="hero" className="container-padding  relative overflow-hidden mt-10">
         {/* Try Products Button */}
         <motion.div 
           className="text-center mb-8" 
@@ -28,7 +31,7 @@ export default function HeroSection() {
         >
           <AnimatedButton className="gradient-secondary rounded-full px-8 py-3 text-white font-medium shadow-brand">
             <Sparkles className="w-4 h-4 mr-2" />
-            Analyze Your Skin with AI!
+            Cildini Yapay Zeka ile Analiz Et!
           </AnimatedButton>
         </motion.div>
 
@@ -41,13 +44,13 @@ export default function HeroSection() {
           viewport={{ once: true }}
         >
           <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6 font-sans text-[#323232]">
-            Elevate Your Skincare Game <br />
-            with <span className="text-gradient-primary">AI-Powered Analysis!</span>
+          Cilt Bakımını Zirveye Taşı <br />
+             <span className="text-gradient-primary">Yapay Zeka Destekli Analizle!</span>
           </h1>
           <p className="text-lg text-[#323232]/70 max-w-2xl mx-auto leading-relaxed font-sans">
-            Discover your perfect skincare routine with advanced AI technology. <br />
-            Get personalized recommendations and track your skin&apos;s transformation journey!
-          </p>
+  Gelişmiş yapay zeka teknolojisiyle sana en uygun cilt bakım rutinini keşfet. <br />
+  Kişiselleştirilmiş öneriler al ve cildindeki değişimi adım adım takip et!
+</p>
         </motion.div>
 
         {/* Phone Mockup with Floating Elements */}
@@ -88,19 +91,21 @@ className="absolute top-24  transform  translate-x-40 w-[350px] h-[450px] bg-gra
         </div>
 
         {/* Feature Tags */}
+        <div ref={buttonsRef}>
+
         <motion.div
-          className="flex flex-wrap justify-center gap-4 mt-16 px-4"
-          variants={staggerAnimation}
+          className="flex flex-wrap justify-center gap-4 mt-10 md:mt-16 px-4"
+          variants={fadeIn("up", 0)  as Variants}
           initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
+          animate={isButtonsInView ? "show" : "hidden"}
+        
         >
          <div className="flex flex-wrap justify-center gap-4  px-4">
           <Link href="/">
           <Image
                   src="/images/store-btn.svg"
                   alt="Download on the App Store"
-                  className="h-14 w-auto"
+                  className="h-12 w-auto transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-1 active:scale-95"
                   width={180}
                   height={60}
                 />
@@ -109,13 +114,14 @@ className="absolute top-24  transform  translate-x-40 w-[350px] h-[450px] bg-gra
           <Image
                   src="/images/google-btn.svg"
                   alt="Download on the App Store"
-                  className="h-14 w-auto"
+                  className="h-12 w-auto transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-1 active:scale-95"
                   width={180}
                   height={60}
                 />
           </Link>
          </div>
         </motion.div>
+        </div>
       </section>
     </AnimatePresence>
   )

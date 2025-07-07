@@ -9,12 +9,13 @@ import { Link } from 'react-scroll'
 import NextLink from 'next/link'
 
 const navItems = [
-  { label: "Home", href: "hero" },
-  { label: "How it Works", href: "features" },
-  { label: "Reviews", href: "testimonials" },
-  { label: "Pricing", href: "pricing" },
-  { label: "FAQ", href: "faq" },
+  { label: "Ana Sayfa", href: "hero" },
+  { label: "Nasıl Çalışır", href: "features" },
+  { label: "Yorumlar", href: "testimonials" },
+  { label: "Fiyatlandırma", href: "pricing" },
+  { label: "SSS", href: "faq" },
 ]
+
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)
@@ -46,7 +47,7 @@ export default function MobileMenu() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden absolute top-full left-0 right-0 bg-white/70 backdrop-blur-sm shadow-sm mt-2 mx-4 py-4 z-50 rounded-2xl"
+            className="md:hidden absolute top-full left-0 right-0 bg-white  shadow-sm mt-2 mx-4 py-4 z-50 rounded-2xl"
             variants={mobileMenuAnimation() as Variants}
             initial="hidden"
             animate="show"

@@ -20,9 +20,9 @@ const suggestedProducts = [
 
 export default function DashboardSection() {
   return (
-    <AnimatedSection className="container-padding py-16 bg-gradient-to-b from-[#DBEAFE]/15 to-white rounded-tl-3xl rounded-tr-3xl mt-28">
+    <AnimatedSection className="container-padding  md:pt-5 bg-gradient-to-b from-[#DBEAFE]/15 to-white rounded-tl-3xl rounded-tr-3xl mt-5 md:mt-24">
       <div className="max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-4 md:gap-12 items-center">
           {/* Left Side - Dashboard Analytics */}
           <motion.div className="space-y-8 bg-white p-8 rounded-2xl shadow-sm" variants={staggerContainer(0.1, 0.2)} initial="hidden" animate="show" >
             {/* Header Metrics */}

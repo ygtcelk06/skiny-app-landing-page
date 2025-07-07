@@ -2,12 +2,13 @@
 import { Link } from 'react-scroll'
 
 const navItems = [
-    { label: "Home", href: "hero" },
-    { label: "How it Works", href: "features" },
-    { label: "Reviews", href: "testimonials" },
-    { label: "Pricing", href: "pricing" },
-    { label: "FAQ", href: "faq" },
-  ]
+  { label: "Ana Sayfa", href: "hero" },
+  { label: "Nasıl Çalışır", href: "features" },
+  { label: "Yorumlar", href: "testimonials" },
+  { label: "Fiyatlandırma", href: "pricing" },
+  { label: "SSS", href: "faq" },
+]
+
   
   export default function DesktopNav() {
     return (

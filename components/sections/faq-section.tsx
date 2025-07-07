@@ -1,60 +1,60 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Plus, Minus } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
-import AnimatedSection from "@/components/animated-section"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Plus, Minus } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import AnimatedSection from "@/components/animated-section";
 
 const faqs = [
   {
-    question: "How accurate is the AI skin analysis?",
+    question: "Yapay zeka cilt analizi ne kadar doğru?",
     answer:
-      "Our AI technology uses advanced computer vision and machine learning algorithms trained on thousands of dermatologist-verified skin images. The analysis accuracy is over 90% for common skin concerns like acne, wrinkles, dark spots, and skin type identification.",
+      "Yapay zeka teknolojimiz, binlerce dermatolog onaylı cilt görseli üzerinde eğitilmiş gelişmiş bilgisayarlı görme ve makine öğrenimi algoritmalarını kullanır. Akne, kırışıklıklar, koyu lekeler ve cilt tipi tespiti gibi yaygın cilt problemlerinde analiz doğruluğu %90'ın üzerindedir.",
   },
   {
-    question: "Is my skin data and photos secure?",
+    question: "Cilt verilerim ve fotoğraflarım güvende mi?",
     answer:
-      "Absolutely. We use enterprise-grade encryption to protect all your data. Your photos are processed securely and never shared with third parties. You can delete your data at any time, and we comply with GDPR and other privacy regulations.",
+      "Kesinlikle. Tüm verileriniz kurumsal düzeyde şifreleme ile korunur. Fotoğraflarınız güvenli bir şekilde işlenir ve asla üçüncü taraflarla paylaşılmaz. Verilerinizi istediğiniz zaman silebilir ve biz GDPR ve diğer gizlilik düzenlemelerine tam uyum sağlarız.",
   },
   {
-    question: "Can I cancel my subscription anytime?",
+    question: "Aboneliğimi istediğim zaman iptal edebilir miyim?",
     answer:
-      "Yes, you can cancel your subscription at any time with no cancellation fees. If you cancel during your free trial, you won't be charged. For paid subscriptions, you'll continue to have access until the end of your billing period.",
+      "Evet, aboneliğinizi dilediğiniz zaman iptal edebilirsiniz ve iptal ücreti alınmaz. Ücretsiz deneme süresi içinde iptal ederseniz hiçbir ücret ödemezsiniz. Ücretli aboneliklerde ise faturalama dönemi sonuna kadar erişiminiz devam eder.",
   },
   {
-    question: "Do you offer personalized product recommendations?",
+    question: "Kişiselleştirilmiş ürün önerileri sunuyor musunuz?",
     answer:
-      "Yes! Based on your skin analysis, we provide personalized skincare product recommendations from trusted brands. Our AI considers your skin type, concerns, budget, and ingredient preferences to suggest the most suitable products for your routine.",
+      "Evet! Cilt analizine dayanarak, güvenilir markalardan kişiselleştirilmiş cilt bakım ürünü önerileri sunuyoruz. Yapay zekamız; cilt tipiniz, sorunlarınız, bütçeniz ve içerik tercihlerinizi dikkate alarak rutininize en uygun ürünleri önerir.",
   },
   {
-    question: "How often should I take skin analysis photos?",
+    question: "Cilt analiz fotoğraflarını ne sıklıkla çekmeliyim?",
     answer:
-      "We recommend taking photos weekly for the first month to establish a baseline, then bi-weekly or monthly for ongoing progress tracking. The app will send you gentle reminders, but you can analyze your skin as often as you'd like.",
+      "İlk ay için haftalık fotoğraf çekmenizi öneriyoruz; bu şekilde bir başlangıç verisi oluşur. Sonrasında ise iki haftada bir veya aylık fotoğraflar, gelişiminizi takip etmeniz için yeterlidir. Uygulama size nazik hatırlatmalar gönderir, ancak dilediğiniz sıklıkta analiz yapabilirsiniz.",
   },
   {
-    question: "What's included in the free trial?",
+    question: "Ücretsiz deneme süresine neler dahil?",
     answer:
-      "The 7-day free trial includes full access to all Premium features: unlimited skin analyses, personalized recommendations, progress tracking, and priority support. No credit card required to start your trial.",
+      "7 günlük ücretsiz deneme süresi, tüm Premium özelliklere tam erişim sunar: sınırsız cilt analizi, kişiselleştirilmiş öneriler, gelişim takibi ve öncelikli destek. Denemeye başlamak için kredi kartı gerekmez.",
   },
   {
-    question: "Can I use Skiny if I have sensitive skin?",
+    question: "Hassas cildim varsa Skiny'i kullanabilir miyim?",
     answer:
-      "Skiny is designed for all skin types, including sensitive skin. Our recommendations specifically account for sensitivity levels and suggest gentle, hypoallergenic products. We also provide ingredient analysis to help you avoid potential irritants.",
+      "Skiny, hassas cilt dahil olmak üzere tüm cilt tipleri için tasarlanmıştır. Önerilerimiz özellikle hassasiyet seviyelerini dikkate alır ve nazik, hipoalerjenik ürünler sunar. Ayrıca, tahrişe neden olabilecek içeriklerden kaçınmanız için içerik analizleri de sağlıyoruz.",
   },
   {
-    question: "Do you provide dermatologist consultations?",
+    question: "Dermatolog danışmanlığı sunuyor musunuz?",
     answer:
-      "Premium subscribers get access to virtual dermatologist consultations. You can book 15-minute sessions to discuss your skin analysis results, get professional advice, and receive personalized treatment recommendations from licensed dermatologists.",
+      "Premium aboneler, sanal dermatolog danışmanlığına erişebilir. 15 dakikalık seanslar ayırarak analiz sonuçlarınızı tartışabilir, profesyonel tavsiyeler alabilir ve lisanslı dermatologlardan kişiselleştirilmiş tedavi önerileri elde edebilirsiniz.",
   },
-]
+];
 
 export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index)
-  }
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   return (
     <AnimatedSection
@@ -63,12 +63,15 @@ export default function FAQSection() {
     >
       <div className="max-w-4xl mx-auto">
         <div className="text-center space-y-4 mb-16">
-          <Badge className="bg-[#6B88EB]/10 text-[#6B88EB] font-medium border-0 px-6 py-2 rounded-full">FAQ</Badge>
+          <Badge className="bg-[#6B88EB]/10 text-[#6B88EB] font-medium border-0 px-6 py-2 rounded-full">
+            SSS
+          </Badge>
           <h2 className="text-4xl font-bold font-sans text-[#323232]">
-            Frequently Asked <span className="text-gradient-primary">Questions</span>
+            Sıkça Sorulan <span className="text-gradient-primary">Sorular</span>
           </h2>
           <p className="text-xl text-[#323232]/70 max-w-2xl mx-auto font-sans">
-            Everything you need to know about Skiny&apos;s AI-powered skincare analysis.
+            Skiny’nin yapay zeka destekli cilt analizi hakkında bilmeniz gereken
+            her şey.
           </p>
         </div>
 
@@ -85,7 +88,9 @@ export default function FAQSection() {
                 onClick={() => toggleFAQ(index)}
                 className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50/50 transition-colors duration-200"
               >
-                <h3 className="text-lg font-semibold text-[#323232] font-sans pr-4">{faq.question}</h3>
+                <h3 className="text-lg font-semibold text-[#323232] font-sans pr-4">
+                  {faq.question}
+                </h3>
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -110,7 +115,9 @@ export default function FAQSection() {
                   >
                     <div className="px-8 pb-6">
                       <div className="h-px bg-gradient-to-r from-[#1BCEE0]/20 to-[#6B88EB]/20 mb-4"></div>
-                      <p className="text-[#323232]/80 font-sans leading-relaxed">{faq.answer}</p>
+                      <p className="text-[#323232]/80 font-sans leading-relaxed">
+                        {faq.answer}
+                      </p>
                     </div>
                   </motion.div>
                 )}
@@ -121,19 +128,21 @@ export default function FAQSection() {
 
         {/* Contact Support */}
         <div className="text-center mt-12 p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
-          <h3 className="text-xl font-semibold text-[#323232] font-sans mb-2">Still have questions?</h3>
+          <h3 className="text-xl font-semibold text-[#323232] font-sans mb-2">
+            Hala sorularınız mı var?
+          </h3>
           <p className="text-[#323232]/70 font-sans mb-4">
-            Our support team is here to help you get the most out of Skiny.
+            Destek ekibimiz, Skiny’den en iyi şekilde faydalanmanız için burada.
           </p>
           <motion.button
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#1BCEE0] to-[#6B88EB] text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-200"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Contact Support
+            Destek ile İletişime Geç
           </motion.button>
         </div>
       </div>
     </AnimatedSection>
-  )
+  );
 }

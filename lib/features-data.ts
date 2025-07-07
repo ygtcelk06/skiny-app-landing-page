@@ -4,75 +4,72 @@ export const features = [
   {
     id: "ai-analysis",
     number: "1",
-    title: "Scan Your Face",
+    title: "Yüzünü Tara",
     description:
-      "Achieving great skin starts with understanding it. With Skiny scanning your face is quick, easy, and accurate.",
+      "Harika bir cilde ulaşmak, onu anlamakla başlar. Skiny ile yüzünüzü taramak hızlı, kolay ve doğrudur.",
     image: "/images/step-01.png",
     iconColor: "#1bcee0",
     iconBgColor: "#ddf8fa",
     points: [
       {
         icon: Camera,
-        text: "Use your phone's camera for an instant analysis.",
+        text: "Anında analiz için telefon kamerasını kullan.",
       },
       {
         icon: Target,
-        text: "Identify problem areas and skin concerns in seconds.",
+        text: "Sorunlu bölgeleri ve cilt problemlerini saniyeler içinde belirle.",
       },
       {
         icon: Calendar,
-        text: "No appointments or expensive equipment needed.",
+        text: "Randevuya veya pahalı ekipmanlara gerek yok.",
       },
     ],
-    
   },
   {
     id: "personalized-score",
     number: "2",
-    title: "Get Your Personalized Skin Score",
+    title: "Kişiselleştirilmiş Cilt Skorunu Al",
     description:
-      "Understand your skin like never before. Get a detailed score highlighting what's great and what needs attention.",
+      "Cildini hiç olmadığı kadar iyi tanı. Nelerin iyi olduğunu ve nelere dikkat etmen gerektiğini gösteren detaylı bir skor al.",
     image: "/images/step-02.png",
     iconColor: "#6b88eb",
     iconBgColor: "#e9edfc",
     points: [
       {
         icon: RotateCcw,
-        text: "Track acne, hydration, irritation, and texture.",
+        text: "Sivilce, nem, tahriş ve doku durumunu takip et.",
       },
       {
         icon: BarChart3,
-        text: "See what's working and what's not in your current routine.",
+        text: "Mevcut rutininde ne işe yarıyor, ne yaramıyor gör.",
       },
       {
         icon: Info,
-        text: "Gain insights tailored to your unique skin type.",
+        text: "Benzersiz cilt tipine özel içgörüler elde et.",
       },
     ],
-    
   },
   {
     id: "personalized-routine",
     number: "3",
-    title: "Get Your Personalized Routine",
-    description: "Receive expert-recommended products and routines tailored to your skin.",
+    title: "Kişiselleştirilmiş Rutinini Al",
+    description: "Cildine özel önerilen ürünleri ve rutinleri al.",
     image: "/images/step-03.png",
     iconColor: "#c838f8",
     iconBgColor: "#f7e1fe",
     points: [
       {
         icon: User,
-        text: "Unbiased recommendations for your unique needs.",
+        text: "Eşsiz ihtiyaçların için tarafsız öneriler.",
       },
       {
         icon: Star,
-        text: "Choose what's best to help your skin glow.",
+        text: "Cildinin ışıltısını artırmak için en iyisini seç.",
       },
       {
         icon: Handshake,
-        text: "No brand affiliations—just results you can trust.",
+        text: "Marka bağı yok—sadece güvenilir sonuçlar.",
       },
     ],
-    
   },
 ]
