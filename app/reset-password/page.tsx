@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { useState } from "react"
-import { Eye, EyeOff, ArrowLeft, CheckCircle, Key, AlertCircle } from "lucide-react"
+import { Eye, EyeOff,CheckCircle, Key, AlertCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -95,19 +95,13 @@ export default function ResetPasswordPage() {
 
             {/* Success Message */}
             <div className="space-y-3">
-              <h2 className="text-xl font-semibold text-[#323232]">Password Reset!</h2>
+              <h2 className="text-xl font-semibold text-[#323232]">Şifre Sıfırlandı!</h2>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Your password has been successfully reset, click below to continue your access
+              Şifreniz başarıyla sıfırlandı, erişiminize devam etmek için aşağıya tıklayın.
               </p>
             </div>
 
-            {/* Continue Button */}
-            <Button
-              className="w-full bg-[#1BCEE0]/50 hover:bg-[#1BCEE0]/70 text-[#323232] font-medium py-3 rounded-lg transition-colors"
-              onClick={() => (window.location.href = "/")}
-            >
-              Continue
-            </Button>
+            
 
             {/* Return to Login Link */}
             <div className="text-center pt-2">
@@ -115,8 +109,8 @@ export default function ResetPasswordPage() {
                 onClick={() => (window.location.href = "/")}
                 className="flex items-center justify-center space-x-2 text-gray-600 hover:text-[#323232] transition-colors text-sm font-medium mx-auto"
               >
-                <ArrowLeft className="w-4 h-4" />
-                <span>Return to the login screen</span>
+                
+                <span>Artık bu sayfayı güvenle kapatabilirsiniz.</span>
               </button>
             </div>
           </CardContent>
@@ -138,9 +132,9 @@ export default function ResetPasswordPage() {
 
           {/* Header */}
           <div className="text-center space-y-2">
-            <h1 className="text-xl font-semibold text-[#323232]">Set your new password</h1>
+            <h1 className="text-xl font-semibold text-[#323232]">Yeni Şifre Oluştur</h1>
             <p className="text-gray-600 text-sm">
-              Your new password should be different from passwords previously used.
+            Yeni şifreniz, daha önce kullandığınız şifrelerden farklı olmalıdır
             </p>
           </div>
 
@@ -149,15 +143,15 @@ export default function ResetPasswordPage() {
             {/* Password Field */}
             <div className="space-y-2">
               <Label htmlFor="password" className="text-sm font-medium text-gray-700">
-                Password
+              Yeni Şifre
               </Label>
               <div className="relative">
                 <Input
                   id="password"
-                  type={showPassword ? "text" : "password"}
+                  type={showPassword ? "text" : "Şifre"}
                   value={formData.password}
                   onChange={(e) => handleInputChange("password", e.target.value)}
-                  className={`pr-10 border-gray-300 focus:ring-2 focus:ring-purple-200 focus:border-purple-300 ${
+                  className={`pr-10 border-gray-300 focus:ring-2  focus:ring-[#1BCEE0]/30 focus:border-[#1BCEE0]/30 ${
                     errors.password ? "border-red-300 focus:ring-red-200 focus:border-red-300" : ""
                   }`}
                   required
@@ -181,15 +175,15 @@ export default function ResetPasswordPage() {
             {/* Confirm Password Field */}
             <div className="space-y-2">
               <Label htmlFor="confirmPassword" className="text-sm font-medium text-gray-700">
-                Confirm your new password
+              Yeni Şifreyi Doğrula
               </Label>
               <div className="relative">
                 <Input
                   id="confirmPassword"
-                  type={showConfirmPassword ? "text" : "password"}
+                  type={showConfirmPassword ? "text" : "Şifre"}
                   value={formData.confirmPassword}
                   onChange={(e) => handleInputChange("confirmPassword", e.target.value)}
-                  className={`pr-10 border-gray-300 focus:ring-2 focus:ring-purple-200 focus:border-purple-300 ${
+                  className={`pr-10 border-gray-300 focus:ring-2 focus:ring-[#1BCEE0]/30 focus:border-[#1BCEE0]/30 ${
                     errors.confirmPassword ? "border-red-300 focus:ring-red-200 focus:border-red-300" : ""
                   }`}
                   required
@@ -219,24 +213,13 @@ export default function ResetPasswordPage() {
               {isLoading ? (
                 <div className="flex items-center justify-center space-x-2">
                   <div className="w-4 h-4 border-2 border-gray-600 border-t-transparent rounded-full animate-spin" />
-                  <span>Confirming...</span>
+                  <span>Güncelleniyor...</span>
                 </div>
               ) : (
-                "Confirm"
+                "Şifreyi Güncelle"
               )}
             </Button>
           </form>
-
-          {/* Return to Login Link */}
-          <div className="text-center pt-4">
-            <button
-              onClick={() => (window.location.href = "/")}
-              className="flex items-center justify-center space-x-2 text-gray-600 hover:text-gray-800 transition-colors text-sm font-medium mx-auto"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              <span>Return to the login screen</span>
-            </button>
-          </div>
         </CardContent>
       </Card>
     </div>
