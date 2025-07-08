@@ -7,11 +7,11 @@ const footerSections = [
   },
   {
     title: "Şirket",
-    links: ["Hakkımızda", "Blog", "Kariyer", "İletişim"],
+    links: ["Hakkımızda", "İletişim"],
   },
   {
     title: "Destek",
-    links: ["Yardım Merkezi", "Gizlilik Politikası", "Hizmet Şartları", "Destek ile İletişime Geçin"],
+    links: ["Yardım Merkezi", "Gizlilik Politikası", "Hizmet Şartları", "Destek ile iletişime geçin"],
   },
 ]
 

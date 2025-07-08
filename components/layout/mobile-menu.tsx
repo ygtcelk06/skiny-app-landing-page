@@ -1,12 +1,17 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion, AnimatePresence, type Variants } from "framer-motion"
-import { Menu, X } from "lucide-react"
-import AnimatedButton from "@/components/animated-button"
-import { mobileMenuAnimation, staggerContainer, staggerItem } from "@/lib/variants"
-import { Link } from 'react-scroll'
-import NextLink from 'next/link'
+import { useState } from "react";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
+import { Menu, X } from "lucide-react";
+
+import {
+  mobileMenuAnimation,
+  staggerContainer,
+  staggerItem,
+} from "@/lib/variants";
+import { Link } from "react-scroll";
+import NextLink from "next/link";
+import Image from "next/image";
 
 const navItems = [
   { label: "Ana Sayfa", href: "hero" },
@@ -14,11 +19,10 @@ const navItems = [
   { label: "Yorumlar", href: "testimonials" },
   { label: "Fiyatlandırma", href: "pricing" },
   { label: "SSS", href: "faq" },
-]
-
+];
 
 export default function MobileMenu() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
@@ -80,19 +84,39 @@ export default function MobileMenu() {
               ))}
               <hr className="border-gray-200" />
               <motion.div variants={staggerItem() as Variants}>
-                <AnimatedButton
-                  className="gradient-primary hover:opacity-90 text-white w-full"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <NextLink href="https://apps.apple.com/us/app/new-skin-scan-stop-wrinkles/id6739453891" target="_blank">
-                    Download App
-                  </NextLink>
-                </AnimatedButton>
+                <div className="flex md:hidden gap-2 ">
+                  <div className=" hover:opacity-90 text-white font-medium flex items-center gap-2">
+                    <NextLink
+                      href="https://apps.apple.com/us/app/new-skin-scan-stop-wrinkles/id6739453891"
+                      target="_blank"
+                    >
+                      <Image
+                        src="/images/apple.svg"
+                        alt="App Store"
+                        width={40}
+                        height={40}
+                      />
+                    </NextLink>
+                  </div>
+                  <div className="hover:opacity-90">
+                    <NextLink
+                      href="https://apps.apple.com/us/app/new-skin-scan-stop-wrinkles/id6739453891"
+                      target="_blank"
+                    >
+                      <Image
+                        src="/images/android.svg"
+                        alt="App Store"
+                        width={40}
+                        height={40}
+                      />
+                    </NextLink>
+                  </div>
+                </div>
               </motion.div>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
     </>
-  )
+  );
 }

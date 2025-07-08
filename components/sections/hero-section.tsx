@@ -20,7 +20,7 @@ export default function HeroSection() {
 
   return (
     <AnimatePresence mode="wait">
-      <section id="hero" className="container-padding  relative overflow-hidden mt-10">
+      <section id="hero" className="container-padding  relative overflow-hidden mt-10 md:mt-20">
         {/* Try Products Button */}
         <motion.div 
           className="text-center mb-8" 
@@ -43,9 +43,10 @@ export default function HeroSection() {
           whileInView="show"
           viewport={{ once: true }}
         >
-          <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6 font-sans text-[#323232]">
-          Cilt Bakımını Zirveye Taşı <br />
-             <span className="text-gradient-primary">Yapay Zeka Destekli Analizle!</span>
+          <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6 font-sans ">
+          <span className="text-gradient-primary">Yapay Zeka Destekli</span> <br />
+             <span className="text-[#323232]">Analizle
+             Cilt Bakımını Zirveye Taşı!</span>
           </h1>
           <p className="text-lg text-[#323232]/70 max-w-2xl mx-auto leading-relaxed font-sans">
   Gelişmiş yapay zeka teknolojisiyle sana en uygun cilt bakım rutinini keşfet. <br />

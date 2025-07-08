@@ -34,7 +34,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <AnimatedSection id="testimonials" className="container-padding py-10  ">
+    <AnimatedSection id="testimonials" className="container-padding  py-10 md:py-20   ">
      <div className="text-center space-y-4 mb-16">
   <Badge className="bg-[#6B88EB]/10 text-[#6B88EB] font-medium border-0">Kullanıcı Yorumları</Badge>
   <h2 className="text-4xl font-bold font-sans text-[#323232]">

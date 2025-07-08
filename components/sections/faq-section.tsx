@@ -139,7 +139,7 @@ export default function FAQSection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Destek ile İletişime Geç
+            Destek ile iletişime geçin
           </motion.button>
         </div>
       </div>
