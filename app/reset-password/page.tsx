@@ -1,13 +1,14 @@
 "use client"
 
-import type React from "react"
+import type { FormEvent } from "react"
 import { useState } from "react"
-import { Eye, EyeOff,CheckCircle, Key, AlertCircle } from "lucide-react"
+import { Eye, EyeOff, CheckCircle, Key, AlertCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { z } from "zod"
+import { supabase } from "@/lib/supabaseClient"
 
 // Zod schema for password validation
 const passwordSchema = z
@@ -38,6 +39,16 @@ export default function ResetPasswordPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
+  const [apiError, setApiError] = useState<string>("")
+
+  const getAccessTokenFromHash = () => {
+    if (typeof window !== 'undefined') {
+      const hash = window.location.hash
+      const params = new URLSearchParams(hash.replace('#', ''))
+      return params.get('access_token')
+    }
+    return null
+  }
 
   const validateForm = () => {
     try {
@@ -47,7 +58,7 @@ export default function ResetPasswordPage() {
     } catch (error) {
       if (error instanceof z.ZodError) {
         const newErrors: Record<string, string> = {}
-        error.errors.forEach((err) => {
+        error.errors.forEach((err: z.ZodIssue) => {
           if (err.path[0]) {
             newErrors[err.path[0] as string] = err.message
           }
@@ -58,8 +69,9 @@ export default function ResetPasswordPage() {
     }
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
+    setApiError("")
 
     if (!validateForm()) {
       return
@@ -67,18 +79,44 @@ export default function ResetPasswordPage() {
 
     setIsLoading(true)
 
-    // Simulate API call - you'll replace this with Supabase logic
-    setTimeout(() => {
-      setIsLoading(false)
+    try {
+      const accessToken = getAccessTokenFromHash()
+      
+      if (!accessToken) {
+        throw new Error("Geçersiz veya eksik erişim belirteci")
+      }
+
+      // Set the session with the access token
+      const { error: sessionError } = await supabase.auth.setSession({
+        access_token: accessToken,
+        refresh_token: '',
+      })
+
+      if (sessionError) {
+        throw sessionError
+      }
+
+      // Update the user's password
+      const { error: updateError } = await supabase.auth.updateUser({
+        password: formData.password
+      })
+
+      if (updateError) {
+        throw updateError
+      }
+
       setIsSubmitted(true)
-    }, 1500)
+    } catch (error) {
+      setApiError(error instanceof Error ? error.message : "Şifre güncellenirken bir hata oluştu")
+      setIsLoading(false)
+    }
   }
 
   const handleInputChange = (field: keyof PasswordFormData, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }))
+    setFormData((prev: PasswordFormData) => ({ ...prev, [field]: value }))
     // Clear specific field error when user starts typing
     if (errors[field]) {
-      setErrors((prev) => ({ ...prev, [field]: "" }))
+      setErrors((prev: Record<string, string>) => ({ ...prev, [field]: "" }))
     }
   }
 
@@ -137,6 +175,14 @@ export default function ResetPasswordPage() {
             Yeni şifreniz, daha önce kullandığınız şifrelerden farklı olmalıdır
             </p>
           </div>
+
+          {/* API Error Message */}
+          {apiError && (
+            <div className="flex items-center space-x-1 text-red-600 text-sm bg-red-50 p-3 rounded-md">
+              <AlertCircle className="w-5 h-5" />
+              <span>{apiError}</span>
+            </div>
+          )}
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-6">
