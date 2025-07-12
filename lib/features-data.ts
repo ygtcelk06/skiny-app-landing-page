@@ -6,69 +6,69 @@ export const features = [
     number: "1",
     title: "Yüzünü Tara",
     description:
-      "Harika bir cilde ulaşmak, onu anlamakla başlar. Skinly ile yüzünüzü taramak hızlı, kolay ve doğrudur.",
+      "Harika bir cilt için önce onu tanıman gerekiyor. Skinly ile yüzünü taramak çok kolay ve hızlı!",
     image: "/images/step-01.png",
     iconColor: "#1bcee0",
     iconBgColor: "#ddf8fa",
     points: [
       {
         icon: Camera,
-        text: "Anında analiz için telefon kamerasını kullan.",
+        text: "Telefon kameranı kullanarak anında analiz yap.",
       },
       {
         icon: Target,
-        text: "Sorunlu bölgeleri ve cilt problemlerini saniyeler içinde belirle.",
+        text: "Sorunlu bölgeleri ve cilt problemlerini saniyeler içinde öğren.",
       },
       {
         icon: Calendar,
-        text: "Randevuya veya pahalı ekipmanlara gerek yok.",
+        text: "Randevuya ya da pahalı cihazlara hiç gerek yok.",
       },
     ],
   },
   {
     id: "personalized-score",
     number: "2",
-    title: "Kişiselleştirilmiş Cilt Skorunu Al",
+    title: "Kişiye Özel Cilt Skorunu Öğren",
     description:
-      "Cildini hiç olmadığı kadar iyi tanı. Nelerin iyi olduğunu ve nelere dikkat etmen gerektiğini gösteren detaylı bir skor al.",
+      "Cildini şimdiye kadarki en iyi şekilde tanı. Nelerin iyi gittiğini, neleri düzeltmen gerektiğini net bir şekilde gör.",
     image: "/images/step-02.png",
     iconColor: "#6b88eb",
     iconBgColor: "#e9edfc",
     points: [
       {
         icon: RotateCcw,
-        text: "Sivilce, nem, tahriş ve doku durumunu takip et.",
+        text: "Sivilce, nem, tahriş ve cildinin genel durumunu takip et.",
       },
       {
         icon: BarChart3,
-        text: "Mevcut rutininde ne işe yarıyor, ne yaramıyor gör.",
+        text: "Kullandığın ürünler işe yarıyor mu, yoksa boşa mı gidiyor, öğren.",
       },
       {
         icon: Info,
-        text: "Benzersiz cilt tipine özel içgörüler elde et.",
+        text: "Cilt tipine özel öneriler ve ipuçları al.",
       },
     ],
   },
   {
     id: "personalized-routine",
     number: "3",
-    title: "Kişiselleştirilmiş Rutinini Al",
-    description: "Cildine özel önerilen ürünleri ve rutinleri al.",
+    title: "Cildine Özel Rutinini Al",
+    description: "Cildine en uygun ürün ve bakım önerilerini keşfet. Tamamen sana göre hazırlanmış bir rutin seni bekliyor.",
     image: "/images/step-03.png",
     iconColor: "#c838f8",
     iconBgColor: "#f7e1fe",
     points: [
       {
         icon: User,
-        text: "Eşsiz ihtiyaçların için tarafsız öneriler.",
+        text: "İhtiyacına özel, tarafsız öneriler al.",
       },
       {
         icon: Star,
-        text: "Cildinin ışıltısını artırmak için en iyisini seç.",
+        text: "Cildinin parlaması için en etkili ürünleri seç.",
       },
       {
         icon: Handshake,
-        text: "Marka bağı yok—sadece güvenilir sonuçlar.",
+        text: "Marka bağımlılığı yok — sadece işe yarayan güvenilir sonuçlar.",
       },
     ],
   },

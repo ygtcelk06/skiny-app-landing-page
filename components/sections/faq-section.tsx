@@ -5,47 +5,43 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import AnimatedSection from "@/components/animated-section";
+import Link from "next/link";
 
 const faqs = [
   {
     question: "Yapay zeka cilt analizi ne kadar doğru?",
     answer:
-      "Yapay zeka teknolojimiz, binlerce dermatolog onaylı cilt görseli üzerinde eğitilmiş gelişmiş bilgisayarlı görme ve makine öğrenimi algoritmalarını kullanır. Akne, kırışıklıklar, koyu lekeler ve cilt tipi tespiti gibi yaygın cilt problemlerinde analiz doğruluğu %90'ın üzerindedir.",
+      "Yapay zeka destekli cilt analizimiz, binlerce dermatolog onaylı cilt görseli üzerinde eğitilmiş gelişmiş algoritmalarla çalışır. Akne, kırışıklık, koyu leke ve cilt tipi gibi yaygın sorunlarda %90’ın üzerinde doğrulukla analiz yapar.",
   },
   {
     question: "Cilt verilerim ve fotoğraflarım güvende mi?",
     answer:
-      "Kesinlikle. Tüm verileriniz kurumsal düzeyde şifreleme ile korunur. Fotoğraflarınız güvenli bir şekilde işlenir ve asla üçüncü taraflarla paylaşılmaz. Verilerinizi istediğiniz zaman silebilir ve biz GDPR ve diğer gizlilik düzenlemelerine tam uyum sağlarız.",
+      "Kesinlikle. Tüm cilt verileriniz ve fotoğraflarınız kurumsal düzeyde şifreleme ile güvenli bir şekilde saklanır ve işlenir. Verilerinizi dilediğiniz zaman silebilirsiniz. Uygulamamız, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) başta olmak üzere tüm ilgili gizlilik düzenlemelerine tam uyum sağlar.",
   },
   {
     question: "Aboneliğimi istediğim zaman iptal edebilir miyim?",
     answer:
-      "Evet, aboneliğinizi dilediğiniz zaman iptal edebilirsiniz ve iptal ücreti alınmaz. Ücretsiz deneme süresi içinde iptal ederseniz hiçbir ücret ödemezsiniz. Ücretli aboneliklerde ise faturalama dönemi sonuna kadar erişiminiz devam eder.",
+      "Evet, aboneliğinizi dilediğiniz zaman iptal edebilirsiniz ve iptal ücreti alınmaz. Ücretli aboneliklerde ise faturalama dönemi sonuna kadar erişiminiz devam eder.",
   },
   {
     question: "Kişiselleştirilmiş ürün önerileri sunuyor musunuz?",
     answer:
-      "Evet! Cilt analizine dayanarak, güvenilir markalardan kişiselleştirilmiş cilt bakım ürünü önerileri sunuyoruz. Yapay zekamız; cilt tipiniz, sorunlarınız, bütçeniz ve içerik tercihlerinizi dikkate alarak rutininize en uygun ürünleri önerir.",
+      "Evet! Cilt analizine dayanarak, yapay zekamız cilt tipiniz, mevcut cilt problemleriniz ve rutin alışkanlıklarınızı dikkate alarak en uygun içerikleri önerir. Marka odaklı değil, içerik bazlı çalışan sistemimiz sayesinde gerçekten ihtiyacınız olan bileşenleri kolayca keşfedebilirsiniz.",
   },
   {
     question: "Cilt analiz fotoğraflarını ne sıklıkla çekmeliyim?",
     answer:
-      "İlk ay için haftalık fotoğraf çekmenizi öneriyoruz; bu şekilde bir başlangıç verisi oluşur. Sonrasında ise iki haftada bir veya aylık fotoğraflar, gelişiminizi takip etmeniz için yeterlidir. Uygulama size nazik hatırlatmalar gönderir, ancak dilediğiniz sıklıkta analiz yapabilirsiniz.",
+      "Cilt analiz fotoğraflarınızı haftada 1 kez çekmeniz yeterlidir. Uygulama sizi her hafta nazikçe hatırlatır ve bu düzenli takip sayesinde cildinizdeki değişimleri sağlıklı bir şekilde gözlemleyebilirsiniz.",
   },
   {
-    question: "Ücretsiz deneme süresine neler dahil?",
+    question: "Ücretsiz plana neler dahil?",
     answer:
-      "7 günlük ücretsiz deneme süresi, tüm Premium özelliklere tam erişim sunar: sınırsız cilt analizi, kişiselleştirilmiş öneriler, gelişim takibi ve öncelikli destek. Denemeye başlamak için kredi kartı gerekmez.",
+      "Uygulamamızı denemek tamamen ücretsizdir. Kayıt olduktan sonra tüm temel özellikleri kullanabilir ve 1 kez cilt analizi yapabilirsiniz.",
   },
   {
     question: "Hassas cildim varsa Skinly'i kullanabilir miyim?",
     answer:
-      "Skinly, hassas cilt dahil olmak üzere tüm cilt tipleri için tasarlanmıştır. Önerilerimiz özellikle hassasiyet seviyelerini dikkate alır ve nazik, hipoalerjenik ürünler sunar. Ayrıca, tahrişe neden olabilecek içeriklerden kaçınmanıza yardımcı oluruz.",
-  },
-  {
-    question: "Dermatolog danışmanlığı sunuyor musunuz?",
-    answer:
-      "Premium aboneler, sanal dermatolog danışmanlığına erişebilir. 15 dakikalık seanslar ayırarak analiz sonuçlarınızı tartışabilir, profesyonel tavsiyeler alabilir ve lisanslı dermatologlardan kişiselleştirilmiş tedavi önerileri elde edebilirsiniz.",
+      "Skinly, hassas cilt dahil olmak üzere tüm cilt tipleri için tasarlanmıştır. Önerilerimiz özellikle hassasiyet seviyelerini dikkate alır ve nazik, hipoalerjenik ürünler sunar. Ayrıca, tahrişe neden olabilecek içeriklerden kaçınmanıza yardımcı olur.",
   },
 ];
 
@@ -134,13 +130,15 @@ export default function FAQSection() {
           <p className="text-[#323232]/70 font-sans mb-4">
             Destek ekibimiz, Skinly&apos;den en iyi şekilde faydalanmanız için burada.
           </p>
-          <motion.button
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#1BCEE0] to-[#6B88EB] text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-200"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Destek ile iletişime geçin
-          </motion.button>
+          <Link href="/contact-us">
+            <motion.button
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#1BCEE0] to-[#6B88EB] text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-200"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Destek ile iletişime geçin
+            </motion.button>
+          </Link>
         </div>
       </div>
     </AnimatedSection>

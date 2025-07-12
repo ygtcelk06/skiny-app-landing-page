@@ -26,7 +26,7 @@ export default function FeaturesSection() {
             Analizle Öğrenin
           </h2>
           <p className="text-xl text-[#323232]/70 max-w-2xl mx-auto font-sans">
-            Gelişmiş yapay zeka teknolojimiz cilt durumunuzu analiz eder ve en
+            Gelişmiş yapay zeka teknolojimiz, cilt durumunuzu analiz eder ve en
             iyi cilt bakım sonuçları için size özel öneriler sunar.
           </p>
         </div>

@@ -32,7 +32,7 @@ export default function DashboardSection() {
                 <p className="text-lg text-[#323232]/60 font-sans">Cilt Skoru</p>
               </div>
               <div className="space-y-1 md:flex md:items-center md:gap-x-4">
-                <p className="text-4xl font-bold text-[#323232] font-sans">27</p>
+                <p className="text-4xl font-bold text-[#323232] font-sans">21</p>
                 <p className="text-lg text-[#323232]/60 font-sans">Cilt Yaşı</p>
               </div>
             </motion.div>
