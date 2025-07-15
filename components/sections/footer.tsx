@@ -7,6 +7,7 @@ const footerSections = [
     links: [
       { name: "Hakkımızda", href: "/hakkimizda" },
       { name: "İletişim", href: "/iletisim" },
+      { name: "Hesap Silme", href: "/delete-account" },
     ],
   },
   {
