@@ -85,27 +85,25 @@ export default function MobileMenu() {
               <hr className="border-gray-200" />
               <motion.div variants={staggerItem() as Variants}>
                 <div className="flex md:hidden gap-2 ">
-                  <div className=" hover:opacity-90 text-white font-medium flex items-center gap-2">
-                    <NextLink
-                      href="https://apps.apple.com/us/app/new-skin-scan-stop-wrinkles/id6739453891"
-                      target="_blank"
-                    >
+                  <div className="relative flex items-center">
+                    <div className="opacity-60 pointer-events-none">
                       <Image
                         src="/images/apple.svg"
-                        alt="App Store"
+                        alt="App Store (Çok Yakında)"
                         width={40}
                         height={40}
                       />
-                    </NextLink>
+                    </div>
+                    <span className="absolute -top-2 -right-2 text-[10px] font-semibold bg-black/60 text-white px-1.5 py-0.5 rounded">Çok Yakında!</span>
                   </div>
                   <div className="hover:opacity-90">
                     <NextLink
-                      href="https://apps.apple.com/us/app/new-skin-scan-stop-wrinkles/id6739453891"
+                      href="https://play.google.com/store/apps/details?id=com.skinly.app"
                       target="_blank"
                     >
                       <Image
                         src="/images/android.svg"
-                        alt="App Store"
+                        alt="Google Play"
                         width={40}
                         height={40}
                       />

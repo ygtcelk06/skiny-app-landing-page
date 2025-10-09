@@ -16,16 +16,21 @@ export default function CTASection() {
 
             {/* App Store Badges */}
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-              <Link href="https://apps.apple.com/us/app/new-skin-scan-stop-wrinkles/id6739453891" target="_blank" className="inline-block w-[180px]">
-                <Image
-                  src="/images/store-btn.svg"
-                  alt="Download on the App Store"
-                  width={180}
-                  height={53}
-                  className="h-[53px] w-auto hover:opacity-90 transition-opacity"
-                />
-              </Link>
-              <Link href="https://apps.apple.com/us/app/new-skin-scan-stop-wrinkles/id6739453891" target="_blank" className="inline-block w-[180px]">
+              <div className="relative inline-block w-[180px]">
+                <div className="pointer-events-none opacity-60">
+                  <Image
+                    src="/images/store-btn.svg"
+                    alt="App Store (Çok Yakında)"
+                    width={180}
+                    height={53}
+                    className="h-[53px] w-auto"
+                  />
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-xs font-semibold bg-black/60 text-white px-2 py-1 rounded">Çok Yakında!</span>
+                </div>
+              </div>
+              <Link href="https://play.google.com/store/apps/details?id=com.skinly.app" target="_blank" className="inline-block w-[180px]">
                 <Image
                   src="/images/google-btn.svg"
                   alt="Get it on Google Play"

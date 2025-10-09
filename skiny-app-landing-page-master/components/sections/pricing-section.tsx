@@ -142,24 +142,7 @@ export default function PricingSection() {
                 ))}
               </div>
 
-              {/* CTA Button */}
-              <div className="pt-4">
-                <AnimatedButton
-                  className={`w-full font-semibold py-3 ${
-                    plan.popular
-                      ? "bg-white text-[#C838F8] hover:bg-white/90"
-                      : "gradient-secondary text-white hover:opacity-90"
-                  }`}
-                >
-                  <Link
-                    href="https://apps.apple.com/us/app/new-skin-scan-stop-wrinkles/id6739453891"
-                    target="_blank"
-                  >
-                    {" "}
-                    {plan.buttonText}
-                  </Link>
-                </AnimatedButton>
-              </div>
+              {/* Pricing CTAs kaldırıldı: bu bölümden yönlendirme yapılmıyor */}
             </CardContent>
           </Card>
         ))}
