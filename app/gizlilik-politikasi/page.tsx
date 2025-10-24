@@ -70,6 +70,13 @@ export default function GizlilikPolitikasi() {
             </div>
 
             <div>
+              <h2 className="text-xl font-semibold mb-4">Yüz Verilerine İlişkin Ek Bilgilendirme</h2>
+              <p>
+                Kullanıcı tarafından yüklenen yüz fotoğrafları, yalnızca yapay zekâ destekli cilt analizinin gerçekleştirilmesi amacıyla işlenir. Bu görseller, güvenli bir şekilde Supabase altyapısında saklanır ve kullanıcı hesabı aktif olduğu sürece muhafaza edilir. Kullanıcı hesabını silerse veya verilerinin silinmesini talep ederse, bu görseller ve ilişkili analiz sonuçları kalıcı olarak silinir. Skinly, yüz verilerini yalnızca hizmetin sağlanması için iş ortaklarıyla paylaşır. Bu kapsamda, görseller Face++ (Megvii) tarafından analiz edilmekte olup, bu üçüncü taraf hizmet sağlayıcı yüz fotoğraflarını analiz tamamlandıktan sonra sistemlerinde saklamaz. Yüz verileri hiçbir şekilde yetkisiz üçüncü kişilerle paylaşılmaz veya ticari amaçlarla kullanılmaz.
+              </p>
+            </div>
+
+            <div>
               <h2 className="text-xl font-semibold mb-4">6. Verilerin Üçüncü Kişilerle Paylaşımı</h2>
               <p>
                 Veriler, aşağıdaki durumlar dışında üçüncü kişi ve kurumlarla paylaşılmaz:
