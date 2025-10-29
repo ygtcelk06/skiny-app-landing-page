@@ -119,20 +119,18 @@ export default function HeroSection() {
             animate={isButtonsInView ? "show" : "hidden"}
           >
             <div className="flex flex-wrap justify-center gap-4  px-4">
-              <div className="relative inline-block">
-                <div className="pointer-events-none opacity-60">
-                  <Image
-                    src="/images/store-btn.svg"
-                    alt="App Store (Çok Yakında)"
-                    className="h-12 w-auto"
-                    width={180}
-                    height={60}
-                  />
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-xs font-semibold bg-black/60 text-white px-2 py-1 rounded">Çok Yakında!</span>
-                </div>
-              </div>
+              <Link
+                href="https://apps.apple.com/tr/app/skinly-ai-cilt-bak%C4%B1m-asistan%C4%B1/id6749868115?l=tr"
+                target="_blank"
+              >
+                <Image
+                  src="/images/store-btn.svg"
+                  alt="Download on the App Store"
+                  className="h-12 w-auto transition-transform duration-200 ease-in-out hover:scale-105 hover:-translate-y-1 active:scale-95"
+                  width={180}
+                  height={60}
+                />
+              </Link>
               <Link
                 href="https://play.google.com/store/apps/details?id=com.skinly.app"
                 target="_blank"

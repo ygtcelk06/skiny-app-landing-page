@@ -47,16 +47,18 @@ export default function Header() {
 
         {/* Desktop Download Button */}
         <div className="hidden md:flex gap-2 ">
-          <div className="relative flex items-center">
-            <div className="opacity-60 pointer-events-none">
+          <div className="hover:opacity-90">
+            <Link
+              href="https://apps.apple.com/tr/app/skinly-ai-cilt-bak%C4%B1m-asistan%C4%B1/id6749868115?l=tr"
+              target="_blank"
+            >
               <Image
                 src="/images/apple.svg"
-                alt="App Store (Çok Yakında)"
+                alt="Download on the App Store"
                 width={40}
                 height={40}
               />
-            </div>
-            <span className="absolute -top-2 -right-2 text-[10px] font-semibold bg-black/60 text-white px-1.5 py-0.5 rounded">Çok Yakında!</span>
+            </Link>
           </div>
           <div className="hover:opacity-90">
             <Link
