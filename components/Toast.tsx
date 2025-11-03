@@ -76,7 +76,7 @@ export default function Toast({
   return (
     <div
       className={`
-        fixed top-4 right-4 z-50 max-w-sm w-full mx-4 sm:mx-0
+        fixed top-4 right-4 left-4 sm:left-auto z-50 max-w-sm w-full sm:w-auto mx-auto sm:mx-0
         transform transition-all duration-300 ease-in-out
         ${isVisible && !isLeaving 
           ? 'translate-x-0 opacity-100 scale-100' 
