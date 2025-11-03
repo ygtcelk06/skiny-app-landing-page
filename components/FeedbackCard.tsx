@@ -10,7 +10,7 @@ import StatusBadge from './StatusBadge'
 interface FeedbackCardProps {
   feedback: FeedbackItem
   currentUser: User | null
-  onVote: (feedbackId: string) => Promise<void>
+  onVote?: (feedbackId: string) => Promise<void>
   onDelete?: (feedbackId: string) => Promise<void>
   onStatusChange?: (feedbackId: string, status: string) => Promise<void>
   className?: string
