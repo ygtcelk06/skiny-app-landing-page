@@ -57,17 +57,11 @@ export async function POST(request: NextRequest) {
     
     const { title, description } = validationResult.data
     
-    // Test modunda user_id'yi null yap (foreign key constraint olmadan)
-    let finalUserId = userId
-    if (process.env.NODE_ENV === 'development') {
-      finalUserId = null // Test için null kullan
-    }
-
     // Supabase'e yeni geri bildirim ekle (Service Role ile)
     const { data: newFeedback, error: insertError } = await supabaseAdmin
       .from('feedbacks')
       .insert({
-        user_id: finalUserId,
+        user_id: userId,
         title: title,
         description: description,
         status: 'Beklemede' // Başlangıç durumu

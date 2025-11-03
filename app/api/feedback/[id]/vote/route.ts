@@ -29,11 +29,7 @@ export async function POST(
       )
     }
     
-    // Test modunda user_id'yi null yap (foreign key constraint olmadan)
-    let userId = payload.user_id
-    if (process.env.NODE_ENV === 'development') {
-      userId = null // Test için null kullan
-    }
+    const userId = payload.user_id
     
     // Feedback'in var olup olmadığını kontrol et
     const { data: feedback, error: feedbackError } = await supabaseAdmin
@@ -164,11 +160,7 @@ export async function GET(
       )
     }
     
-    // Test modunda user_id'yi null yap (foreign key constraint olmadan)
-    let userId = payload.user_id
-    if (process.env.NODE_ENV === 'development') {
-      userId = null // Test için null kullan
-    }
+    const userId = payload.user_id
     
     // Kullanıcının oy durumunu kontrol et
     const { data: userVote } = await supabaseAdmin
