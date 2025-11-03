@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-import { validateAccessToken, isTestMode, createTestUser, generateTestToken, createRealUser, generateRealUserToken } from '@/lib/auth'
+import { validateAccessToken } from '@/lib/auth'
 import { redirect } from 'next/navigation'
 import FeedbackPageClient from './FeedbackPageClient'
 
@@ -12,46 +12,6 @@ interface FeedbackPageProps {
 export default async function FeedbackPage({ searchParams }: FeedbackPageProps) {
   const params = await searchParams
   const token = params.token as string
-  const testMode = isTestMode(params)
-  const realUserMode = params.real === 'true'
-  
-  // Gerçek kullanıcı modu
-  if (realUserMode) {
-    console.log('🎯 Real user mode active - using Yiğit Çelik credentials')
-    
-    const realUser = createRealUser()
-    const realToken = generateRealUserToken()
-    
-    return (
-      <Suspense fallback={<div>Loading...</div>}>
-        <FeedbackPageClient
-          isAuthorized={true}
-          user={realUser}
-          accessToken={realToken}
-          error={null}
-        />
-      </Suspense>
-    )
-  }
-  
-  // Development test modu kontrolü
-  if (testMode) {
-    console.log('🧪 Test mode active - bypassing token validation')
-    
-    const testUser = createTestUser(true) // Admin yetkisi ile test kullanıcısı
-    const testToken = generateTestToken(true)
-    
-    return (
-      <Suspense fallback={<div>Loading...</div>}>
-        <FeedbackPageClient
-          isAuthorized={true}
-          user={testUser}
-          accessToken={testToken}
-          error={null}
-        />
-      </Suspense>
-    )
-  }
   
   // Production token doğrulama
   if (!token || typeof token !== 'string') {
