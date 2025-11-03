@@ -5,10 +5,10 @@ import { validateAccessToken } from '@/lib/auth'
 // Oy verme/geri çekme API endpoint'i
 export async function POST(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const feedbackId = params.id
+    const { id: feedbackId } = await params
     
     // Token doğrulama
     const authHeader = request.headers.get('authorization')
@@ -140,10 +140,10 @@ export async function POST(
 // Oy durumunu kontrol etme endpoint'i
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const feedbackId = params.id
+    const { id: feedbackId } = await params
     
     // Token doğrulama
     const authHeader = request.headers.get('authorization')
