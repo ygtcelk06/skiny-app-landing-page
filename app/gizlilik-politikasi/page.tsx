@@ -89,6 +89,16 @@ export default function GizlilikPolitikasi() {
             </div>
 
             <div>
+              <h2 className="text-xl font-semibold mb-4">6.1. Üçüncü Taraf Analiz Araçları</h2>
+              <p>
+                Uygulamamızda kullanıcı deneyimini geliştirmek, uygulama performansını ölçmek ve teknik hataları tespit etmek amacıyla bazı üçüncü taraf analiz araçları kullanılmaktadır. Bu kapsamda PostHog ve Meta App Events (Facebook Analytics) gibi hizmetler anonim kullanım verilerini işleyebilir. Bu araçlar; uygulama içi davranışlar, gezinme verileri, belirli buton tıklamaları ve abonelikle ilgili etkileşimler gibi teknik bilgileri toplayabilir.
+              </p>
+              <p className="mt-4">
+                Bu veriler kişisel kimlik bilgilerinizi içermez ve reklam hedefleme amacıyla kullanılmaz. Toplanan tüm anonim veriler yalnızca uygulamanın geliştirilmesi ve performans analizleri için işlenmektedir.
+              </p>
+            </div>
+
+            <div>
               <h2 className="text-xl font-semibold mb-4">7. Yurtdışına Veri Aktarımı</h2>
               <p>
                 Uygulama kapsamında kişisel veriler yurt dışına aktarılmaktadır. Bu aktarma, Kullanıcı Sözleşmesi, Aydınlatma Metni ve Açık Rıza Metni ile birlikte kullanıcıya bildirilmekte ve açık rıza alınarak gerçekleştirilmektedir.
