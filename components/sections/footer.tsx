@@ -1,29 +1,83 @@
+"use client"
+
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
-
-const footerSections = [
-  {
-    title: "Şirket",
-    links: [
-      { name: "Hakkımızda", href: "/hakkimizda" },
-      { name: "İletişim", href: "/iletisim" },
-      { name: "Hesap Silme", href: "/delete-account" },
-    ],
-  },
-  {
-    title: "Destek",
-    links: [
-      { name: "KVKK Aydınlatma Metni", href: "/kvkk-aydinlatma-metni" },
-      { name: "Açık Rıza Metni", href: "/acik-riza-metni" },
-      { name: "Abonelik Sözleşmesi", href: "/abonelik-sozlesmesi" },
-      { name: "Kullanıcı Sözleşmesi", href: "/kullanici-sozlesmesi" },
-      { name: "Gizlilik Politikası", href: "/gizlilik-politikasi" },
-      { name: "Bize Ulaşın", href: "/contact-us" },
-    ],
-  },
-]
+import { getClientTranslations } from "@/lib/i18n-client"
+import { getClientRoute } from "@/lib/routes"
 
 export default function Footer() {
+  const [footerData, setFooterData] = useState<{
+    tagline: string;
+    company: string;
+    support: string;
+    links: {
+      about: string;
+      contact: string;
+      deleteAccount: string;
+      kvkk: string;
+      consent: string;
+      subscription: string;
+      userAgreement: string;
+      privacy: string;
+      contactUs: string;
+    };
+    copyright: string;
+  } | null>(null);
+  
+  const [footerSections, setFooterSections] = useState<Array<{
+    title: string;
+    links: Array<{ name: string; href: string }>;
+  }>>([]);
+  
+  useEffect(() => {
+    const t = getClientTranslations('footer');
+    const data = {
+      tagline: t('tagline'),
+      company: t('company'),
+      support: t('support'),
+      links: {
+        about: t('links.about'),
+        contact: t('links.contact'),
+        deleteAccount: t('links.deleteAccount'),
+        kvkk: t('links.kvkk'),
+        consent: t('links.consent'),
+        subscription: t('links.subscription'),
+        userAgreement: t('links.userAgreement'),
+        privacy: t('links.privacy'),
+        contactUs: t('links.contactUs'),
+      },
+      copyright: t('copyright'),
+    };
+    setFooterData(data);
+    
+    // Route'ları client-side'da hesapla
+    setFooterSections([
+      {
+        title: data.company,
+        links: [
+          { name: data.links.about, href: getClientRoute('about') },
+          { name: data.links.contact, href: getClientRoute('contact') },
+          { name: data.links.deleteAccount, href: getClientRoute('deleteAccount') },
+        ],
+      },
+      {
+        title: data.support,
+        links: [
+          { name: data.links.kvkk, href: getClientRoute('kvkk') },
+          { name: data.links.consent, href: getClientRoute('consent') },
+          { name: data.links.subscription, href: getClientRoute('subscription') },
+          { name: data.links.userAgreement, href: getClientRoute('userAgreement') },
+          { name: data.links.privacy, href: getClientRoute('privacy') },
+          { name: data.links.contactUs, href: getClientRoute('contactUs') },
+        ],
+      },
+    ]);
+  }, []);
+  
+  if (!footerData || footerSections.length === 0) {
+    return <footer className="bg-[#323232] text-white py-12 min-h-[200px]"></footer>;
+  }
   return (
     <footer className="bg-[#323232] text-white py-12">
       <div className="container-padding">
@@ -38,7 +92,7 @@ export default function Footer() {
                 className=" "
               />
             </div>
-            <p className="text-white/70 font-sans">Cildinin ihtiyaçlarını yapay zekayla keşfet.</p>
+            <p className="text-white/70 font-sans">{footerData.tagline}</p>
           </div>
 
           {footerSections.map((section) => (
@@ -60,7 +114,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/70">
-          <p className="font-sans">&copy; 2025 Skinly. Tüm hakları saklıdır.</p>
+          <p className="font-sans">{footerData.copyright}</p>
         </div>
       </div>
     </footer>

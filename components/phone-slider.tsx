@@ -3,27 +3,56 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
-
-const slides = [
-  {
-    id: 1,
-    image: "/images/shot-1.png",
-    alt: "AI Skin Analysis - Understand Your Skin",
-  },
-  {
-    id: 2,
-    image: "/images/shot-2.png",
-    alt: "Routine Recommendations - Personalized skincare routines",
-  },
-  {
-    id: 3,
-    image: "/images/shot-3.png",
-    alt: "Track Progress - Before and after results",
-  },
-]
+import { getLocalizedImage } from "@/lib/image-utils"
+import type { Locale } from "@/middleware"
 
 export default function PhoneSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [locale, setLocale] = useState<Locale>('tr')
+  
+  useEffect(() => {
+    // Locale'i belirle
+    const cookies = document.cookie.split(';');
+    const localeCookie = cookies.find(c => c.trim().startsWith('locale='));
+    const cookieLocale = localeCookie?.split('=')[1]?.trim();
+    
+    if (cookieLocale === 'en' || cookieLocale === 'tr') {
+      setLocale(cookieLocale as Locale);
+    } else {
+      // Route'a göre locale belirle
+      const pathname = window.location.pathname;
+      const englishRoutes = [
+        '/about-us',
+        '/contact',
+        '/privacy-policy',
+        '/user-agreement',
+        '/subscription-agreement',
+        '/privacy-notice',
+        '/consent-form',
+        '/contact-us',
+      ];
+      
+      setLocale(englishRoutes.includes(pathname) ? 'en' : 'tr');
+    }
+  }, [])
+
+  const slides = [
+    {
+      id: 1,
+      image: getLocalizedImage("/images/shot-1.png", locale),
+      alt: "AI Skin Analysis - Understand Your Skin",
+    },
+    {
+      id: 2,
+      image: getLocalizedImage("/images/shot-2.png", locale),
+      alt: "Routine Recommendations - Personalized skincare routines",
+    },
+    {
+      id: 3,
+      image: getLocalizedImage("/images/shot-3.png", locale),
+      alt: "Track Progress - Before and after results",
+    },
+  ]
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -31,7 +60,7 @@ export default function PhoneSlider() {
     }, 3000)
 
     return () => clearInterval(timer)
-  }, [])
+  }, [slides.length])
 
   return (
     <motion.div

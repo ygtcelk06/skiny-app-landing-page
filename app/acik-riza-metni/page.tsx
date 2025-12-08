@@ -16,7 +16,7 @@ export default function AcikRizaMetni() {
           
           <div className="space-y-6 text-gray-700">
             <p>
-              6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, [Uygulama Adı] isimli mobil uygulama kapsamında sunulan cilt analizi hizmetinden yararlanabilmem için aşağıda belirtilen kişisel verilerimin işlenmesine, aktarılmasına ve saklanmasına açıkça rıza verdiğimi kabul ve beyan ederim:
+              6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, Skinly isimli mobil uygulama kapsamında sunulan cilt analizi hizmetinden yararlanabilmem için aşağıda belirtilen kişisel verilerimin işlenmesine, aktarılmasına ve saklanmasına açıkça rıza verdiğimi kabul ve beyan ederim:
             </p>
 
             <div>

@@ -1,44 +1,41 @@
+"use client"
+
+import { useState, useEffect } from "react"
 import { Star } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import AnimatedSection from "@/components/animated-section"
 import Image from "next/image"
-
-const testimonials = [
-  {
-    name: "Elif Yılmaz",
-    role: "Cilt Bakım Meraklısı",
-    content:
-      "Skinly, cilt bakım rutinimi tamamen değiştirdi. Yapay zekanın önerileri tam nokta atışıydı. Cildim hiç bu kadar sağlıklı görünmemişti!",
-    rating: 5,
-    image: "/images/ava1.png",
-  },
-  {
-    name: "Mehmet Kaya",
-    role: "Yoğun Bir Profesyonel",
-    content:
-      "Zamanım kısıtlı ama Skinly sayesinde cilt bakımım artık hem kolay hem etkili. Gerçekten hayat kurtarıcı. Şiddetle tavsiye ederim!",
-    rating: 5,
-    image: "/images/ava2.png",
-  },
-  {
-    name: "Ayşe Demir",
-    role: "Güzellik Blog Yazarı",
-    content:
-      "İyileşmeleri adım adım görmek inanılmaz. Gelişimi takip etme özelliğine bayıldım. Cildimdeki değişimi resmen hissediyorum!",
-    rating: 5,
-    image: "/images/ava3.png",
-  },
-]
-
+import { getClientTranslations } from "@/lib/i18n-client"
 
 export default function TestimonialsSection() {
+  const [translations, setTranslations] = useState<any>(null);
+
+  useEffect(() => {
+    const t = getClientTranslations('testimonials');
+    setTranslations({
+      badge: t('badge'),
+      title: t('title'),
+      titleHighlight: t('titleHighlight'),
+      users: t('users') as any[],
+    });
+  }, []);
+
+  if (!translations) {
+    return <div className="min-h-[400px]"></div>;
+  }
+
+  const testimonials = translations.users.map((user: any, index: number) => ({
+    ...user,
+    rating: 5,
+    image: user.image || `/images/ava${index + 1}.png`,
+  }));
   return (
     <AnimatedSection id="testimonials" className="container-padding  py-10 md:py-20   ">
      <div className="text-center space-y-4 mb-16">
-  <Badge className="bg-[#6B88EB]/10 text-[#6B88EB] font-medium border-0">Kullanıcı Yorumları</Badge>
+  <Badge className="bg-[#6B88EB]/10 text-[#6B88EB] font-medium border-0">{translations.badge}</Badge>
   <h2 className="text-4xl font-bold font-sans text-[#323232]">
-    <span className="text-gradient-accent ">Mutlu Kullanıcılarımızın<br/></span> Yorumlarına Kulak Verin
+    <span className="text-gradient-accent ">{translations.titleHighlight}<br/></span> {translations.title}
   </h2>
 </div>
 
@@ -56,7 +53,7 @@ export default function TestimonialsSection() {
               <div className="flex items-center space-x-3">
                 <div className="relative h-10 w-10 overflow-hidden rounded-full">
                   <Image 
-                    src={testimonial.image} 
+                    src={testimonial.image || "/images/ava1.png"} 
                     alt={`${testimonial.name}'s avatar`} 
                     width={40} 
                     height={40}

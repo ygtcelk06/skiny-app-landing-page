@@ -1,13 +1,121 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
 import AnimatedSection from "@/components/animated-section";
 import { staggerContainer, staggerItem } from "@/lib/variants";
 import { motion, Variants } from "framer-motion";
 import { features } from "@/lib/features-data";
 import Image from "next/image";
+import { getClientTranslations } from "@/lib/i18n-client";
+import { getLocalizedImage } from "@/lib/image-utils";
+import type { Locale } from "@/middleware";
 
 export default function FeaturesSection() {
+  const [translations, setTranslations] = useState<{
+    badge: string;
+    title: string;
+    titleHighlight: string;
+    titleEnd: string;
+    description: string;
+    features: any;
+  } | null>(null);
+  const [locale, setLocale] = useState<Locale>('tr');
+
+  useEffect(() => {
+    const t = getClientTranslations('features');
+    setTranslations({
+      badge: t('badge'),
+      title: t('title'),
+      titleHighlight: t('titleHighlight'),
+      titleEnd: t('titleEnd'),
+      description: t('description'),
+      features: {
+        scanFace: {
+          title: t('scanFace.title'),
+          description: t('scanFace.description'),
+          points: {
+            camera: t('scanFace.points.camera'),
+            target: t('scanFace.points.target'),
+            calendar: t('scanFace.points.calendar'),
+          },
+        },
+        personalizedScore: {
+          title: t('personalizedScore.title'),
+          description: t('personalizedScore.description'),
+          points: {
+            track: t('personalizedScore.points.track'),
+            chart: t('personalizedScore.points.chart'),
+            info: t('personalizedScore.points.info'),
+          },
+        },
+        personalizedRoutine: {
+          title: t('personalizedRoutine.title'),
+          description: t('personalizedRoutine.description'),
+          points: {
+            user: t('personalizedRoutine.points.user'),
+            star: t('personalizedRoutine.points.star'),
+            handshake: t('personalizedRoutine.points.handshake'),
+          },
+        },
+      },
+    });
+
+    // Locale'i belirle
+    const cookies = document.cookie.split(';');
+    const localeCookie = cookies.find(c => c.trim().startsWith('locale='));
+    const cookieLocale = localeCookie?.split('=')[1]?.trim();
+    
+    if (cookieLocale === 'en' || cookieLocale === 'tr') {
+      setLocale(cookieLocale as Locale);
+    } else {
+      // Route'a göre locale belirle
+      const pathname = window.location.pathname;
+      const englishRoutes = [
+        '/about-us',
+        '/contact',
+        '/privacy-policy',
+        '/user-agreement',
+        '/subscription-agreement',
+        '/privacy-notice',
+        '/consent-form',
+        '/contact-us',
+      ];
+      
+      setLocale(englishRoutes.includes(pathname) ? 'en' : 'tr');
+    }
+  }, []);
+
+  if (!translations) {
+    return <div className="min-h-[400px]"></div>;
+  }
+
+  // Features data'yı çevirilerle birleştir
+  const translatedFeatures = features.map((feature) => {
+    let featureData;
+    let pointKeys: string[] = [];
+    
+    if (feature.id === 'ai-analysis') {
+      featureData = translations.features.scanFace;
+      pointKeys = ['camera', 'target', 'calendar'];
+    } else if (feature.id === 'personalized-score') {
+      featureData = translations.features.personalizedScore;
+      pointKeys = ['track', 'chart', 'info'];
+    } else {
+      featureData = translations.features.personalizedRoutine;
+      pointKeys = ['user', 'star', 'handshake'];
+    }
+    
+    return {
+      ...feature,
+      title: featureData.title,
+      description: featureData.description,
+      points: feature.points.map((point, pointIndex) => ({
+        ...point,
+        text: featureData.points[pointKeys[pointIndex]] || point.text,
+      })),
+    };
+  });
   return (
     <AnimatedSection
       id="features"
@@ -16,18 +124,17 @@ export default function FeaturesSection() {
       <div className="container-padding">
         <div className="text-center space-y-4 mb-20">
           <Badge className="bg-[#1BCEE0]/10 text-[#1E63A3] font-medium border-0">
-            Özellikler
+            {translations.badge}
           </Badge>
           <h2 className="text-4xl font-bold font-sans text-[#323232]">
-            Cildinizin Neye İhtiyacı Olduğunu <br />{" "}
+            {translations.title} <br />{" "}
             <span className="text-gradient-primary">
-              Yapay Zeka Destekli 
+              {translations.titleHighlight}
             </span>{" "}
-            Analizle Öğrenin
+            {translations.titleEnd}
           </h2>
           <p className="text-xl text-[#323232]/70 max-w-2xl mx-auto font-sans">
-            Gelişmiş yapay zeka teknolojimiz, cilt durumunuzu analiz eder ve en
-            iyi cilt bakım sonuçları için size özel öneriler sunar.
+            {translations.description}
           </p>
         </div>
 
@@ -37,7 +144,7 @@ export default function FeaturesSection() {
           initial="hidden"
           animate="show"
         >
-          {features.map((feature, index) => (
+          {translatedFeatures.map((feature, index) => (
             <motion.div
               key={feature.id}
               variants={staggerItem() as Variants}
@@ -90,7 +197,7 @@ export default function FeaturesSection() {
               <div className="flex-1 relative">
                 <div className="relative max-w-lg">
                   <Image
-                    src={feature.image || "/placeholder.svg"}
+                    src={getLocalizedImage(feature.image || "/placeholder.svg", locale)}
                     alt={feature.title}
                     width={400}
                     height={400}

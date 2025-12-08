@@ -1,40 +1,77 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "@/components/animated-section";
 import AnimatedButton from "@/components/animated-button";
 import Link from "next/link";
-import { useState } from "react";
-
-const freePlanFeatures = [
-  "Uygulamanın tüm özelliklerini dene",
-  "1 kez Standart yüz analizi hakkı",
-  "Yüzeysel analiz – sadece temel bilgiler",
-  "Cilt skoru, yaş, gözenek, leke gibi detaylar yok",
-  "Uygulamayı tanı, kendin gör – taahhüt yok!"
-];
-
-const premiumPlanFeatures = [
-  "Haftalık düzenli Pro analiz",
-  "Pro yüz analizi – gelişmiş yapay zeka ile detaylı tarama",
-  "Cilt yaşı, skoru, gözenek, sivilce, leke, kırışıklık, parlaklık vb. değerlendirmeleri",
-  "Cilt ihtiyaçlarına göre ürün ve içerik önerileri",
-  "Sabah–akşam kişiselleştirilmiş cilt bakım rutini",
-  "Zamanla değişimleri karşılaştırma ve iyileşme takibi",
-  "Öncelikli destek"
-];
+import { getClientTranslations } from "@/lib/i18n-client";
 
 export default function PricingSection() {
   const [isYearly, setIsYearly] = useState(true);
+  const [translations, setTranslations] = useState<any>(null);
 
-  const premiumPrice = isYearly ? "₺13,46" : "₺29,99";
-  const premiumPeriod = isYearly ? "/hafta" : "/hafta";
-  const yearlyBillingInfo = isYearly ? "Yıllık ₺699 olarak faturalandırılır" : "";
-  const originalPrice = isYearly ? "₺1.560" : "";
-  const discountedPrice = isYearly ? "₺699" : "";
-  const savingsText = isYearly ? "%55 tasarruf edersin!" : "";
+  useEffect(() => {
+    const t = getClientTranslations('pricing');
+    setTranslations({
+      badge: t('badge'),
+      title: t('title'),
+      description: t('description'),
+      free: {
+        title: t('free.title'),
+        description: t('free.description'),
+        price: t('free.price'),
+        period: t('free.period'),
+        features: t('free.features') as string[],
+      },
+      premium: {
+        title: t('premium.title'),
+        description: t('premium.description'),
+        weekly: t('premium.weekly'),
+        yearly: t('premium.yearly'),
+        popular: t('premium.popular'),
+        priceWeekly: t('premium.priceWeekly'),
+        priceYearly: t('premium.priceYearly'),
+        period: t('premium.period'),
+        yearlyBilling: t('premium.yearlyBilling'),
+        originalPrice: t('premium.originalPrice'),
+        discountedPrice: t('premium.discountedPrice'),
+        savings: t('premium.savings'),
+        features: t('premium.features') as string[],
+      },
+      additionalInfo: {
+        noSetupFee: t('additionalInfo.noSetupFee'),
+        cancelAnytime: t('additionalInfo.cancelAnytime'),
+        support24: t('additionalInfo.support24'),
+      },
+    });
+  }, []);
+
+  if (!translations) {
+    return <div className="min-h-[400px]"></div>;
+  }
+
+  // Haftalık fiyatı sayısal değere çevir (currency symbol'ü kaldır)
+  const weeklyPriceNum = parseFloat(translations.premium.priceWeekly.replace(/[^0-9.]/g, ''));
+  const yearlyPriceNum = parseFloat(translations.premium.priceYearly.replace(/[^0-9.]/g, ''));
+  const currencySymbol = translations.premium.priceWeekly.match(/[^\d.,]/)?.[0] || '$';
+  
+  // Haftalık * 52 hesapla (indirim hesaplaması için)
+  const weeklyTimes52 = weeklyPriceNum * 52;
+  const savingsAmount = weeklyTimes52 - yearlyPriceNum;
+  const savingsPercentage = Math.round((savingsAmount / weeklyTimes52) * 100);
+
+  // Yıllık seçildiğinde haftalık eşdeğeri göster, değilse direkt yıllık fiyat
+  const premiumPrice = isYearly 
+    ? `${currencySymbol}${(yearlyPriceNum / 52).toFixed(2)}` 
+    : translations.premium.priceWeekly;
+  const premiumPeriod = translations.premium.period;
+  const yearlyBillingInfo = isYearly ? translations.premium.yearlyBilling : "";
+  const originalPrice = isYearly ? `${currencySymbol}${weeklyTimes52.toFixed(2)}` : "";
+  const discountedPrice = isYearly ? translations.premium.discountedPrice : "";
+  const savingsText = isYearly ? `Save ${savingsPercentage}%!` : "";
 
   return (
     <AnimatedSection
@@ -43,15 +80,13 @@ export default function PricingSection() {
     >
       <div className="text-center space-y-4 mb-12">
         <Badge className="bg-[#323232] text-white font-medium border-0 px-6 py-2 rounded-full">
-          Fiyatlandırma
+          {translations.badge}
         </Badge>
         <h2 className="text-3xl md:text-4xl font-bold font-sans text-[#323232]">
-          Her İhtiyaca Uygun Basit Planlar
+          {translations.title}
         </h2>
         <p className="text-xl text-[#323232]/70 max-w-2xl mx-auto font-sans">
-        İster küçük bir başlangıç yap, ister tüm özellikleri dene — senin için uygun bir plan mutlaka var.
-
-
+          {translations.description}
         </p>
       </div>
 
@@ -61,26 +96,26 @@ export default function PricingSection() {
           <CardContent className="p-0 space-y-6">
             <div className="space-y-2">
               <h3 className="text-2xl font-bold font-sans text-[#323232]">
-                Ücretsiz Plan
+                {translations.free.title}
               </h3>
               <p className="font-sans text-[#323232]/70">
-                Uygulamayı keşfetmen için tek seferlik analiz hakkı!
+                {translations.free.description}
               </p>
             </div>
 
             <div className="space-y-1">
               <div className="flex items-baseline space-x-2">
                 <span className="text-5xl font-bold font-sans text-[#323232]">
-                  ₺0
+                  {translations.free.price}
                 </span>
                 <span className="text-lg font-sans text-[#323232]/60">
-                  /tek seferlik
+                  {translations.free.period}
                 </span>
               </div>
             </div>
 
             <div className="space-y-4">
-              {freePlanFeatures.map((feature, index) => (
+              {translations.free.features.map((feature: string, index: number) => (
                 <div key={index} className="flex items-start gap-3">
                   <div className="min-w-5 h-5 rounded-full flex items-center justify-center bg-[#1E63A3]/10 mt-1">
                     <Check className="w-3.5 h-3.5 text-[#1E63A3] stroke-[2.5] stroke-round" />
@@ -105,7 +140,7 @@ export default function PricingSection() {
                   !isYearly ? 'bg-[#C838F8] text-white' : 'text-[#323232]'
                 }`}
               >
-                Haftalık
+                {translations.premium.weekly}
               </button>
               <button
                 onClick={() => setIsYearly(true)}
@@ -113,7 +148,7 @@ export default function PricingSection() {
                   isYearly ? 'bg-[#C838F8] text-white' : 'text-[#323232]'
                 }`}
               >
-                Yıllık
+                {translations.premium.yearly}
               </button>
             </div>
           </div>
@@ -122,7 +157,7 @@ export default function PricingSection() {
           {isYearly && (
             <div className="absolute -top-4 right-8">
               <Badge className="bg-[#1BCEE0] text-white font-medium border-0 px-4 py-1">
-                En Popüler
+                {translations.premium.popular}
               </Badge>
             </div>
           )}
@@ -130,10 +165,10 @@ export default function PricingSection() {
           <CardContent className="p-0 space-y-6 mt-8">
             <div className="space-y-2">
               <h3 className="text-2xl font-bold font-sans text-white">
-                Premium Plan
+                {translations.premium.title}
               </h3>
               <p className="font-sans text-white/90">
-                Gerçek sonuçlar, derinlemesine analizler burada.
+                {translations.premium.description}
               </p>
             </div>
 
@@ -167,7 +202,7 @@ export default function PricingSection() {
             </div>
 
             <div className="space-y-4">
-              {premiumPlanFeatures.map((feature, index) => (
+              {translations.premium.features.map((feature: string, index: number) => (
                 <div key={index} className="flex items-start gap-3">
                   <div className="min-w-5 h-5 rounded-full flex items-center justify-center bg-white/20 mt-1">
                     <Check className="w-3.5 h-3.5 text-white stroke-[2.5] stroke-round" />
@@ -192,19 +227,19 @@ export default function PricingSection() {
             <div className="min-w-4 h-4 rounded-full flex items-center justify-center">
               <Check className="w-4 h-4 text-[#1BCEE0] stroke-[2.5] stroke-round" />
             </div>
-            <span className="font-sans">Kurulum ücreti yok</span>
+            <span className="font-sans">{translations.additionalInfo.noSetupFee}</span>
           </span>
           <span className="flex items-center gap-2 text-[#323232]/70">
             <div className="min-w-4 h-4 rounded-full flex items-center justify-center">
               <Check className="w-4 h-4 text-[#1BCEE0] stroke-[2.5] stroke-round" />
             </div>
-            <span className="font-sans">İstediğin zaman iptal et</span>
+            <span className="font-sans">{translations.additionalInfo.cancelAnytime}</span>
           </span>
           <span className="flex items-center gap-2 text-[#323232]/70">
             <div className="min-w-4 h-4 rounded-full flex items-center justify-center">
               <Check className="w-4 h-4 text-[#1BCEE0] stroke-[2.5] stroke-round" />
             </div>
-            <span className="font-sans">7/24 destek</span>
+            <span className="font-sans">{translations.additionalInfo.support24}</span>
           </span>
         </div>
       </div>

@@ -1,52 +1,36 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import AnimatedSection from "@/components/animated-section";
 import Link from "next/link";
-
-const faqs = [
-  {
-    question: "Yapay zeka cilt analizi ne kadar doğru?",
-    answer:
-      "Yapay zeka destekli cilt analizimiz, binlerce dermatolog onaylı cilt görseli üzerinde eğitilmiş gelişmiş algoritmalarla çalışır. Akne, kırışıklık, koyu leke ve cilt tipi gibi yaygın sorunlarda %90’ın üzerinde doğrulukla analiz yapar.",
-  },
-  {
-    question: "Cilt verilerim ve fotoğraflarım güvende mi?",
-    answer:
-      "Kesinlikle. Tüm cilt verileriniz ve fotoğraflarınız kurumsal düzeyde şifreleme ile güvenli bir şekilde saklanır ve işlenir. Verilerinizi dilediğiniz zaman silebilirsiniz. Uygulamamız, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) başta olmak üzere tüm ilgili gizlilik düzenlemelerine tam uyum sağlar.",
-  },
-  {
-    question: "Aboneliğimi istediğim zaman iptal edebilir miyim?",
-    answer:
-      "Evet, aboneliğinizi dilediğiniz zaman iptal edebilirsiniz ve iptal ücreti alınmaz. Ücretli aboneliklerde ise faturalama dönemi sonuna kadar erişiminiz devam eder.",
-  },
-  {
-    question: "Kişiselleştirilmiş ürün önerileri sunuyor musunuz?",
-    answer:
-      "Evet! Cilt analizine dayanarak, yapay zekamız cilt tipiniz, mevcut cilt problemleriniz ve rutin alışkanlıklarınızı dikkate alarak en uygun içerikleri önerir. Marka odaklı değil, içerik bazlı çalışan sistemimiz sayesinde gerçekten ihtiyacınız olan bileşenleri kolayca keşfedebilirsiniz.",
-  },
-  {
-    question: "Cilt analiz fotoğraflarını ne sıklıkla çekmeliyim?",
-    answer:
-      "Cilt analiz fotoğraflarınızı haftada 1 kez çekmeniz yeterlidir. Uygulama sizi her hafta nazikçe hatırlatır ve bu düzenli takip sayesinde cildinizdeki değişimleri sağlıklı bir şekilde gözlemleyebilirsiniz.",
-  },
-  {
-    question: "Ücretsiz plana neler dahil?",
-    answer:
-      "Uygulamamızı denemek tamamen ücretsizdir. Kayıt olduktan sonra tüm temel özellikleri kullanabilir ve 1 kez cilt analizi yapabilirsiniz.",
-  },
-  {
-    question: "Hassas cildim varsa Skinly'i kullanabilir miyim?",
-    answer:
-      "Skinly, hassas cilt dahil olmak üzere tüm cilt tipleri için tasarlanmıştır. Önerilerimiz özellikle hassasiyet seviyelerini dikkate alır ve nazik, hipoalerjenik ürünler sunar. Ayrıca, tahrişe neden olabilecek içeriklerden kaçınmanıza yardımcı olur.",
-  },
-];
+import { getClientTranslations } from "@/lib/i18n-client";
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [translations, setTranslations] = useState<any>(null);
+
+  useEffect(() => {
+    const t = getClientTranslations('faq');
+    setTranslations({
+      badge: t('badge'),
+      title: t('title'),
+      titleHighlight: t('titleHighlight'),
+      description: t('description'),
+      questions: t('questions') as any[],
+      stillHaveQuestions: t('stillHaveQuestions'),
+      supportDescription: t('supportDescription'),
+      contactSupport: t('contactSupport'),
+    });
+  }, []);
+
+  if (!translations) {
+    return <div className="min-h-[400px]"></div>;
+  }
+
+  const faqs = translations.questions;
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -60,14 +44,13 @@ export default function FAQSection() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center space-y-4 mb-16">
           <Badge className="bg-[#6B88EB]/10 text-[#6B88EB] font-medium border-0 px-6 py-2 rounded-full">
-            SSS
+            {translations.badge}
           </Badge>
           <h2 className="text-4xl font-bold font-sans text-[#323232]">
-            Sıkça Sorulan <span className="text-gradient-primary">Sorular</span>
+            {translations.title} <span className="text-gradient-primary">{translations.titleHighlight}</span>
           </h2>
           <p className="text-xl text-[#323232]/70 max-w-2xl mx-auto font-sans">
-            Skinly&apos;nin yapay zeka destekli cilt analizi hakkında bilmeniz gereken
-            her şey.
+            {translations.description}
           </p>
         </div>
 
@@ -125,10 +108,10 @@ export default function FAQSection() {
         {/* Contact Support */}
         <div className="text-center mt-12 p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
           <h3 className="text-xl font-semibold text-[#323232] font-sans mb-2">
-            Hala sorularınız mı var?
+            {translations.stillHaveQuestions}
           </h3>
           <p className="text-[#323232]/70 font-sans mb-4">
-            Destek ekibimiz, Skinly&apos;den en iyi şekilde faydalanmanız için burada.
+            {translations.supportDescription}
           </p>
           <Link href="/contact-us">
             <motion.button
@@ -136,7 +119,7 @@ export default function FAQSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Destek ile iletişime geçin
+              {translations.contactSupport}
             </motion.button>
           </Link>
         </div>

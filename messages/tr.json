@@ -1,0 +1,383 @@
+{
+  "common": {
+    "appName": "Skinly",
+    "tagline": "Cildinin ihtiyaçlarını yapay zekayla keşfet."
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "howItWorks": "Nasıl Çalışır",
+    "testimonials": "Yorumlar",
+    "pricing": "Fiyatlandırma",
+    "faq": "SSS"
+  },
+  "hero": {
+    "cta": "Cildini Yapay Zeka ile Analiz Et!",
+    "title": "Analizle",
+    "titleHighlight": "Yapay Zeka Destekli",
+    "titleEnd": "Cilt Bakımını Zirveye Taşı!",
+    "description": "Gelişmiş yapay zeka teknolojisiyle sana en uygun cilt bakım rutinini keşfet. Kişiselleştirilmiş öneriler al ve cildindeki değişimi adım adım takip et!"
+  },
+  "features": {
+    "badge": "Özellikler",
+    "title": "Cildinizin Neye İhtiyacı Olduğunu",
+    "titleHighlight": "Yapay Zeka Destekli",
+    "titleEnd": "Analizle Öğrenin",
+    "description": "Gelişmiş yapay zeka teknolojimiz, cilt durumunuzu analiz eder ve en iyi cilt bakım sonuçları için size özel öneriler sunar.",
+    "scanFace": {
+      "title": "Yüzünü Tara",
+      "description": "Harika bir cilt için önce onu tanıman gerekiyor. Skinly ile yüzünü taramak çok kolay ve hızlı!",
+      "points": {
+        "camera": "Telefon kameranı kullanarak anında analiz yap.",
+        "target": "Sorunlu bölgeleri ve cilt problemlerini saniyeler içinde öğren.",
+        "calendar": "Randevuya ya da pahalı cihazlara hiç gerek yok."
+      }
+    },
+    "personalizedScore": {
+      "title": "Kişiye Özel Cilt Skorunu Öğren",
+      "description": "Cildini şimdiye kadarki en iyi şekilde tanı. Nelerin iyi gittiğini, neleri düzeltmen gerektiğini net bir şekilde gör.",
+      "points": {
+        "track": "Sivilce, nem, tahriş ve cildinin genel durumunu takip et.",
+        "chart": "Kullandığın ürünler işe yarıyor mu, yoksa boşa mı gidiyor, öğren.",
+        "info": "Cilt tipine özel öneriler ve ipuçları al."
+      }
+    },
+    "personalizedRoutine": {
+      "title": "Cildine Özel Rutinini Al",
+      "description": "Cildine en uygun ürün ve bakım önerilerini keşfet. Tamamen sana göre hazırlanmış bir rutin seni bekliyor.",
+      "points": {
+        "user": "İhtiyacına özel, tarafsız öneriler al.",
+        "star": "Cildinin parlaması için en etkili ürünleri seç.",
+        "handshake": "Marka bağımlılığı yok — sadece işe yarayan güvenilir sonuçlar."
+      }
+    }
+  },
+  "dashboard": {
+    "skinScore": "Cilt Skoru",
+    "skinAge": "Cilt Yaşı",
+    "suggestedProducts": "Önerilen Ürünler",
+    "metrics": {
+      "spot": "Leke",
+      "wrinkle": "Kırışıklık",
+      "pore": "Gözenek",
+      "darkCircle": "Göz Altı Morluğu"
+    }
+  },
+  "pricing": {
+    "badge": "Fiyatlandırma",
+    "title": "Her İhtiyaca Uygun Basit Planlar",
+    "description": "İster küçük bir başlangıç yap, ister tüm özellikleri dene — senin için uygun bir plan mutlaka var.",
+    "free": {
+      "title": "Ücretsiz Plan",
+      "description": "Uygulamayı keşfetmen için tek seferlik analiz hakkı!",
+      "price": "₺0",
+      "period": "/tek seferlik",
+      "features": [
+        "Uygulamanın tüm özelliklerini dene",
+        "1 kez Standart yüz analizi hakkı",
+        "Yüzeysel analiz – sadece temel bilgiler",
+        "Cilt skoru, yaş, gözenek, leke gibi detaylar yok",
+        "Uygulamayı tanı, kendin gör – taahhüt yok!"
+      ]
+    },
+    "premium": {
+      "title": "Premium Plan",
+      "description": "Gerçek sonuçlar, derinlemesine analizler burada.",
+      "weekly": "Haftalık",
+      "yearly": "Yıllık",
+      "popular": "En Popüler",
+      "priceWeekly": "₺29,99",
+      "priceYearly": "₺499",
+      "period": "/hafta",
+      "yearlyBilling": "Yıllık ₺499 olarak faturalandırılır",
+      "originalPrice": "₺1.560",
+      "discountedPrice": "₺499",
+      "savings": "%68 tasarruf edersin!",
+      "features": [
+        "Haftalık düzenli Pro analiz",
+        "Pro yüz analizi – gelişmiş yapay zeka ile detaylı tarama",
+        "Cilt yaşı, skoru, gözenek, sivilce, leke, kırışıklık, parlaklık vb. değerlendirmeleri",
+        "Cilt ihtiyaçlarına göre ürün ve içerik önerileri",
+        "Sabah–akşam kişiselleştirilmiş cilt bakım rutini",
+        "Zamanla değişimleri karşılaştırma ve iyileşme takibi",
+        "Öncelikli destek"
+      ]
+    },
+    "additionalInfo": {
+      "noSetupFee": "Kurulum ücreti yok",
+      "cancelAnytime": "İstediğin zaman iptal et",
+      "support24": "7/24 destek"
+    }
+  },
+  "testimonials": {
+    "badge": "Kullanıcı Yorumları",
+    "title": "Yorumlarına Kulak Verin",
+    "titleHighlight": "Mutlu Kullanıcılarımızın",
+    "users": [
+      {
+        "name": "Elif Yılmaz",
+        "role": "Cilt Bakım Meraklısı",
+        "content": "Skinly, cilt bakım rutinimi tamamen değiştirdi. Yapay zekanın önerileri tam nokta atışıydı. Cildim hiç bu kadar sağlıklı görünmemişti!",
+        "image": "/images/ava1.png"
+      },
+      {
+        "name": "Mehmet Kaya",
+        "role": "Yoğun Bir Profesyonel",
+        "content": "Zamanım kısıtlı ama Skinly sayesinde cilt bakımım artık hem kolay hem etkili. Gerçekten hayat kurtarıcı. Şiddetle tavsiye ederim!",
+        "image": "/images/ava2.png"
+      },
+      {
+        "name": "Ayşe Demir",
+        "role": "Güzellik Blog Yazarı",
+        "content": "İyileşmeleri adım adım görmek inanılmaz. Gelişimi takip etme özelliğine bayıldım. Cildimdeki değişimi resmen hissediyorum!",
+        "image": "/images/ava3.png"
+      }
+    ]
+  },
+  "faq": {
+    "badge": "SSS",
+    "title": "Sıkça Sorulan",
+    "titleHighlight": "Sorular",
+    "description": "Skinly'nin yapay zeka destekli cilt analizi hakkında bilmeniz gereken her şey.",
+    "questions": [
+      {
+        "question": "Yapay zeka cilt analizi ne kadar doğru?",
+        "answer": "Yapay zeka destekli cilt analizimiz, binlerce dermatolog onaylı cilt görseli üzerinde eğitilmiş gelişmiş algoritmalarla çalışır. Akne, kırışıklık, koyu leke ve cilt tipi gibi yaygın sorunlarda %90'ın üzerinde doğrulukla analiz yapar."
+      },
+      {
+        "question": "Cilt verilerim ve fotoğraflarım güvende mi?",
+        "answer": "Kesinlikle. Tüm cilt verileriniz ve fotoğraflarınız kurumsal düzeyde şifreleme ile güvenli bir şekilde saklanır ve işlenir. Verilerinizi dilediğiniz zaman silebilirsiniz. Uygulamamız, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) başta olmak üzere tüm ilgili gizlilik düzenlemelerine tam uyum sağlar."
+      },
+      {
+        "question": "Aboneliğimi istediğim zaman iptal edebilir miyim?",
+        "answer": "Evet, aboneliğinizi dilediğiniz zaman iptal edebilirsiniz ve iptal ücreti alınmaz. Ücretli aboneliklerde ise faturalama dönemi sonuna kadar erişiminiz devam eder."
+      },
+      {
+        "question": "Kişiselleştirilmiş ürün önerileri sunuyor musunuz?",
+        "answer": "Evet! Cilt analizine dayanarak, yapay zekamız cilt tipiniz, mevcut cilt problemleriniz ve rutin alışkanlıklarınızı dikkate alarak en uygun içerikleri önerir. Marka odaklı değil, içerik bazlı çalışan sistemimiz sayesinde gerçekten ihtiyacınız olan bileşenleri kolayca keşfedebilirsiniz."
+      },
+      {
+        "question": "Cilt analiz fotoğraflarını ne sıklıkla çekmeliyim?",
+        "answer": "Cilt analiz fotoğraflarınızı haftada 1 kez çekmeniz yeterlidir. Uygulama sizi her hafta nazikçe hatırlatır ve bu düzenli takip sayesinde cildinizdeki değişimleri sağlıklı bir şekilde gözlemleyebilirsiniz."
+      },
+      {
+        "question": "Ücretsiz plana neler dahil?",
+        "answer": "Uygulamamızı denemek tamamen ücretsizdir. Kayıt olduktan sonra tüm temel özellikleri kullanabilir ve 1 kez cilt analizi yapabilirsiniz."
+      },
+      {
+        "question": "Hassas cildim varsa Skinly'i kullanabilir miyim?",
+        "answer": "Skinly, hassas cilt dahil olmak üzere tüm cilt tipleri için tasarlanmıştır. Önerilerimiz özellikle hassasiyet seviyelerini dikkate alır ve nazik, hipoalerjenik ürünler sunar. Ayrıca, tahrişe neden olabilecek içeriklerden kaçınmanıza yardımcı olur."
+      }
+    ],
+    "stillHaveQuestions": "Hala sorularınız mı var?",
+    "supportDescription": "Destek ekibimiz, Skinly'den en iyi şekilde faydalanmanız için burada.",
+    "contactSupport": "Destek ile iletişime geçin"
+  },
+  "cta": {
+    "title": "Ne bekliyorsun, cilt bakım rutinini hemen takip etmeye başla!"
+  },
+  "footer": {
+    "tagline": "Cildinin ihtiyaçlarını yapay zekayla keşfet.",
+    "company": "Şirket",
+    "support": "Destek",
+    "links": {
+      "about": "Hakkımızda",
+      "contact": "İletişim",
+      "deleteAccount": "Hesap Silme",
+      "kvkk": "KVKK Aydınlatma Metni",
+      "consent": "Açık Rıza Metni",
+      "subscription": "Abonelik Sözleşmesi",
+      "userAgreement": "Kullanıcı Sözleşmesi",
+      "privacy": "Gizlilik Politikası",
+      "contactUs": "Bize Ulaşın"
+    },
+    "copyright": "© 2025 Skinly. Tüm hakları saklıdır."
+  },
+  "legal": {
+    "privacy": {
+      "title": "GİZLİLİK POLİTİKASI",
+      "sections": {
+        "introduction": {
+          "title": "1. Giriş",
+          "content": "Bu Gizlilik Politikası, Skinly - Cilt Analiz Asistanı mobil uygulamasının (\"Uygulama\") kullanıcılarından toplanan kişisel verilerin, nasıl işlendiği, saklandığı ve korunduğuna ilişkin ilkeleri içermektedir. Kullanıcılar, uygulamayı kullanarak bu Gizlilik Politikasını kabul etmiş sayılırlar."
+        },
+        "collectedData": {
+          "title": "2. Toplanan Veriler",
+          "content": "Uygulama aracılığıyla kullanıcılardan şu kişisel veriler toplanabilir:",
+          "items": [
+            "Kimlik Bilgileri: Ad, soyad",
+            "İletişim Bilgileri: E-posta adresi",
+            "Görsel Veriler: Kullanıcı tarafından yüklenen yüz fotoğrafları",
+            "Alışkanlık ve Tercih Bilgileri: Cilt tipi, yaşam tarzına dair yanıtlar",
+            "Kullanım Verileri: Uygulama içerisindeki gezinme ve tercih bilgileri"
+          ]
+        },
+        "dataCollection": {
+          "title": "3. Verilerin Toplanma Yöntemi ve Hukuki Sebepler",
+          "content": "Veriler, uygulama üzerinden kullanıcının beyanı yoluyla ve uygulamanın kullanımı sırasında otomatik yollarla toplanabilir.",
+          "legalBasis": "Hukuki sebepler:",
+          "items": [
+            "KVKK m.5/1 (açık rıza)",
+            "KVKK m.5/2(f) (meşru menfaat - anonim kullanım verileri)"
+          ]
+        },
+        "dataProcessing": {
+          "title": "4. Verilerin İşlenme Amaçları",
+          "content": "Toplanan veriler aşağıdaki amaçlarla işlenebilir:",
+          "items": [
+            "Yüz tanıma tabanlı cilt analizinin gerçekleştirilmesi",
+            "Kişiselleştirilmiş ürün ve önerilerin sunulması",
+            "Hizmetin sunulması ve iyileştirilmesi",
+            "Kullanıcıyla iletişimin sağlanması",
+            "Yasal yükümlülüklerin yerine getirilmesi"
+          ]
+        },
+        "dataStorage": {
+          "title": "5. Verilerin Saklanması ve Korunması",
+          "content": "Kullanıcıya ait kişisel veriler, yurt içi ve/veya yurt dışında bulunan güvenli sunucularda, teknik ve idari tedbirler alınarak saklanmaktadır. Veriler, uygulama kullanıldığı sürece saklanmakta olup, kullanıcının üyeliğinin sonlanmasından itibaren 2 yıl süreyle muhafaza edilir. Bu sürenin sonunda veriler silinir veya anonim hale getirilir. Verilerin anonimleştirilip getirilmeyeceğine uygulama yöneticisi karar verir."
+        },
+        "faceData": {
+          "title": "Yüz Verilerine İlişkin Ek Bilgilendirme",
+          "content": "Kullanıcı tarafından yüklenen yüz fotoğrafları, yalnızca yapay zekâ destekli cilt analizinin gerçekleştirilmesi amacıyla işlenir. Bu görseller, güvenli bir şekilde Supabase altyapısında saklanır ve kullanıcı hesabı aktif olduğu sürece muhafaza edilir. Kullanıcı hesabını silerse veya verilerinin silinmesini talep ederse, bu görseller ve ilişkili analiz sonuçları kalıcı olarak silinir. Skinly, yüz verilerini yalnızca hizmetin sağlanması için iş ortaklarıyla paylaşır. Bu kapsamda, görseller Face++ (Megvii) tarafından analiz edilmekte olup, bu üçüncü taraf hizmet sağlayıcı yüz fotoğraflarını analiz tamamlandıktan sonra sistemlerinde saklamaz. Yüz verileri hiçbir şekilde yetkisiz üçüncü kişilerle paylaşılmaz veya ticari amaçlarla kullanılmaz."
+        },
+        "thirdParty": {
+          "title": "6. Verilerin Üçüncü Kişilerle Paylaşımı",
+          "content": "Veriler, aşağıdaki durumlar dışında üçüncü kişi ve kurumlarla paylaşılmaz:",
+          "items": [
+            "Kullanıcının açık rızasını vermiş olması",
+            "Hizmetin sağlanabilmesi için alt hizmet sağlayıcılarla (bulut barındırma, yapay zeka işlemleri vb.)",
+            "Kanuni zorunluluklar kapsamında yetkili kamu kurum ve kuruluşlarıyla"
+          ]
+        },
+        "thirdPartyAnalytics": {
+          "title": "6.1. Üçüncü Taraf Analiz Araçları",
+          "content": "Uygulamamızda kullanıcı deneyimini geliştirmek, uygulama performansını ölçmek ve teknik hataları tespit etmek amacıyla bazı üçüncü taraf analiz araçları kullanılmaktadır. Bu kapsamda PostHog ve Meta App Events (Facebook Analytics) gibi hizmetler anonim kullanım verilerini işleyebilir. Bu araçlar; uygulama içi davranışlar, gezinme verileri, belirli buton tıklamaları ve abonelikle ilgili etkileşimler gibi teknik bilgileri toplayabilir.",
+          "content2": "Bu veriler kişisel kimlik bilgilerinizi içermez ve reklam hedefleme amacıyla kullanılmaz. Toplanan tüm anonim veriler yalnızca uygulamanın geliştirilmesi ve performans analizleri için işlenmektedir."
+        },
+        "dataTransfer": {
+          "title": "7. Yurtdışına Veri Aktarımı",
+          "content": "Uygulama kapsamında kişisel veriler yurt dışına aktarılmaktadır. Bu aktarma, Kullanıcı Sözleşmesi, Aydınlatma Metni ve Açık Rıza Metni ile birlikte kullanıcıya bildirilmekte ve açık rıza alınarak gerçekleştirilmektedir."
+        },
+        "minors": {
+          "title": "8. 18 Yaş Altı Kullanıcılar",
+          "content": "Uygulama 18 yaş altı bireylerin kullanımına kapalıdır. Bu yaş grubuna ait olduğu tespit edilen kullanıcılara ait veriler derhal silinir."
+        },
+        "userRights": {
+          "title": "9. Kullanıcı Hakları",
+          "content": "KVKK m.11 uyarınca kullanıcılar:",
+          "items": [
+            "Veri işlenip işlenmediğini öğrenme",
+            "Veri işlenmişse bilgi talep etme",
+            "Amaca uygun kullanılıp kullanılmadığını öğrenme",
+            "Eksik veya yanlış işlenmiş verilerin düzeltilmesini isteme",
+            "KVKK m.7 uyarınca verilerin silinmesini/anonim hale getirilmesini talep etme",
+            "Aktarıldığı üçüncü kişilere bildirimi isteme",
+            "Otomatik sistemlerce analiz sonucu aleyhe bir sonuç çıkmasına itiraz etme",
+            "Zarar halinde tazminat talep etme haklarına sahiptir"
+          ]
+        },
+        "applicationMethod": {
+          "title": "10. Başvuru Yöntemi",
+          "content": "Kullanıcılar, bu haklarını kullanmak için info@skinly.com.tr üzerinden başvuru yapabilir. Tüm talepler yasal süreler içinde cevaplandırılır."
+        },
+        "changes": {
+          "title": "11. Değişiklikler ve Güncellemeler",
+          "content": "Bu Gizlilik Politikası, gerek duyulduğunda uygulama yöneticisi tarafından güncellenebilir. En güncel versiyon, uygulama içinde ve/veya web sitesi aracılığıyla yayınlanır."
+        }
+      },
+      "userAgreement": {
+        "title": "KULLANICI SÖZLEŞMESİ"
+      },
+      "subscription": {
+        "title": "ABONELİK SÖZLEŞMESİ"
+      },
+      "kvkk": {
+        "title": "KVKK AYDINLATMA METNİ"
+      },
+      "consent": {
+        "title": "AÇIK RIZA METNİ"
+      }
+    },
+    "about": {
+      "title": "Hakkımızda",
+      "badge": "Hakkımızda",
+      "heading": "Cildinizi Daha Yakından Tanıyın",
+      "description": "Skinly, cilt bakımını bilimsel verilere ve teknolojik analizlere dayandırarak herkesin cildini daha yakından tanımasını sağlamayı amaçlayan bir yapay zeka destekli cilt analiz uygulamasıdır.",
+      "scientificApproach": {
+        "title": "Bilimsel Yaklaşım",
+        "content": "Güzellik sektöründeki ezbere önerilerden farklı olarak, biz cildin gerçek ihtiyaçlarını yüzeyin altına inerek anlamaya çalışıyoruz. Gelişmiş yapay zeka altyapımız, binlerce dermatolog onaylı görsel üzerinde eğitilmiş algoritmalarla çalışır ve kullanıcıya özel analizler sunar."
+      },
+      "mission": {
+        "title": "Misyonumuz",
+        "content": "Skinly olarak, cilt bakımının herkes için ulaşılabilir, güvenilir ve kişiselleştirilmiş olması gerektiğine inanıyoruz. Teknolojiyi, estetikle ve sağduyuyla birleştirerek, cildinizin en iyi haline ulaşmanız için buradayız.",
+        "values": {
+          "accessible": {
+            "title": "Ulaşılabilir",
+            "description": "Herkes için erişilebilir cilt bakımı çözümleri"
+          },
+          "reliable": {
+            "title": "Güvenilir",
+            "description": "Bilimsel verilere dayalı analizler"
+          },
+          "personalized": {
+            "title": "Kişiselleştirilmiş",
+            "description": "Size özel cilt bakım önerileri"
+          }
+        }
+      }
+    },
+    "contact": {
+      "title": "İletişim",
+      "badge": "İletişim",
+      "heading": "Bizimle iletişime geçmek ister misiniz?",
+      "description": "Skinly ekibi olarak size yardımcı olmaktan memnuniyet duyarız.",
+      "content": "Uygulamayla ilgili sorularınız, geri bildirimleriniz veya iş birliği talepleriniz için bize dilediğiniz zaman ulaşabilirsiniz.",
+      "email": "info@skinly.com.tr",
+      "responseNote": "Tüm mesajlarınızı en kısa sürede yanıtlamaya özen gösteriyoruz.",
+      "supportText": "Destek ekibimizle doğrudan iletişime geçmek ister misiniz?",
+      "contactFormButton": "İletişim Formu"
+    },
+    "deleteAccount": {
+      "title": "Skinly Hesap Silme Talimatları",
+      "intro": "Skinly uygulamasında hesabınızı kalıcı olarak silebilir ve tüm verilerinizi kaldırabilirsiniz. Bu işlem geri alınamaz. Aşağıda adımları bulabilirsiniz.",
+      "stepsTitle": "Uygulama İçi Hesap Silme Adımları",
+      "stepsIntro": "Hesabınızı silmek için lütfen aşağıdaki adımları izleyin:",
+      "steps": [
+        "Uygulamayı açın",
+        "Sağ üstteki profil simgesine dokunun",
+        "\"Ayarlar\" > \"Hesabımı Sil\" seçeneğine dokunun",
+        "\"Hesabımı Kalıcı Olarak Sil\"e basın"
+      ],
+      "stepsNote": "İşlem tamamlandıktan sonra verileriniz 7 gün içinde sistemden silinecektir.",
+      "deletedDataTitle": "Silinen Veriler",
+      "deletedDataIntro": "Hesabınız silindiğinde aşağıdaki veriler kalıcı olarak silinir:",
+      "deletedDataItems": [
+        "Profil bilgileri (isim, e-posta, giriş verileri)",
+        "Cilt analiz geçmişi",
+        "AI öneri kayıtları",
+        "Günlük tutma verileri"
+      ],
+      "deletedDataNote": "Not: Abonelik bilgileri (ödeme geçmişi vs.) yasal yükümlülükler gereği sistemimizde anonimleştirilerek saklanabilir.",
+      "processingTitle": "İşlem Süresi ve Geri Alma",
+      "processingContent": "Silme işlemi anında başlatılır, 7 gün içinde kalıcı olarak tamamlanır. Bu süre zarfında hesabınızı yeniden aktif etmezseniz veriler geri getirilemez.",
+      "contactTitle": "İletişim",
+      "contactContent": "Herhangi bir sorunla karşılaşırsanız bizimle şu adresten iletişime geçebilirsiniz:",
+      "contactEmail": "support@skinly.com.tr"
+    },
+    "contactUs": {
+      "badge": "İletişim",
+      "title": "Hala sorularınız mı var?",
+      "description": "Destek ekibimiz, Skinly'den en iyi şekilde faydalanmanız için burada.",
+      "nameLabel": "Adınız",
+      "namePlaceholder": "Adınızı giriniz",
+      "emailLabel": "E-posta Adresiniz",
+      "emailPlaceholder": "E-posta adresinizi giriniz",
+      "messageLabel": "Mesajınız",
+      "messagePlaceholder": "Mesajınızı yazın...",
+      "sendButton": "Gönder",
+      "sending": "Gönderiliyor...",
+      "errorMessage": "Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyin.",
+      "successMessage": "Mesajınız başarıyla gönderildi! Size en kısa sürede dönüş yapacağız."
+    }
+  }
+}
+

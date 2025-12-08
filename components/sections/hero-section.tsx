@@ -13,17 +13,69 @@ import AnimatedCard from "@/components/animated-card";
 import AnimatedButton from "@/components/animated-button";
 import { fadeIn } from "@/lib/variants";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
+import { getClientTranslations } from "@/lib/i18n-client";
+import { getLocalizedImage } from "@/lib/image-utils";
+import type { Locale } from "@/middleware";
 
 export default function HeroSection() {
+  const [translations, setTranslations] = useState<{
+    cta: string;
+    title: string;
+    titleHighlight: string;
+    titleEnd: string;
+    description: string;
+  } | null>(null);
+  const [locale, setLocale] = useState<Locale>('tr');
+  
+  // Tüm hook'ları conditional return'den önce çağırmalıyız
   const fadeUpAnimation = fadeIn("up", 0.3) as Variants;
   const fadeUpDelayedAnimation = fadeIn("up", 0.4) as Variants;
-
   const buttonsRef = useRef(null);
   const isButtonsInView = useInView(buttonsRef, {
     once: true,
     margin: "-100px",
   });
+  
+  useEffect(() => {
+    const t = getClientTranslations('hero');
+    setTranslations({
+      cta: t('cta'),
+      title: t('title'),
+      titleHighlight: t('titleHighlight'),
+      titleEnd: t('titleEnd'),
+      description: t('description'),
+    });
+
+    // Locale'i belirle
+    const cookies = document.cookie.split(';');
+    const localeCookie = cookies.find(c => c.trim().startsWith('locale='));
+    const cookieLocale = localeCookie?.split('=')[1]?.trim();
+    
+    if (cookieLocale === 'en' || cookieLocale === 'tr') {
+      setLocale(cookieLocale as Locale);
+    } else {
+      // Route'a göre locale belirle
+      const pathname = window.location.pathname;
+      const englishRoutes = [
+        '/about-us',
+        '/contact',
+        '/privacy-policy',
+        '/user-agreement',
+        '/subscription-agreement',
+        '/privacy-notice',
+        '/consent-form',
+        '/contact-us',
+      ];
+      
+      setLocale(englishRoutes.includes(pathname) ? 'en' : 'tr');
+    }
+  }, []);
+  
+  // Conditional return hook'lardan sonra olmalı
+  if (!translations) {
+    return <div className="min-h-screen"></div>;
+  }
 
   return (
     <AnimatePresence mode="wait">
@@ -41,7 +93,7 @@ export default function HeroSection() {
         >
           <AnimatedButton className="gradient-secondary rounded-full px-8 py-3 text-white font-medium shadow-brand">
             <Sparkles className="w-4 h-4 mr-2" />
-            Cildini Yapay Zeka ile Analiz Et!
+            {translations.cta}
           </AnimatedButton>
         </motion.div>
 
@@ -54,15 +106,12 @@ export default function HeroSection() {
           viewport={{ once: true }}
         >
           <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6 font-sans ">
-            <span className="text-gradient-primary">Yapay Zeka Destekli</span> Analizle
+            <span className="text-gradient-primary">{translations.titleHighlight}</span> {translations.title}
              <br />
-            <span className="text-[#323232]">Cilt Bakımını Zirveye Taşı!</span>
+            <span className="text-[#323232]">{translations.titleEnd}</span>
           </h1>
           <p className="text-lg text-[#323232]/70 max-w-2xl mx-auto leading-relaxed font-sans">
-            Gelişmiş yapay zeka teknolojisiyle sana en uygun cilt bakım rutinini
-            keşfet. <br />
-            Kişiselleştirilmiş öneriler al ve cildindeki değişimi adım adım
-            takip et!
+            {translations.description}
           </p>
         </motion.div>
 
@@ -80,8 +129,8 @@ export default function HeroSection() {
           >
             <div className="bg-white rounded-2xl p-2 shadow-brand-lg max-w-xs -mr-20 ">
               <Image
-                src="/images/card-left.png"
-                alt="Serum"
+                src={getLocalizedImage("/images/card-left.png", locale)}
+                alt="Analysis Report"
                 width={203}
                 height={350}
               />
@@ -96,8 +145,8 @@ export default function HeroSection() {
           >
             <div className="bg-white rounded-2xl p-2 shadow-brand-lg max-w-xs -ml-20">
               <Image
-                src="/images/card-right-2.png"
-                alt="Serum"
+                src={getLocalizedImage("/images/card-right-2.png", locale)}
+                alt="Routine Calendar"
                 width={203}
                 height={350}
               />

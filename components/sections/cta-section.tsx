@@ -1,7 +1,50 @@
+"use client"
+
+import { useState, useEffect } from "react"
 import Link from "next/link";
 import Image from "next/image";
+import { getClientTranslations } from "@/lib/i18n-client";
+import { getLocalizedImage } from "@/lib/image-utils";
+import type { Locale } from "@/middleware";
 
 export default function CTASection() {
+  const [translations, setTranslations] = useState<{ title: string } | null>(null);
+  const [locale, setLocale] = useState<Locale>('tr');
+
+  useEffect(() => {
+    const t = getClientTranslations('cta');
+    setTranslations({
+      title: t('title'),
+    });
+
+    // Locale'i belirle
+    const cookies = document.cookie.split(';');
+    const localeCookie = cookies.find(c => c.trim().startsWith('locale='));
+    const cookieLocale = localeCookie?.split('=')[1]?.trim();
+    
+    if (cookieLocale === 'en' || cookieLocale === 'tr') {
+      setLocale(cookieLocale as Locale);
+    } else {
+      // Route'a göre locale belirle
+      const pathname = window.location.pathname;
+      const englishRoutes = [
+        '/about-us',
+        '/contact',
+        '/privacy-policy',
+        '/user-agreement',
+        '/subscription-agreement',
+        '/privacy-notice',
+        '/consent-form',
+        '/contact-us',
+      ];
+      
+      setLocale(englishRoutes.includes(pathname) ? 'en' : 'tr');
+    }
+  }, []);
+
+  if (!translations) {
+    return <div className="min-h-[200px]"></div>;
+  }
   return (
     <section className="pt-10 md:pt-20 relative bg-gradient-to-br from-[#C838F8]/60 via-[#6B88EB]/30 to-[#1BCEE0]/60">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
@@ -10,7 +53,7 @@ export default function CTASection() {
           <div className="space-y-6 lg:space-y-8 pb-12 lg:pb-0 text-center lg:text-left flex flex-col items-center lg:items-start">
             <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C] leading-tight max-w-xl">
               <span className="inline-block text-left">
-              Ne bekliyorsun, cilt bakım rutinini hemen takip etmeye başla!
+              {translations.title}
               </span>
             </h2>
 
@@ -41,7 +84,7 @@ export default function CTASection() {
           <div className="relative flex justify-end">
             <div className="relative w-full max-w-[600px]">
               <Image
-                src="/images/footer-img.png"
+                src={getLocalizedImage("/images/footer-img.png", locale)}
                 alt="Skinly App - Track Your Skincare Routine"
                 width={600}
                 height={500}

@@ -1,0 +1,383 @@
+{
+  "common": {
+    "appName": "Skinly",
+    "tagline": "Discover your skin's needs with AI."
+  },
+  "nav": {
+    "home": "Home",
+    "howItWorks": "How It Works",
+    "testimonials": "Testimonials",
+    "pricing": "Pricing",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "cta": "Analyze Your Skin with AI!",
+    "title": "Analysis",
+    "titleHighlight": "AI-Powered",
+    "titleEnd": "Take Your Skincare to the Next Level!",
+    "description": "Discover your perfect skincare routine with advanced AI technology. Get personalized recommendations and track your skin's transformation step by step!"
+  },
+  "features": {
+    "badge": "Features",
+    "title": "Discover What Your Skin Needs",
+    "titleHighlight": "with AI-Powered",
+    "titleEnd": "Analysis",
+    "description": "Our advanced AI technology analyzes your skin condition and provides personalized recommendations for the best skincare results.",
+    "scanFace": {
+      "title": "Scan Your Face",
+      "description": "To have great skin, you first need to know it. Scanning your face with Skinly is very easy and fast!",
+      "points": {
+        "camera": "Analyze instantly using your phone camera.",
+        "target": "Learn about problem areas and skin issues in seconds.",
+        "calendar": "No need for appointments or expensive devices."
+      }
+    },
+    "personalizedScore": {
+      "title": "Learn Your Personalized Skin Score",
+      "description": "Get to know your skin better than ever. See clearly what's working and what needs to be fixed.",
+      "points": {
+        "track": "Track acne, moisture, irritation, and your skin's overall condition.",
+        "chart": "Find out if the products you're using are working or going to waste.",
+        "info": "Get personalized recommendations and tips for your skin type."
+      }
+    },
+    "personalizedRoutine": {
+      "title": "Get Your Personalized Routine",
+      "description": "Discover the most suitable products and care recommendations for your skin. A routine tailored entirely for you awaits.",
+      "points": {
+        "user": "Get unbiased recommendations tailored to your needs.",
+        "star": "Choose the most effective products to make your skin glow.",
+        "handshake": "No brand dependency — just reliable results that work."
+      }
+    }
+  },
+  "dashboard": {
+    "skinScore": "Skin Score",
+    "skinAge": "Skin Age",
+    "suggestedProducts": "Suggested Products",
+    "metrics": {
+      "spot": "Spots",
+      "wrinkle": "Wrinkles",
+      "pore": "Pores",
+      "darkCircle": "Dark Circles"
+    }
+  },
+  "pricing": {
+    "badge": "Pricing",
+    "title": "Simple Plans for Every Need",
+    "description": "Whether you're just starting out or want to try all features — there's definitely a plan that's right for you.",
+    "free": {
+      "title": "Free Plan",
+      "description": "One-time analysis to explore the app!",
+      "price": "$0",
+      "period": "/one-time",
+      "features": [
+        "Try all app features",
+        "1 Standard face analysis",
+        "Surface analysis – basic information only",
+        "No details like skin score, age, pores, spots",
+        "Get to know the app, see for yourself – no commitment!"
+      ]
+    },
+    "premium": {
+      "title": "Premium Plan",
+      "description": "Real results, in-depth analysis here.",
+      "weekly": "Weekly",
+      "yearly": "Yearly",
+      "popular": "Most Popular",
+      "priceWeekly": "$2.99",
+      "priceYearly": "$49.99",
+      "period": "/week",
+      "yearlyBilling": "Billed annually as $49.99",
+      "originalPrice": "$155.48",
+      "discountedPrice": "$49.99",
+      "savings": "Save 68%!",
+      "features": [
+        "Weekly regular Pro analysis",
+        "Pro face analysis – detailed scan with advanced AI",
+        "Assessments of skin age, score, pores, acne, spots, wrinkles, brightness, etc.",
+        "Product and ingredient recommendations based on skin needs",
+        "Personalized morning–evening skincare routine",
+        "Compare changes over time and track improvement",
+        "Priority support"
+      ]
+    },
+    "additionalInfo": {
+      "noSetupFee": "No setup fee",
+      "cancelAnytime": "Cancel anytime",
+      "support24": "24/7 support"
+    }
+  },
+  "testimonials": {
+    "badge": "User Reviews",
+    "title": "Listen to Reviews from",
+    "titleHighlight": "Our Happy Users",
+    "users": [
+      {
+        "name": "Sarah Johnson",
+        "role": "Skincare Enthusiast",
+        "content": "Skinly completely changed my skincare routine. The AI's recommendations were spot on. My skin has never looked this healthy!",
+        "image": "/images/ava1.png"
+      },
+      {
+        "name": "Michael Chen",
+        "role": "Busy Professional",
+        "content": "My time is limited, but thanks to Skinly, my skincare is now both easy and effective. It's truly a lifesaver. I highly recommend it!",
+        "image": "/images/ava2.png"
+      },
+      {
+        "name": "Emma Williams",
+        "role": "Beauty Blogger",
+        "content": "Seeing improvements step by step is incredible. I love the progress tracking feature. I can literally feel the change in my skin!",
+        "image": "/images/ava3.png"
+      }
+    ]
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Frequently Asked",
+    "titleHighlight": "Questions",
+    "description": "Everything you need to know about Skinly's AI-powered skin analysis.",
+    "questions": [
+      {
+        "question": "How accurate is AI skin analysis?",
+        "answer": "Our AI-powered skin analysis works with advanced algorithms trained on thousands of dermatologist-approved skin images. It analyzes with over 90% accuracy for common issues like acne, wrinkles, dark spots, and skin type."
+      },
+      {
+        "question": "Are my skin data and photos secure?",
+        "answer": "Absolutely. All your skin data and photos are stored and processed securely with enterprise-level encryption. You can delete your data at any time. Our app fully complies with all relevant privacy regulations, including GDPR and other applicable data protection laws."
+      },
+      {
+        "question": "Can I cancel my subscription anytime?",
+        "answer": "Yes, you can cancel your subscription at any time, and no cancellation fee is charged. For paid subscriptions, your access continues until the end of the billing period."
+      },
+      {
+        "question": "Do you offer personalized product recommendations?",
+        "answer": "Yes! Based on skin analysis, our AI recommends the most suitable ingredients considering your skin type, current skin problems, and routine habits. Thanks to our content-based, not brand-focused system, you can easily discover the ingredients you really need."
+      },
+      {
+        "question": "How often should I take skin analysis photos?",
+        "answer": "It's enough to take your skin analysis photos once a week. The app will gently remind you every week, and with this regular tracking, you can observe changes in your skin in a healthy way."
+      },
+      {
+        "question": "What's included in the free plan?",
+        "answer": "Trying our app is completely free. After signing up, you can use all basic features and perform 1 skin analysis."
+      },
+      {
+        "question": "Can I use Skinly if I have sensitive skin?",
+        "answer": "Skinly is designed for all skin types, including sensitive skin. Our recommendations specifically consider sensitivity levels and offer gentle, hypoallergenic products. It also helps you avoid ingredients that could cause irritation."
+      }
+    ],
+    "stillHaveQuestions": "Still have questions?",
+    "supportDescription": "Our support team is here to help you get the most out of Skinly.",
+    "contactSupport": "Contact Support"
+  },
+  "cta": {
+    "title": "What are you waiting for? Start tracking your skincare routine now!"
+  },
+  "footer": {
+    "tagline": "Discover your skin's needs with AI.",
+    "company": "Company",
+    "support": "Support",
+    "links": {
+      "about": "About Us",
+      "contact": "Contact",
+      "deleteAccount": "Delete Account",
+      "kvkk": "Privacy Notice",
+      "consent": "Consent Form",
+      "subscription": "Subscription Agreement",
+      "userAgreement": "User Agreement",
+      "privacy": "Privacy Policy",
+      "contactUs": "Contact Us"
+    },
+    "copyright": "© 2025 Skinly. All rights reserved."
+  },
+  "legal": {
+    "privacy": {
+      "title": "PRIVACY POLICY",
+      "sections": {
+        "introduction": {
+          "title": "1. Introduction",
+          "content": "This Privacy Policy contains the principles regarding how personal data collected from users of the Skinly - Skin Analysis Assistant mobile application (\"Application\") is processed, stored, and protected. Users are deemed to have accepted this Privacy Policy by using the application."
+        },
+        "collectedData": {
+          "title": "2. Collected Data",
+          "content": "The following personal data may be collected from users through the application:",
+          "items": [
+            "Identity Information: Name, surname",
+            "Contact Information: Email address",
+            "Visual Data: Face photos uploaded by the user",
+            "Habit and Preference Information: Skin type, lifestyle-related responses",
+            "Usage Data: Navigation and preference information within the application"
+          ]
+        },
+        "dataCollection": {
+          "title": "3. Data Collection Method and Legal Basis",
+          "content": "Data may be collected through user declarations on the application and automatically during the use of the application.",
+          "legalBasis": "Legal basis:",
+          "items": [
+            "GDPR Art. 6(1)(a) (explicit consent)",
+            "GDPR Art. 6(1)(f) (legitimate interest - anonymous usage data)"
+          ]
+        },
+        "dataProcessing": {
+          "title": "4. Data Processing Purposes",
+          "content": "Collected data may be processed for the following purposes:",
+          "items": [
+            "Performing face recognition-based skin analysis",
+            "Providing personalized products and recommendations",
+            "Providing and improving the service",
+            "Communicating with the user",
+            "Fulfilling legal obligations"
+          ]
+        },
+        "dataStorage": {
+          "title": "5. Data Storage and Protection",
+          "content": "Personal data belonging to users is stored on secure servers located domestically and/or abroad, with technical and administrative measures taken. Data is stored while the application is used, and is retained for 2 years from the termination of the user's membership. After this period, data is deleted or anonymized. The application administrator decides whether data will be anonymized."
+        },
+        "faceData": {
+          "title": "Additional Information Regarding Face Data",
+          "content": "Face photos uploaded by the user are processed solely for the purpose of performing AI-powered skin analysis. These images are stored securely in the Supabase infrastructure and retained while the user account is active. If the user deletes their account or requests deletion of their data, these images and related analysis results are permanently deleted. Skinly shares face data only with business partners for service provision. In this context, images are analyzed by Face++ (Megvii), and this third-party service provider does not store face photos in their systems after analysis is completed. Face data is never shared with unauthorized third parties or used for commercial purposes."
+        },
+        "thirdParty": {
+          "title": "6. Sharing Data with Third Parties",
+          "content": "Data is not shared with third parties and institutions except in the following cases:",
+          "items": [
+            "The user has given explicit consent",
+            "With sub-service providers for service provision (cloud hosting, AI processing, etc.)",
+            "With authorized public institutions and organizations within the scope of legal obligations"
+          ]
+        },
+        "thirdPartyAnalytics": {
+          "title": "6.1. Third-Party Analytics Tools",
+          "content": "Some third-party analytics tools are used in our application to improve user experience, measure application performance, and detect technical errors. In this context, services such as PostHog and Meta App Events (Facebook Analytics) may process anonymous usage data. These tools may collect technical information such as in-app behaviors, navigation data, specific button clicks, and subscription-related interactions.",
+          "content2": "This data does not contain your personal identification information and is not used for advertising targeting. All collected anonymous data is processed solely for application development and performance analysis."
+        },
+        "dataTransfer": {
+          "title": "7. Data Transfer Abroad",
+          "content": "Personal data is transferred abroad within the scope of the application. This transfer is notified to the user together with the User Agreement, Disclosure Text, and Consent Form, and is carried out with explicit consent."
+        },
+        "minors": {
+          "title": "8. Users Under 18",
+          "content": "The application is closed to use by individuals under 18 years of age. Data belonging to users found to belong to this age group is immediately deleted."
+        },
+        "userRights": {
+          "title": "9. User Rights",
+          "content": "In accordance with GDPR Art. 15, users have the right to:",
+          "items": [
+            "Learn whether data is processed",
+            "Request information if data is processed",
+            "Learn whether it is used in accordance with the purpose",
+            "Request correction of incomplete or incorrectly processed data",
+            "Request deletion/anonymization of data in accordance with GDPR Art. 17",
+            "Request notification to third parties to whom data has been transferred",
+            "Object to a result that is unfavorable to them as a result of analysis by automated systems",
+            "Request compensation in case of damage"
+          ]
+        },
+        "applicationMethod": {
+          "title": "10. Application Method",
+          "content": "Users can apply via info@skinly.com.tr to exercise these rights. All requests are answered within legal periods."
+        },
+        "changes": {
+          "title": "11. Changes and Updates",
+          "content": "This Privacy Policy may be updated by the application administrator when necessary. The most current version is published within the application and/or through the website."
+        }
+      },
+      "userAgreement": {
+        "title": "USER AGREEMENT"
+      },
+      "subscription": {
+        "title": "SUBSCRIPTION AGREEMENT"
+      },
+      "kvkk": {
+        "title": "PRIVACY NOTICE"
+      },
+      "consent": {
+        "title": "CONSENT FORM"
+      }
+    },
+    "about": {
+      "title": "About Us",
+      "badge": "About Us",
+      "heading": "Get to Know Your Skin Better",
+      "description": "Skinly is an AI-powered skin analysis application that aims to help everyone get to know their skin better by basing skin care on scientific data and technological analysis.",
+      "scientificApproach": {
+        "title": "Scientific Approach",
+        "content": "Unlike the memorized recommendations in the beauty industry, we try to understand the real needs of the skin by going beneath the surface. Our advanced AI infrastructure works with algorithms trained on thousands of dermatologist-approved images and provides personalized analyses for users."
+      },
+      "mission": {
+        "title": "Our Mission",
+        "content": "As Skinly, we believe that skin care should be accessible, reliable, and personalized for everyone. We are here to help you reach the best version of your skin by combining technology with aesthetics and common sense.",
+        "values": {
+          "accessible": {
+            "title": "Accessible",
+            "description": "Accessible skin care solutions for everyone"
+          },
+          "reliable": {
+            "title": "Reliable",
+            "description": "Analyses based on scientific data"
+          },
+          "personalized": {
+            "title": "Personalized",
+            "description": "Personalized skin care recommendations for you"
+          }
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "badge": "Contact",
+      "heading": "Would you like to get in touch with us?",
+      "description": "The Skinly team is happy to help you.",
+      "content": "You can reach us anytime for questions about the app, feedback, or collaboration requests.",
+      "email": "info@skinly.com.tr",
+      "responseNote": "We make sure to respond to all your messages as soon as possible.",
+      "supportText": "Would you like to contact our support team directly?",
+      "contactFormButton": "Contact Form"
+    },
+    "deleteAccount": {
+      "title": "Skinly Account Deletion Instructions",
+      "intro": "In the Skinly application, you can permanently delete your account and remove all your data. This action cannot be undone. You can find the steps below.",
+      "stepsTitle": "In-App Account Deletion Steps",
+      "stepsIntro": "To delete your account, please follow the steps below:",
+      "steps": [
+        "Open the application",
+        "Tap the profile icon in the top right",
+        "Tap \"Settings\" > \"Delete My Account\"",
+        "Press \"Delete My Account Permanently\""
+      ],
+      "stepsNote": "After the process is completed, your data will be deleted from the system within 7 days.",
+      "deletedDataTitle": "Deleted Data",
+      "deletedDataIntro": "When your account is deleted, the following data will be permanently deleted:",
+      "deletedDataItems": [
+        "Profile information (name, email, login data)",
+        "Skin analysis history",
+        "AI recommendation records",
+        "Journaling data"
+      ],
+      "deletedDataNote": "Note: Subscription information (payment history, etc.) may be stored anonymously in our system due to legal obligations.",
+      "processingTitle": "Processing Time and Recovery",
+      "processingContent": "The deletion process starts immediately and is permanently completed within 7 days. During this period, if you do not reactivate your account, the data cannot be recovered.",
+      "contactTitle": "Contact",
+      "contactContent": "If you encounter any issues, you can contact us at:",
+      "contactEmail": "support@skinly.com.tr"
+    },
+    "contactUs": {
+      "badge": "Contact",
+      "title": "Still have questions?",
+      "description": "Our support team is here to help you get the most out of Skinly.",
+      "nameLabel": "Your Name",
+      "namePlaceholder": "Enter your name",
+      "emailLabel": "Your Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "messageLabel": "Your Message",
+      "messagePlaceholder": "Write your message...",
+      "sendButton": "Send",
+      "sending": "Sending...",
+      "errorMessage": "Your message could not be sent. Please try again later.",
+      "successMessage": "Your message has been sent successfully! We will get back to you as soon as possible."
+    }
+  }
+}
+

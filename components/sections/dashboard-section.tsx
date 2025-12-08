@@ -1,24 +1,56 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { motion, Variants } from "framer-motion"
 import AnimatedSection from "@/components/animated-section"
 import { fadeIn, staggerContainer, staggerItem } from "@/lib/variants"
 import Image from "next/image"
-
-const skinMetrics = [
-  { label: "Leke", score: 86, color: "#6b88eb", bgColor: "#e9edfc" },
-  { label: "Kırışıklık", score: 45, color: "#8B5CF6", bgColor: "#F3E8FF" },
-  { label: "Gözenek", score: 64, color: "#FCD34D", bgColor: "#FEF3C7" },
-  { label: "Göz Altı Morluğu", score: 88, color: "#10B981", bgColor: "#D1FAE5" },
-]
-
-const suggestedProducts = [
-  { image: "/images/product3.png?height=80&width=60", bgColor: "rgba(254, 215, 204, 0.3)" },
-  { image: "/images/product1.png?height=80&width=60", bgColor: "rgba(243, 232, 255, 0.3)" },
-  { image: "/images/product2.png?height=80&width=60", bgColor: "rgba(219, 234, 254, 0.3)" },
-]
+import { getClientTranslations } from "@/lib/i18n-client"
 
 export default function DashboardSection() {
+  const [translations, setTranslations] = useState<{
+    skinScore: string;
+    skinAge: string;
+    suggestedProducts: string;
+    metrics: {
+      spot: string;
+      wrinkle: string;
+      pore: string;
+      darkCircle: string;
+    };
+  } | null>(null);
+
+  useEffect(() => {
+    const t = getClientTranslations('dashboard');
+    setTranslations({
+      skinScore: t('skinScore'),
+      skinAge: t('skinAge'),
+      suggestedProducts: t('suggestedProducts'),
+      metrics: {
+        spot: t('metrics.spot'),
+        wrinkle: t('metrics.wrinkle'),
+        pore: t('metrics.pore'),
+        darkCircle: t('metrics.darkCircle'),
+      },
+    });
+  }, []);
+
+  if (!translations) {
+    return <div className="min-h-[400px]"></div>;
+  }
+
+  const skinMetrics = [
+    { label: translations.metrics.spot, score: 86, color: "#6b88eb", bgColor: "#e9edfc" },
+    { label: translations.metrics.wrinkle, score: 45, color: "#8B5CF6", bgColor: "#F3E8FF" },
+    { label: translations.metrics.pore, score: 64, color: "#FCD34D", bgColor: "#FEF3C7" },
+    { label: translations.metrics.darkCircle, score: 88, color: "#10B981", bgColor: "#D1FAE5" },
+  ]
+
+  const suggestedProducts = [
+    { image: "/images/product3.png?height=80&width=60", bgColor: "rgba(254, 215, 204, 0.3)" },
+    { image: "/images/product1.png?height=80&width=60", bgColor: "rgba(243, 232, 255, 0.3)" },
+    { image: "/images/product2.png?height=80&width=60", bgColor: "rgba(219, 234, 254, 0.3)" },
+  ]
   return (
     <AnimatedSection className="container-padding  md:pt-5 bg-gradient-to-b from-[#DBEAFE]/15 to-white rounded-tl-3xl rounded-tr-3xl mt-5 md:mt-24">
       <div className="max-w-6xl mx-auto">
@@ -29,11 +61,11 @@ export default function DashboardSection() {
             <motion.div variants={staggerItem()  as Variants}  className="grid grid-cols-2 gap-8">
               <div className="space-y-1 md:flex md:items-center md:gap-x-4">
                 <p className="text-4xl font-bold text-[#FF6B6B] font-sans">80</p>
-                <p className="text-lg text-[#323232]/60 font-sans">Cilt Skoru</p>
+                <p className="text-lg text-[#323232]/60 font-sans">{translations.skinScore}</p>
               </div>
               <div className="space-y-1 md:flex md:items-center md:gap-x-4">
                 <p className="text-4xl font-bold text-[#323232] font-sans">21</p>
-                <p className="text-lg text-[#323232]/60 font-sans">Cilt Yaşı</p>
+                <p className="text-lg text-[#323232]/60 font-sans">{translations.skinAge}</p>
               </div>
             </motion.div>
 
@@ -72,7 +104,7 @@ export default function DashboardSection() {
 
             {/* Suggested Products */}
             <motion.div variants={staggerItem() as Variants} className="space-y-4">
-              <h4 className="text-xl font-semibold text-[#323232] font-sans">Önerilen Ürünler</h4>
+              <h4 className="text-xl font-semibold text-[#323232] font-sans">{translations.suggestedProducts}</h4>
               <div className="grid grid-cols-3 gap-4">
                 {suggestedProducts.map((product, index) => (
                   <div
