@@ -30,7 +30,7 @@ export default function FAQSection() {
     return <div className="min-h-[400px]"></div>;
   }
 
-  const faqs = translations.questions;
+  const faqs = translations.questions as Array<{ question: string; answer: string }>;
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -55,7 +55,7 @@ export default function FAQSection() {
         </div>
 
         <div className="space-y-4">
-          {faqs.map((faq, index) => (
+          {faqs.map((faq: { question: string; answer: string }, index: number) => (
             <motion.div
               key={index}
               className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
