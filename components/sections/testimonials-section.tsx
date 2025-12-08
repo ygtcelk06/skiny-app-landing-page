@@ -29,7 +29,8 @@ export default function TestimonialsSection() {
     ...user,
     rating: 5,
     image: user.image || `/images/ava${index + 1}.png`,
-  }));
+  })) as Array<{ name: string; role: string; content: string; rating: number; image: string }>;
+  
   return (
     <AnimatedSection id="testimonials" className="container-padding  py-10 md:py-20   ">
      <div className="text-center space-y-4 mb-16">
@@ -41,7 +42,7 @@ export default function TestimonialsSection() {
 
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {testimonials.map((testimonial, index) => (
+        {testimonials.map((testimonial: { name: string; role: string; content: string; rating: number; image: string }, index: number) => (
           <Card key={index} className="p-6 border-0 shadow-sm">
             <CardContent className="p-0 space-y-4">
               <div className="flex space-x-1">
