@@ -18,8 +18,11 @@ export function getLocaleFromRoute(): Locale {
     return defaultLocale;
   }
   
-  const pathname = window.location.pathname;
-  
+  let pathname = window.location.pathname;
+  if (pathname.length > 1 && pathname.endsWith('/')) {
+    pathname = pathname.slice(0, -1);
+  }
+
   // İngilizce route'lar
   const englishRoutes = [
     '/about-us',

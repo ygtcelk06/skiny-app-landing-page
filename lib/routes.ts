@@ -1,4 +1,5 @@
 import type { Locale } from '@/middleware';
+import { getLocaleFromRoute } from '@/lib/i18n-client';
 
 // URL route mapping - Türkçe ve İngilizce route'lar
 export const routes = {
@@ -31,20 +32,13 @@ export function getRoute(key: keyof typeof routes.tr, locale: Locale): string {
   return routes[locale][key];
 }
 
-// Client-side için
+// Client-side için — getLocaleFromRoute ile aynı dil mantığı (çerez + path + tarayıcı dili)
 export function getClientRoute(key: keyof typeof routes.tr): string {
   if (typeof window === 'undefined') {
     return routes.en[key];
   }
-  
-  const cookies = document.cookie.split(';');
-  const localeCookie = cookies.find(c => c.trim().startsWith('locale='));
-  const locale = localeCookie?.split('=')[1]?.trim();
-  
-  if (locale === 'tr') {
-    return routes.tr[key];
-  }
-  
-  return routes.en[key];
+
+  const locale = getLocaleFromRoute();
+  return routes[locale][key];
 }
 

@@ -101,7 +101,7 @@ export default function Footer() {
               <div className="space-y-2 text-white/70">
                 {section.links.map((link) => (
                   <Link 
-                    key={link.name} 
+                    key={link.href} 
                     href={link.href}
                     className="block cursor-pointer hover:text-white transition-colors font-sans"
                   >
