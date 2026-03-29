@@ -87,9 +87,9 @@ export default function Footer() {
               <Image 
                 src="/images/klaris.png" 
                 alt="Klaris" 
-                width={120} 
-                height={95}
-                className="h-[72px] w-auto max-w-[140px] object-contain object-left"
+                width={200} 
+                height={120}
+                className="h-[112px] w-auto max-w-[240px] object-contain object-left"
               />
             </div>
             <p className="text-white/70 font-sans">{footerData.tagline}</p>

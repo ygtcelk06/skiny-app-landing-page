@@ -27,9 +27,9 @@ export default function WelcomePage() {
                 <Image
                   src="/images/klaris.png"
                   alt="Klaris"
-                  width={140}
-                  height={48}
-                  className="h-12 w-auto object-contain object-left"
+                  width={220}
+                  height={72}
+                  className="h-16 sm:h-20 w-auto object-contain object-left"
                 />
               </div>
 

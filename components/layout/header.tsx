@@ -36,9 +36,9 @@ export default function Header() {
             <Image
               src="/images/klaris.png"
               alt="Klaris"
-              width={100}
-              height={40}
-              className="h-10 w-auto object-contain object-left"
+              width={170}
+              height={56}
+              className="h-14 md:h-16 w-auto max-h-16 object-contain object-left"
               priority
             />
           </div>
