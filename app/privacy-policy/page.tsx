@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
             <div>
               <h2 className="text-xl font-semibold mb-4">1. Introduction</h2>
               <p>
-                This Privacy Policy contains the principles regarding how personal data collected from users of the Skinly - Skin Analysis Assistant mobile application ("Application") is processed, stored, and protected. This Privacy Policy complies with the General Data Protection Regulation (GDPR) for users in the European Union and the United Kingdom, and with the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA) for users in California, United States. Users are deemed to have accepted this Privacy Policy by using the application.
+                This Privacy Policy contains the principles regarding how personal data collected from users of the Klaris - Skin Analysis Assistant mobile application ("Application") is processed, stored, and protected. This Privacy Policy complies with the General Data Protection Regulation (GDPR) for users in the European Union and the United Kingdom, and with the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA) for users in California, United States. Users are deemed to have accepted this Privacy Policy by using the application.
               </p>
             </div>
 
@@ -67,7 +67,7 @@ export default function PrivacyPolicy() {
             <div>
               <h2 className="text-xl font-semibold mb-4">Additional Information Regarding Facial Data</h2>
               <p>
-                Facial photographs uploaded by the user are processed solely for the purpose of performing artificial intelligence-supported skin analysis. These images are stored securely in the Supabase infrastructure and are retained as long as the user account is active. If the user deletes their account or requests deletion of their data, these images and related analysis results are permanently deleted. Skinly shares facial data only with business partners for the provision of services. In this context, images are analyzed by Face++ (Megvii), and this third-party service provider does not store facial photographs in their systems after analysis is completed. Facial data is not shared with unauthorized third parties or used for commercial purposes in any way.
+                Facial photographs uploaded by the user are processed solely for the purpose of performing artificial intelligence-supported skin analysis. These images are stored securely in the Supabase infrastructure and are retained as long as the user account is active. If the user deletes their account or requests deletion of their data, these images and related analysis results are permanently deleted. Klaris shares facial data only with business partners for the provision of services. In this context, images are analyzed by Face++ (Megvii), and this third-party service provider does not store facial photographs in their systems after analysis is completed. Facial data is not shared with unauthorized third parties or used for commercial purposes in any way.
               </p>
             </div>
 
@@ -144,7 +144,7 @@ export default function PrivacyPolicy() {
             <div>
               <h2 className="text-xl font-semibold mb-4">10. Method of Application</h2>
               <p>
-                Users can apply through info@skinly.com.tr to exercise these rights.
+                Users can apply through info@klarisai.app to exercise these rights.
               </p>
               <ul className="list-disc pl-6 space-y-2 mt-2">
                 <li><strong>GDPR requests</strong>: All requests are answered within 30 days (may be extended to 60 days for complex requests).</li>

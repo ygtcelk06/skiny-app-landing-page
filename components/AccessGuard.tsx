@@ -46,7 +46,7 @@ export default function AccessGuard({
           
           {/* Hata mesajı */}
           <p className="text-sm text-gray-500 mb-4">
-            {error || 'Bu sayfaya sadece Skinly uygulaması üzerinden erişebilirsiniz.'}
+            {error || 'Bu sayfaya sadece Klaris uygulaması üzerinden erişebilirsiniz.'}
           </p>
           
           {/* Yönlendirme bilgisi */}
@@ -72,7 +72,7 @@ export default function AccessGuard({
                 </h3>
                 <div className="mt-2 text-sm text-blue-700">
                   <ol className="list-decimal list-inside space-y-1">
-                    <li>Skinly uygulamasını açın</li>
+                    <li>Klaris uygulamasını açın</li>
                     <li>"Öneri/Feedback" butonuna tıklayın</li>
                     <li>Otomatik olarak bu sayfaya yönlendirileceksiniz</li>
                   </ol>
@@ -96,7 +96,7 @@ export default function AccessGuard({
           
           {/* Footer */}
           <p className="text-xs text-gray-400 mt-4">
-            Skinly Geri Bildirim Sistemi
+            Klaris Geri Bildirim Sistemi
           </p>
         </div>
       </div>

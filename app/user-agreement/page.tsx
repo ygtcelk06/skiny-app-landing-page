@@ -124,7 +124,7 @@ export default function UserAgreement() {
               <h2 className="text-xl font-semibold mb-4">11. Contact Information</h2>
               <ul className="list-none pl-0 space-y-2">
                 <li><strong>Company Name:</strong> Ahmet Yiğit ÇELİK (T.C:49285044668)</li>
-                <li><strong>Contact:</strong> info@skinly.com.tr</li>
+                <li><strong>Contact:</strong> info@klarisai.app</li>
                 <li><strong>Address:</strong> Ragıp Tüzün Mahallesi Coşkun Sokak 33/3 Yenimahalle Ankara, Turkey</li>
               </ul>
             </div>

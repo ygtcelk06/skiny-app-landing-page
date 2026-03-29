@@ -2,23 +2,23 @@
 
 ## Giriş
 
-Skinly Geri Bildirim ve Oylama Sistemi, Skinly kullanıcılarının uygulama için öneri, fikir ve özellik isteklerini paylaşabilecekleri topluluk odaklı bir platformdur. Diğer kullanıcılar bu önerilere oy vererek en çok talep edilen özelliklerin önceliklendirilmesine yardımcı olabilir. Sistem, mevcut Skinly web platformuna skinly.com.tr/feedback adresinde entegre edilecek ve mevcut Supabase altyapısı ile kullanıcı kimlik doğrulama sistemini kullanacaktır.
+Klaris Geri Bildirim ve Oylama Sistemi, Klaris kullanıcılarının uygulama için öneri, fikir ve özellik isteklerini paylaşabilecekleri topluluk odaklı bir platformdur. Diğer kullanıcılar bu önerilere oy vererek en çok talep edilen özelliklerin önceliklendirilmesine yardımcı olabilir. Sistem, mevcut Klaris web platformuna klarisai.app/feedback adresinde entegre edilecek ve mevcut Supabase altyapısı ile kullanıcı kimlik doğrulama sistemini kullanacaktır.
 
 ## Sözlük
 
-- **Geri_Bildirim_Sistemi**: Skinly kullanıcıları için eksiksiz geri bildirim ve oylama platformu
-- **Kullanici**: Geçerli kimlik doğrulama bilgilerine sahip kayıtlı Skinly kullanıcısı
-- **Admin**: Geri bildirim durumunu yönetme yetkisine sahip Skinly ekip üyeleri
+- **Geri_Bildirim_Sistemi**: Klaris kullanıcıları için eksiksiz geri bildirim ve oylama platformu
+- **Kullanici**: Geçerli kimlik doğrulama bilgilerine sahip kayıtlı Klaris kullanıcısı
+- **Admin**: Geri bildirim durumunu yönetme yetkisine sahip Klaris ekip üyeleri
 - **Geri_Bildirim_Ogesi**: Başlık, açıklama ve meta veriler içeren kullanıcı tarafından gönderilen öneri
 - **Oy**: Belirli bir geri bildirim öğesi üzerindeki kullanıcının beğeni eylemi
 - **Durum**: Geri bildirim öğesinin mevcut durumu (Beklemede, Değerlendiriliyor, Geliştiriliyor, Yayında)
-- **Supabase_Veritabani**: Skinly tarafından kullanılan mevcut veritabanı altyapısı
+- **Supabase_Veritabani**: Klaris tarafından kullanılan mevcut veritabanı altyapısı
 
 ## Gereksinimler
 
 ### Gereksinim 1
 
-**Kullanıcı Hikayesi:** Skinly kullanıcısı olarak, yeni özellikler veya iyileştirmeler için fikirlerimi paylaşabilmek amacıyla geri bildirim önerileri göndermek istiyorum.
+**Kullanıcı Hikayesi:** Klaris kullanıcısı olarak, yeni özellikler veya iyileştirmeler için fikirlerimi paylaşabilmek amacıyla geri bildirim önerileri göndermek istiyorum.
 
 #### Kabul Kriterleri
 
@@ -30,7 +30,7 @@ Skinly Geri Bildirim ve Oylama Sistemi, Skinly kullanıcılarının uygulama iç
 
 ### Gereksinim 2
 
-**Kullanıcı Hikayesi:** Skinly kullanıcısı olarak, en önemli özelliklerin önceliklendirilmesine yardımcı olmak için geri bildirim önerilerine oy vermek istiyorum.
+**Kullanıcı Hikayesi:** Klaris kullanıcısı olarak, en önemli özelliklerin önceliklendirilmesine yardımcı olmak için geri bildirim önerilerine oy vermek istiyorum.
 
 #### Kabul Kriterleri
 
@@ -42,7 +42,7 @@ Skinly Geri Bildirim ve Oylama Sistemi, Skinly kullanıcılarının uygulama iç
 
 ### Gereksinim 3
 
-**Kullanıcı Hikayesi:** Skinly kullanıcısı olarak, en çok talep edilen özellikleri kolayca bulabilmek için geri bildirim önerilerini popülerlik sırasına göre görmek istiyorum.
+**Kullanıcı Hikayesi:** Klaris kullanıcısı olarak, en çok talep edilen özellikleri kolayca bulabilmek için geri bildirim önerilerini popülerlik sırasına göre görmek istiyorum.
 
 #### Kabul Kriterleri
 
@@ -54,7 +54,7 @@ Skinly Geri Bildirim ve Oylama Sistemi, Skinly kullanıcılarının uygulama iç
 
 ### Gereksinim 4
 
-**Kullanıcı Hikayesi:** Skinly admin'i olarak, geliştirme ilerlemesini kullanıcılara iletebilmek için geri bildirim durumunu yönetmek istiyorum.
+**Kullanıcı Hikayesi:** Klaris admin'i olarak, geliştirme ilerlemesini kullanıcılara iletebilmek için geri bildirim durumunu yönetmek istiyorum.
 
 #### Kabul Kriterleri
 
@@ -66,7 +66,7 @@ Skinly Geri Bildirim ve Oylama Sistemi, Skinly kullanıcılarının uygulama iç
 
 ### Gereksinim 5
 
-**Kullanıcı Hikayesi:** Skinly kullanıcısı olarak, henüz topluluk ilgisi görmemiş önerilerimi kaldırabilmek için kendi geri bildirim gönderilerimi yönetmek istiyorum.
+**Kullanıcı Hikayesi:** Klaris kullanıcısı olarak, henüz topluluk ilgisi görmemiş önerilerimi kaldırabilmek için kendi geri bildirim gönderilerimi yönetmek istiyorum.
 
 #### Kabul Kriterleri
 
@@ -78,7 +78,7 @@ Skinly Geri Bildirim ve Oylama Sistemi, Skinly kullanıcılarının uygulama iç
 
 ### Gereksinim 6
 
-**Kullanıcı Hikayesi:** Skinly admin'i olarak, kaliteli bir geri bildirim ortamı sürdürebilmek için uygunsuz içeriği denetlemek istiyorum.
+**Kullanıcı Hikayesi:** Klaris admin'i olarak, kaliteli bir geri bildirim ortamı sürdürebilmek için uygunsuz içeriği denetlemek istiyorum.
 
 #### Kabul Kriterleri
 
@@ -90,7 +90,7 @@ Skinly Geri Bildirim ve Oylama Sistemi, Skinly kullanıcılarının uygulama iç
 
 ### Gereksinim 7
 
-**Kullanıcı Hikayesi:** Skinly kullanıcısı olarak, geri bildirim sistemini herhangi bir cihazda kolayca kullanabilmek için duyarlı ve sezgisel bir arayüz istiyorum.
+**Kullanıcı Hikayesi:** Klaris kullanıcısı olarak, geri bildirim sistemini herhangi bir cihazda kolayca kullanabilmek için duyarlı ve sezgisel bir arayüz istiyorum.
 
 #### Kabul Kriterleri
 

@@ -199,7 +199,7 @@ function FeedbackPageContent({
                   Geri Bildirim ve Öneriler
                 </h1>
                 <p className="mt-2 text-sm text-gray-600">
-                  Skinly uygulaması için önerilerinizi paylaşın ve oy verin
+                  Klaris uygulaması için önerilerinizi paylaşın ve oy verin
                 </p>
               </div>
               

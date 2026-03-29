@@ -109,7 +109,7 @@ export default function PrivacyNotice() {
               <h2 className="text-xl font-semibold mb-4">7. Method of Application</h2>
               <p>To exercise your rights, you may apply by:</p>
               <ul className="list-disc pl-6 space-y-2 mt-2">
-                <li>Sending an email to info@skinly.com.tr</li>
+                <li>Sending an email to info@klarisai.app</li>
                 <li>Sending a signed written request to Ragıp Tüzün Mahallesi Coşkun Sokak 33/3 Yenimahalle Ankara, Turkey</li>
                 <li>Sending a message through the in-app support section</li>
               </ul>

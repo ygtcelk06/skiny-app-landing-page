@@ -1,6 +1,6 @@
 {
   "common": {
-    "appName": "Skinly",
+    "appName": "Klaris",
     "tagline": "Discover your skin's needs with AI."
   },
   "nav": {
@@ -25,7 +25,7 @@
     "description": "Our advanced AI technology analyzes your skin condition and provides personalized recommendations for the best skincare results.",
     "scanFace": {
       "title": "Scan Your Face",
-      "description": "To have great skin, you first need to know it. Scanning your face with Skinly is very easy and fast!",
+      "description": "To have great skin, you first need to know it. Scanning your face with Klaris is very easy and fast!",
       "points": {
         "camera": "Analyze instantly using your phone camera.",
         "target": "Learn about problem areas and skin issues in seconds.",
@@ -116,13 +116,13 @@
       {
         "name": "Sarah Johnson",
         "role": "Skincare Enthusiast",
-        "content": "Skinly completely changed my skincare routine. The AI's recommendations were spot on. My skin has never looked this healthy!",
+        "content": "Klaris completely changed my skincare routine. The AI's recommendations were spot on. My skin has never looked this healthy!",
         "image": "/images/ava1.png"
       },
       {
         "name": "Michael Chen",
         "role": "Busy Professional",
-        "content": "My time is limited, but thanks to Skinly, my skincare is now both easy and effective. It's truly a lifesaver. I highly recommend it!",
+        "content": "My time is limited, but thanks to Klaris, my skincare is now both easy and effective. It's truly a lifesaver. I highly recommend it!",
         "image": "/images/ava2.png"
       },
       {
@@ -137,7 +137,7 @@
     "badge": "FAQ",
     "title": "Frequently Asked",
     "titleHighlight": "Questions",
-    "description": "Everything you need to know about Skinly's AI-powered skin analysis.",
+    "description": "Everything you need to know about Klaris's AI-powered skin analysis.",
     "questions": [
       {
         "question": "How accurate is AI skin analysis?",
@@ -164,12 +164,12 @@
         "answer": "Trying our app is completely free. After signing up, you can use all basic features and perform 1 skin analysis."
       },
       {
-        "question": "Can I use Skinly if I have sensitive skin?",
-        "answer": "Skinly is designed for all skin types, including sensitive skin. Our recommendations specifically consider sensitivity levels and offer gentle, hypoallergenic products. It also helps you avoid ingredients that could cause irritation."
+        "question": "Can I use Klaris if I have sensitive skin?",
+        "answer": "Klaris is designed for all skin types, including sensitive skin. Our recommendations specifically consider sensitivity levels and offer gentle, hypoallergenic products. It also helps you avoid ingredients that could cause irritation."
       }
     ],
     "stillHaveQuestions": "Still have questions?",
-    "supportDescription": "Our support team is here to help you get the most out of Skinly.",
+    "supportDescription": "Our support team is here to help you get the most out of Klaris.",
     "contactSupport": "Contact Support"
   },
   "cta": {
@@ -190,7 +190,7 @@
       "privacy": "Privacy Policy",
       "contactUs": "Contact Us"
     },
-    "copyright": "© 2025 Skinly. All rights reserved."
+    "copyright": "© 2025 Klaris. All rights reserved."
   },
   "legal": {
     "privacy": {
@@ -198,7 +198,7 @@
       "sections": {
         "introduction": {
           "title": "1. Introduction",
-          "content": "This Privacy Policy contains the principles regarding how personal data collected from users of the Skinly - Skin Analysis Assistant mobile application (\"Application\") is processed, stored, and protected. Users are deemed to have accepted this Privacy Policy by using the application."
+          "content": "This Privacy Policy contains the principles regarding how personal data collected from users of the Klaris - Skin Analysis Assistant mobile application (\"Application\") is processed, stored, and protected. Users are deemed to have accepted this Privacy Policy by using the application."
         },
         "collectedData": {
           "title": "2. Collected Data",
@@ -237,7 +237,7 @@
         },
         "faceData": {
           "title": "Additional Information Regarding Face Data",
-          "content": "Face photos uploaded by the user are processed solely for the purpose of performing AI-powered skin analysis. These images are stored securely in the Supabase infrastructure and retained while the user account is active. If the user deletes their account or requests deletion of their data, these images and related analysis results are permanently deleted. Skinly shares face data only with business partners for service provision. In this context, images are analyzed by Face++ (Megvii), and this third-party service provider does not store face photos in their systems after analysis is completed. Face data is never shared with unauthorized third parties or used for commercial purposes."
+          "content": "Face photos uploaded by the user are processed solely for the purpose of performing AI-powered skin analysis. These images are stored securely in the Supabase infrastructure and retained while the user account is active. If the user deletes their account or requests deletion of their data, these images and related analysis results are permanently deleted. Klaris shares face data only with business partners for service provision. In this context, images are analyzed by Face++ (Megvii), and this third-party service provider does not store face photos in their systems after analysis is completed. Face data is never shared with unauthorized third parties or used for commercial purposes."
         },
         "thirdParty": {
           "title": "6. Sharing Data with Third Parties",
@@ -277,7 +277,7 @@
         },
         "applicationMethod": {
           "title": "10. Application Method",
-          "content": "Users can apply via info@skinly.com.tr to exercise these rights. All requests are answered within legal periods."
+          "content": "Users can apply via info@klarisai.app to exercise these rights. All requests are answered within legal periods."
         },
         "changes": {
           "title": "11. Changes and Updates",
@@ -301,14 +301,14 @@
       "title": "About Us",
       "badge": "About Us",
       "heading": "Get to Know Your Skin Better",
-      "description": "Skinly is an AI-powered skin analysis application that aims to help everyone get to know their skin better by basing skin care on scientific data and technological analysis.",
+      "description": "Klaris is an AI-powered skin analysis application that aims to help everyone get to know their skin better by basing skin care on scientific data and technological analysis.",
       "scientificApproach": {
         "title": "Scientific Approach",
         "content": "Unlike the memorized recommendations in the beauty industry, we try to understand the real needs of the skin by going beneath the surface. Our advanced AI infrastructure works with algorithms trained on thousands of dermatologist-approved images and provides personalized analyses for users."
       },
       "mission": {
         "title": "Our Mission",
-        "content": "As Skinly, we believe that skin care should be accessible, reliable, and personalized for everyone. We are here to help you reach the best version of your skin by combining technology with aesthetics and common sense.",
+        "content": "As Klaris, we believe that skin care should be accessible, reliable, and personalized for everyone. We are here to help you reach the best version of your skin by combining technology with aesthetics and common sense.",
         "values": {
           "accessible": {
             "title": "Accessible",
@@ -329,16 +329,16 @@
       "title": "Contact",
       "badge": "Contact",
       "heading": "Would you like to get in touch with us?",
-      "description": "The Skinly team is happy to help you.",
+      "description": "The Klaris team is happy to help you.",
       "content": "You can reach us anytime for questions about the app, feedback, or collaboration requests.",
-      "email": "info@skinly.com.tr",
+      "email": "info@klarisai.app",
       "responseNote": "We make sure to respond to all your messages as soon as possible.",
       "supportText": "Would you like to contact our support team directly?",
       "contactFormButton": "Contact Form"
     },
     "deleteAccount": {
-      "title": "Skinly Account Deletion Instructions",
-      "intro": "In the Skinly application, you can permanently delete your account and remove all your data. This action cannot be undone. You can find the steps below.",
+      "title": "Klaris Account Deletion Instructions",
+      "intro": "In the Klaris application, you can permanently delete your account and remove all your data. This action cannot be undone. You can find the steps below.",
       "stepsTitle": "In-App Account Deletion Steps",
       "stepsIntro": "To delete your account, please follow the steps below:",
       "steps": [
@@ -361,12 +361,12 @@
       "processingContent": "The deletion process starts immediately and is permanently completed within 7 days. During this period, if you do not reactivate your account, the data cannot be recovered.",
       "contactTitle": "Contact",
       "contactContent": "If you encounter any issues, you can contact us at:",
-      "contactEmail": "support@skinly.com.tr"
+      "contactEmail": "support@klarisai.app"
     },
     "contactUs": {
       "badge": "Contact",
       "title": "Still have questions?",
-      "description": "Our support team is here to help you get the most out of Skinly.",
+      "description": "Our support team is here to help you get the most out of Klaris.",
       "nameLabel": "Your Name",
       "namePlaceholder": "Enter your name",
       "emailLabel": "Your Email Address",

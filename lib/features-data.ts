@@ -6,7 +6,7 @@ export const features = [
     number: "1",
     title: "Yüzünü Tara",
     description:
-      "Harika bir cilt için önce onu tanıman gerekiyor. Skinly ile yüzünü taramak çok kolay ve hızlı!",
+      "Harika bir cilt için önce onu tanıman gerekiyor. Klaris ile yüzünü taramak çok kolay ve hızlı!",
     image: "/images/step-01.png",
     iconColor: "#1bcee0",
     iconBgColor: "#ddf8fa",

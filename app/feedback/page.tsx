@@ -20,7 +20,7 @@ export default async function FeedbackPage({ searchParams }: FeedbackPageProps) 
         isAuthorized={false}
         user={null}
         accessToken=""
-        error="Yetkisiz erişim. Lütfen Skinly uygulaması üzerinden erişin."
+        error="Yetkisiz erişim. Lütfen Klaris uygulaması üzerinden erişin."
       />
     )
   }
@@ -61,6 +61,6 @@ export default async function FeedbackPage({ searchParams }: FeedbackPageProps) 
 
 // Metadata
 export const metadata = {
-  title: 'Skinly - Geri Bildirim ve Öneriler',
-  description: 'Skinly uygulaması için önerilerinizi paylaşın ve oy verin.',
+  title: 'Klaris - Geri Bildirim ve Öneriler',
+  description: 'Klaris uygulaması için önerilerinizi paylaşın ve oy verin.',
 }

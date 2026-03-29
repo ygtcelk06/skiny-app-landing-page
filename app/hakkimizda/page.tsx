@@ -15,7 +15,7 @@ export default function AboutUs() {
             Cildinizi Daha Yakından Tanıyın
           </h1>
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-            Skinly, cilt bakımını bilimsel verilere ve teknolojik analizlere dayandırarak herkesin cildini daha yakından tanımasını sağlamayı amaçlayan bir yapay zeka destekli cilt analiz uygulamasıdır.
+            Klaris, cilt bakımını bilimsel verilere ve teknolojik analizlere dayandırarak herkesin cildini daha yakından tanımasını sağlamayı amaçlayan bir yapay zeka destekli cilt analiz uygulamasıdır.
           </p>
         </div>
       </AnimatedSection>
@@ -34,7 +34,7 @@ export default function AboutUs() {
           <div className="relative h-[300px] md:h-[400px]">
             <Image
               src="/images/model.jpg"
-              alt="Skinly AI Analiz"
+              alt="Klaris AI Analiz"
               fill
               className="object-cover rounded-2xl"
               priority
@@ -50,7 +50,7 @@ export default function AboutUs() {
             Misyonumuz
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Skinly olarak, cilt bakımının herkes için ulaşılabilir, güvenilir ve kişiselleştirilmiş olması gerektiğine inanıyoruz. Teknolojiyi, estetikle ve sağduyuyla birleştirerek, cildinizin en iyi haline ulaşmanız için buradayız.
+            Klaris olarak, cilt bakımının herkes için ulaşılabilir, güvenilir ve kişiselleştirilmiş olması gerektiğine inanıyoruz. Teknolojiyi, estetikle ve sağduyuyla birleştirerek, cildinizin en iyi haline ulaşmanız için buradayız.
           </p>
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <div className="p-6 bg-white rounded-2xl shadow-sm">

@@ -2,7 +2,7 @@
 
 ## Genel Bakış
 
-Skinly Geri Bildirim ve Oylama Sistemi, Skinly mobil uygulaması içinden erişilebilen güvenli bir topluluk özellik istekleri platformudur. Sistem, sadece Skinly uygulaması içindeki "Öneri/Feedback" butonu üzerinden token-based authentication ile erişilebilir olacaktır. Dışarıdan doğrudan URL erişimi engellenecektir. Sistem, Next.js 15, React 19, TypeScript, Tailwind CSS ve Supabase teknolojilerini kullanarak geliştirilecektir.
+Klaris Geri Bildirim ve Oylama Sistemi, Klaris mobil uygulaması içinden erişilebilen güvenli bir topluluk özellik istekleri platformudur. Sistem, sadece Klaris uygulaması içindeki "Öneri/Feedback" butonu üzerinden token-based authentication ile erişilebilir olacaktır. Dışarıdan doğrudan URL erişimi engellenecektir. Sistem, Next.js 15, React 19, TypeScript, Tailwind CSS ve Supabase teknolojilerini kullanarak geliştirilecektir.
 
 ## Mimari
 
@@ -10,7 +10,7 @@ Skinly Geri Bildirim ve Oylama Sistemi, Skinly mobil uygulaması içinden erişi
 
 ```mermaid
 graph TB
-    A[Skinly Mobil App] --> B[Öneri Butonu]
+    A[Klaris Mobil App] --> B[Öneri Butonu]
     B --> C[Token Generation]
     C --> D[Web Redirect with Token]
     D --> E[Next.js Frontend]
@@ -422,7 +422,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     return {
       props: {
         isAuthorized: false,
-        error: 'Yetkisiz erişim. Lütfen Skinly uygulaması üzerinden erişin.'
+        error: 'Yetkisiz erişim. Lütfen Klaris uygulaması üzerinden erişin.'
       }
     }
   }
@@ -468,10 +468,10 @@ const AccessGuard: React.FC<{ children: React.ReactNode; isAuthorized: boolean; 
           </div>
           <h3 className="text-lg font-medium text-gray-900 mb-2">Erişim Engellendi</h3>
           <p className="text-sm text-gray-500 mb-4">
-            {error || 'Bu sayfaya sadece Skinly uygulaması üzerinden erişebilirsiniz.'}
+            {error || 'Bu sayfaya sadece Klaris uygulaması üzerinden erişebilirsiniz.'}
           </p>
           <p className="text-xs text-gray-400">
-            Skinly uygulamasını açın ve "Öneri/Feedback" butonunu kullanın.
+            Klaris uygulamasını açın ve "Öneri/Feedback" butonunu kullanın.
           </p>
         </div>
       </div>
@@ -605,7 +605,7 @@ NEXT_PUBLIC_SUPABASE_URL=https://zronewujlepzmanxmtug.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 JWT_SECRET=your-jwt-secret-key-for-token-validation
-SKINLY_APP_API_URL=https://api.skinly.com.tr
+KLARIS_APP_API_URL=https://api.klarisai.app
 ```
 
 ### Mobil Uygulama Entegrasyonu
@@ -613,7 +613,7 @@ SKINLY_APP_API_URL=https://api.skinly.com.tr
 #### Token Generation (Mobil App Tarafında)
 
 ```typescript
-// Skinly mobil uygulamasında
+// Klaris mobil uygulamasında
 const generateFeedbackToken = async (userId: string) => {
   const payload: AccessTokenPayload = {
     user_id: userId,
@@ -627,11 +627,11 @@ const generateFeedbackToken = async (userId: string) => {
   const token = jwt.sign(payload, JWT_SECRET)
   
   // Web sayfasına yönlendirme
-  const feedbackUrl = `https://skinly.com.tr/feedback?token=${token}`
+  const feedbackUrl = `https://klarisai.app/feedback?token=${token}`
   
   // In-app browser veya external browser ile açma
   openInAppBrowser(feedbackUrl)
 }
 ```
 
-Bu tasarım belgesi, Skinly Geri Bildirim ve Oylama Sistemi'nin teknik mimarisini, bileşen yapısını, veri modellerini ve implementasyon detaylarını kapsamlı bir şekilde tanımlamaktadır.
+Bu tasarım belgesi, Klaris Geri Bildirim ve Oylama Sistemi'nin teknik mimarisini, bileşen yapısını, veri modellerini ve implementasyon detaylarını kapsamlı bir şekilde tanımlamaktadır.

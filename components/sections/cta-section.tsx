@@ -85,7 +85,7 @@ export default function CTASection() {
             <div className="relative w-full max-w-[600px]">
               <Image
                 src={getLocalizedImage("/images/footer-img.png", locale)}
-                alt="Skinly App - Track Your Skincare Routine"
+                alt="Klaris App - Track Your Skincare Routine"
                 width={600}
                 height={500}
                 className="w-full h-auto object-contain"

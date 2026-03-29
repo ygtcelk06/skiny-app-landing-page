@@ -97,7 +97,7 @@ export default function KvkkAydinlatmaMetni() {
                 KVKK kapsamındaki haklarınızı kullanmak için:
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>info@skinly.com.tr adresine e-posta göndererek</li>
+                <li>info@klarisai.app adresine e-posta göndererek</li>
                 <li>Ragıp Tüzün Mahallesi Coşkun Sokak 33/3 Yenimahalle Ankara adresine ıslak imzalı dilekçe göndererek</li>
                 <li>Uygulama içi destek bölümünden mesaj göndererek</li>
               </ul>

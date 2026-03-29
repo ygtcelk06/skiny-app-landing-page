@@ -24,13 +24,19 @@ export default function WelcomePage() {
             <div className="bg-white rounded-3xl p-8 border border-gray-100 max-w-md">
               {/* Logo */}
               <div className="flex items-center space-x-2 mb-8">
-                <Image src="/images/skiny-logo.svg" alt="Skiny" width={100} height={100} />
+                <Image
+                  src="/images/klaris.png"
+                  alt="Klaris"
+                  width={140}
+                  height={48}
+                  className="h-12 w-auto object-contain object-left"
+                />
               </div>
 
               {/* Karşılama İçeriği */}
               <div className="space-y-6">
                 <div>
-                  <h1 className="text-2xl font-bold text-[#323232] font-sans mb-3">Skinly&apos;e Hoş Geldiniz!</h1>
+                  <h1 className="text-2xl font-bold text-[#323232] font-sans mb-3">Klaris&apos;e Hoş Geldiniz!</h1>
                   <p className="text-[#323232]/70 text-sm leading-relaxed font-sans">
                     Hesabınız başarıyla oluşturuldu. En iyi deneyim için cilt bakım yolculuğunuza mobil uygulamamız üzerinden devam edin.
                   </p>

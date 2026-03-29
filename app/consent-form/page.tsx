@@ -16,7 +16,7 @@ export default function ConsentForm() {
           
           <div className="space-y-6 text-gray-700">
             <p>
-              In accordance with the General Data Protection Regulation (GDPR) (EU) 2016/679, I acknowledge and declare that I give my explicit consent to the processing, transfer, and storage of my personal data specified below in order to benefit from the skin analysis service provided within the scope of the Skinly mobile application:
+              In accordance with the General Data Protection Regulation (GDPR) (EU) 2016/679, I acknowledge and declare that I give my explicit consent to the processing, transfer, and storage of my personal data specified below in order to benefit from the skin analysis service provided within the scope of the Klaris mobile application:
             </p>
 
             <div>

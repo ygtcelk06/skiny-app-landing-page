@@ -85,11 +85,11 @@ export default function Footer() {
           <div className="space-y-4 text-center sm:text-left">
             <div className="flex items-center justify-center sm:justify-start">
               <Image 
-                src="/images/skiny-logo.svg" 
-                alt="Skinly" 
+                src="/images/klaris.png" 
+                alt="Klaris" 
                 width={120} 
                 height={95}
-                className=" "
+                className="h-[72px] w-auto max-w-[140px] object-contain object-left"
               />
             </div>
             <p className="text-white/70 font-sans">{footerData.tagline}</p>

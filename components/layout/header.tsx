@@ -34,10 +34,12 @@ export default function Header() {
         <div className="flex items-center space-x-2">
           <div className="flex items-center justify-center ">
             <Image
-              src="/images/skiny-logo.svg"
-              alt="Skinly"
+              src="/images/klaris.png"
+              alt="Klaris"
               width={100}
               height={40}
+              className="h-10 w-auto object-contain object-left"
+              priority
             />
           </div>
         </div>

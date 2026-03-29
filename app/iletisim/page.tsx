@@ -15,7 +15,7 @@ export default function Iletisim() {
               Bizimle iletişime geçmek ister misiniz?
             </h1>
             <p className="text-xl text-gray-600">
-              Skinly ekibi olarak size yardımcı olmaktan memnuniyet duyarız.
+              Klaris ekibi olarak size yardımcı olmaktan memnuniyet duyarız.
             </p>
           </div>
           
@@ -28,8 +28,8 @@ export default function Iletisim() {
               <div className="py-8">
                 <div className="inline-flex items-center space-x-3 text-xl font-medium text-[#323232]">
                   <span>📩</span>
-                  <a href="mailto:info@skinly.com.tr" className="hover:text-black transition-colors">
-                    info@skinly.com.tr
+                  <a href="mailto:info@klarisai.app" className="hover:text-black transition-colors">
+                    info@klarisai.app
                   </a>
                 </div>
               </div>

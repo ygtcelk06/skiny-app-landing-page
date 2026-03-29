@@ -14,14 +14,14 @@ export async function generateMetadata(): Promise<Metadata> {
   
   if (locale === 'tr') {
     return {
-      title: "Skinly - Yapay Zeka Destekli Cilt Bakım Asistanı",
-      description: "Skinly, gelişmiş yapay zekâ teknolojisiyle cildinizi tanımanıza ve geliştirmenize yardımcı olur. Kişiye özel bakım rutinleri oluşturun, ilerlemenizi takip edin ve cildiniz için en uygun ürünleri keşfedin.",
+      title: "Klaris - Yapay Zeka Destekli Cilt Bakım Asistanı",
+      description: "Klaris, gelişmiş yapay zekâ teknolojisiyle cildinizi tanımanıza ve geliştirmenize yardımcı olur. Kişiye özel bakım rutinleri oluşturun, ilerlemenizi takip edin ve cildiniz için en uygun ürünleri keşfedin.",
     };
   }
   
   return {
-    title: "Skinly - AI-Powered Skincare Assistant",
-    description: "Skinly helps you understand and improve your skin with advanced AI technology. Create personalized care routines, track your progress, and discover the best products for your skin.",
+    title: "Klaris - AI-Powered Skincare Assistant",
+    description: "Klaris helps you understand and improve your skin with advanced AI technology. Create personalized care routines, track your progress, and discover the best products for your skin.",
   };
 }
 

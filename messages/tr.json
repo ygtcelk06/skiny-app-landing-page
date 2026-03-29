@@ -1,6 +1,6 @@
 {
   "common": {
-    "appName": "Skinly",
+    "appName": "Klaris",
     "tagline": "Cildinin ihtiyaçlarını yapay zekayla keşfet."
   },
   "nav": {
@@ -25,7 +25,7 @@
     "description": "Gelişmiş yapay zeka teknolojimiz, cilt durumunuzu analiz eder ve en iyi cilt bakım sonuçları için size özel öneriler sunar.",
     "scanFace": {
       "title": "Yüzünü Tara",
-      "description": "Harika bir cilt için önce onu tanıman gerekiyor. Skinly ile yüzünü taramak çok kolay ve hızlı!",
+      "description": "Harika bir cilt için önce onu tanıman gerekiyor. Klaris ile yüzünü taramak çok kolay ve hızlı!",
       "points": {
         "camera": "Telefon kameranı kullanarak anında analiz yap.",
         "target": "Sorunlu bölgeleri ve cilt problemlerini saniyeler içinde öğren.",
@@ -116,13 +116,13 @@
       {
         "name": "Elif Yılmaz",
         "role": "Cilt Bakım Meraklısı",
-        "content": "Skinly, cilt bakım rutinimi tamamen değiştirdi. Yapay zekanın önerileri tam nokta atışıydı. Cildim hiç bu kadar sağlıklı görünmemişti!",
+        "content": "Klaris, cilt bakım rutinimi tamamen değiştirdi. Yapay zekanın önerileri tam nokta atışıydı. Cildim hiç bu kadar sağlıklı görünmemişti!",
         "image": "/images/ava1.png"
       },
       {
         "name": "Mehmet Kaya",
         "role": "Yoğun Bir Profesyonel",
-        "content": "Zamanım kısıtlı ama Skinly sayesinde cilt bakımım artık hem kolay hem etkili. Gerçekten hayat kurtarıcı. Şiddetle tavsiye ederim!",
+        "content": "Zamanım kısıtlı ama Klaris sayesinde cilt bakımım artık hem kolay hem etkili. Gerçekten hayat kurtarıcı. Şiddetle tavsiye ederim!",
         "image": "/images/ava2.png"
       },
       {
@@ -137,7 +137,7 @@
     "badge": "SSS",
     "title": "Sıkça Sorulan",
     "titleHighlight": "Sorular",
-    "description": "Skinly'nin yapay zeka destekli cilt analizi hakkında bilmeniz gereken her şey.",
+    "description": "Klaris'in yapay zeka destekli cilt analizi hakkında bilmeniz gereken her şey.",
     "questions": [
       {
         "question": "Yapay zeka cilt analizi ne kadar doğru?",
@@ -164,12 +164,12 @@
         "answer": "Uygulamamızı denemek tamamen ücretsizdir. Kayıt olduktan sonra tüm temel özellikleri kullanabilir ve 1 kez cilt analizi yapabilirsiniz."
       },
       {
-        "question": "Hassas cildim varsa Skinly'i kullanabilir miyim?",
-        "answer": "Skinly, hassas cilt dahil olmak üzere tüm cilt tipleri için tasarlanmıştır. Önerilerimiz özellikle hassasiyet seviyelerini dikkate alır ve nazik, hipoalerjenik ürünler sunar. Ayrıca, tahrişe neden olabilecek içeriklerden kaçınmanıza yardımcı olur."
+        "question": "Hassas cildim varsa Klaris'i kullanabilir miyim?",
+        "answer": "Klaris, hassas cilt dahil olmak üzere tüm cilt tipleri için tasarlanmıştır. Önerilerimiz özellikle hassasiyet seviyelerini dikkate alır ve nazik, hipoalerjenik ürünler sunar. Ayrıca, tahrişe neden olabilecek içeriklerden kaçınmanıza yardımcı olur."
       }
     ],
     "stillHaveQuestions": "Hala sorularınız mı var?",
-    "supportDescription": "Destek ekibimiz, Skinly'den en iyi şekilde faydalanmanız için burada.",
+    "supportDescription": "Destek ekibimiz, Klaris'ten en iyi şekilde faydalanmanız için burada.",
     "contactSupport": "Destek ile iletişime geçin"
   },
   "cta": {
@@ -190,7 +190,7 @@
       "privacy": "Gizlilik Politikası",
       "contactUs": "Bize Ulaşın"
     },
-    "copyright": "© 2025 Skinly. Tüm hakları saklıdır."
+    "copyright": "© 2025 Klaris. Tüm hakları saklıdır."
   },
   "legal": {
     "privacy": {
@@ -198,7 +198,7 @@
       "sections": {
         "introduction": {
           "title": "1. Giriş",
-          "content": "Bu Gizlilik Politikası, Skinly - Cilt Analiz Asistanı mobil uygulamasının (\"Uygulama\") kullanıcılarından toplanan kişisel verilerin, nasıl işlendiği, saklandığı ve korunduğuna ilişkin ilkeleri içermektedir. Kullanıcılar, uygulamayı kullanarak bu Gizlilik Politikasını kabul etmiş sayılırlar."
+          "content": "Bu Gizlilik Politikası, Klaris - Cilt Analiz Asistanı mobil uygulamasının (\"Uygulama\") kullanıcılarından toplanan kişisel verilerin, nasıl işlendiği, saklandığı ve korunduğuna ilişkin ilkeleri içermektedir. Kullanıcılar, uygulamayı kullanarak bu Gizlilik Politikasını kabul etmiş sayılırlar."
         },
         "collectedData": {
           "title": "2. Toplanan Veriler",
@@ -237,7 +237,7 @@
         },
         "faceData": {
           "title": "Yüz Verilerine İlişkin Ek Bilgilendirme",
-          "content": "Kullanıcı tarafından yüklenen yüz fotoğrafları, yalnızca yapay zekâ destekli cilt analizinin gerçekleştirilmesi amacıyla işlenir. Bu görseller, güvenli bir şekilde Supabase altyapısında saklanır ve kullanıcı hesabı aktif olduğu sürece muhafaza edilir. Kullanıcı hesabını silerse veya verilerinin silinmesini talep ederse, bu görseller ve ilişkili analiz sonuçları kalıcı olarak silinir. Skinly, yüz verilerini yalnızca hizmetin sağlanması için iş ortaklarıyla paylaşır. Bu kapsamda, görseller Face++ (Megvii) tarafından analiz edilmekte olup, bu üçüncü taraf hizmet sağlayıcı yüz fotoğraflarını analiz tamamlandıktan sonra sistemlerinde saklamaz. Yüz verileri hiçbir şekilde yetkisiz üçüncü kişilerle paylaşılmaz veya ticari amaçlarla kullanılmaz."
+          "content": "Kullanıcı tarafından yüklenen yüz fotoğrafları, yalnızca yapay zekâ destekli cilt analizinin gerçekleştirilmesi amacıyla işlenir. Bu görseller, güvenli bir şekilde Supabase altyapısında saklanır ve kullanıcı hesabı aktif olduğu sürece muhafaza edilir. Kullanıcı hesabını silerse veya verilerinin silinmesini talep ederse, bu görseller ve ilişkili analiz sonuçları kalıcı olarak silinir. Klaris, yüz verilerini yalnızca hizmetin sağlanması için iş ortaklarıyla paylaşır. Bu kapsamda, görseller Face++ (Megvii) tarafından analiz edilmekte olup, bu üçüncü taraf hizmet sağlayıcı yüz fotoğraflarını analiz tamamlandıktan sonra sistemlerinde saklamaz. Yüz verileri hiçbir şekilde yetkisiz üçüncü kişilerle paylaşılmaz veya ticari amaçlarla kullanılmaz."
         },
         "thirdParty": {
           "title": "6. Verilerin Üçüncü Kişilerle Paylaşımı",
@@ -277,7 +277,7 @@
         },
         "applicationMethod": {
           "title": "10. Başvuru Yöntemi",
-          "content": "Kullanıcılar, bu haklarını kullanmak için info@skinly.com.tr üzerinden başvuru yapabilir. Tüm talepler yasal süreler içinde cevaplandırılır."
+          "content": "Kullanıcılar, bu haklarını kullanmak için info@klarisai.app üzerinden başvuru yapabilir. Tüm talepler yasal süreler içinde cevaplandırılır."
         },
         "changes": {
           "title": "11. Değişiklikler ve Güncellemeler",
@@ -301,14 +301,14 @@
       "title": "Hakkımızda",
       "badge": "Hakkımızda",
       "heading": "Cildinizi Daha Yakından Tanıyın",
-      "description": "Skinly, cilt bakımını bilimsel verilere ve teknolojik analizlere dayandırarak herkesin cildini daha yakından tanımasını sağlamayı amaçlayan bir yapay zeka destekli cilt analiz uygulamasıdır.",
+      "description": "Klaris, cilt bakımını bilimsel verilere ve teknolojik analizlere dayandırarak herkesin cildini daha yakından tanımasını sağlamayı amaçlayan bir yapay zeka destekli cilt analiz uygulamasıdır.",
       "scientificApproach": {
         "title": "Bilimsel Yaklaşım",
         "content": "Güzellik sektöründeki ezbere önerilerden farklı olarak, biz cildin gerçek ihtiyaçlarını yüzeyin altına inerek anlamaya çalışıyoruz. Gelişmiş yapay zeka altyapımız, binlerce dermatolog onaylı görsel üzerinde eğitilmiş algoritmalarla çalışır ve kullanıcıya özel analizler sunar."
       },
       "mission": {
         "title": "Misyonumuz",
-        "content": "Skinly olarak, cilt bakımının herkes için ulaşılabilir, güvenilir ve kişiselleştirilmiş olması gerektiğine inanıyoruz. Teknolojiyi, estetikle ve sağduyuyla birleştirerek, cildinizin en iyi haline ulaşmanız için buradayız.",
+        "content": "Klaris olarak, cilt bakımının herkes için ulaşılabilir, güvenilir ve kişiselleştirilmiş olması gerektiğine inanıyoruz. Teknolojiyi, estetikle ve sağduyuyla birleştirerek, cildinizin en iyi haline ulaşmanız için buradayız.",
         "values": {
           "accessible": {
             "title": "Ulaşılabilir",
@@ -329,16 +329,16 @@
       "title": "İletişim",
       "badge": "İletişim",
       "heading": "Bizimle iletişime geçmek ister misiniz?",
-      "description": "Skinly ekibi olarak size yardımcı olmaktan memnuniyet duyarız.",
+      "description": "Klaris ekibi olarak size yardımcı olmaktan memnuniyet duyarız.",
       "content": "Uygulamayla ilgili sorularınız, geri bildirimleriniz veya iş birliği talepleriniz için bize dilediğiniz zaman ulaşabilirsiniz.",
-      "email": "info@skinly.com.tr",
+      "email": "info@klarisai.app",
       "responseNote": "Tüm mesajlarınızı en kısa sürede yanıtlamaya özen gösteriyoruz.",
       "supportText": "Destek ekibimizle doğrudan iletişime geçmek ister misiniz?",
       "contactFormButton": "İletişim Formu"
     },
     "deleteAccount": {
-      "title": "Skinly Hesap Silme Talimatları",
-      "intro": "Skinly uygulamasında hesabınızı kalıcı olarak silebilir ve tüm verilerinizi kaldırabilirsiniz. Bu işlem geri alınamaz. Aşağıda adımları bulabilirsiniz.",
+      "title": "Klaris Hesap Silme Talimatları",
+      "intro": "Klaris uygulamasında hesabınızı kalıcı olarak silebilir ve tüm verilerinizi kaldırabilirsiniz. Bu işlem geri alınamaz. Aşağıda adımları bulabilirsiniz.",
       "stepsTitle": "Uygulama İçi Hesap Silme Adımları",
       "stepsIntro": "Hesabınızı silmek için lütfen aşağıdaki adımları izleyin:",
       "steps": [
@@ -361,12 +361,12 @@
       "processingContent": "Silme işlemi anında başlatılır, 7 gün içinde kalıcı olarak tamamlanır. Bu süre zarfında hesabınızı yeniden aktif etmezseniz veriler geri getirilemez.",
       "contactTitle": "İletişim",
       "contactContent": "Herhangi bir sorunla karşılaşırsanız bizimle şu adresten iletişime geçebilirsiniz:",
-      "contactEmail": "support@skinly.com.tr"
+      "contactEmail": "support@klarisai.app"
     },
     "contactUs": {
       "badge": "İletişim",
       "title": "Hala sorularınız mı var?",
-      "description": "Destek ekibimiz, Skinly'den en iyi şekilde faydalanmanız için burada.",
+      "description": "Destek ekibimiz, Klaris'ten en iyi şekilde faydalanmanız için burada.",
       "nameLabel": "Adınız",
       "namePlaceholder": "Adınızı giriniz",
       "emailLabel": "E-posta Adresiniz",

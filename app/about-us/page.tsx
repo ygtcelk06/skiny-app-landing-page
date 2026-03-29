@@ -82,7 +82,7 @@ export default function AboutUs() {
           <div className="relative h-[300px] md:h-[400px]">
             <Image
               src="/images/model.jpg"
-              alt="Skinly AI Analysis"
+              alt="Klaris AI Analysis"
               fill
               className="object-cover rounded-2xl"
               priority

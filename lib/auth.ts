@@ -64,8 +64,8 @@ export async function validateAccessToken(token: string): Promise<AccessTokenPay
 export function generateTestToken(isAdmin: boolean = true): string {
   const testPayload: AccessTokenPayload = {
     user_id: isAdmin ? '550e8400-e29b-41d4-a716-446655440000' : '550e8400-e29b-41d4-a716-446655440001',
-    email: isAdmin ? 'admin@skinly.com' : 'user@skinly.com',
-    display_name: isAdmin ? 'Skinly Admin' : 'Test Kullanıcı',
+    email: isAdmin ? 'admin@klarisai.app' : 'user@klarisai.app',
+    display_name: isAdmin ? 'Klaris Admin' : 'Test Kullanıcı',
     is_admin: isAdmin,
     app_session_id: 'test-session-' + Date.now(),
     issued_at: Date.now(),
@@ -84,8 +84,8 @@ export function generateTestToken(isAdmin: boolean = true): string {
 export function createTestUser(isAdmin: boolean = true): User {
   return {
     id: isAdmin ? '550e8400-e29b-41d4-a716-446655440000' : '550e8400-e29b-41d4-a716-446655440001',
-    email: isAdmin ? 'admin@skinly.com' : 'user@skinly.com',
-    display_name: isAdmin ? 'Skinly Admin' : 'Test Kullanıcı',
+    email: isAdmin ? 'admin@klarisai.app' : 'user@klarisai.app',
+    display_name: isAdmin ? 'Klaris Admin' : 'Test Kullanıcı',
     is_admin: isAdmin
   }
 }
