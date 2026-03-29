@@ -26,7 +26,7 @@ export default function Icon() {
           borderRadius: '100%'
         }}
       >
-        S
+        K
       </div>
     ),
     {
