@@ -309,6 +309,13 @@
       "mission": {
         "title": "Our Mission",
         "content": "As Klaris, we believe that skin care should be accessible, reliable, and personalized for everyone. We are here to help you reach the best version of your skin by combining technology with aesthetics and common sense.",
+        "ownerInfo": {
+          "title": "Business Contact",
+          "ownerLabel": "Authorized representative",
+          "ownerName": "Ahmet Yiğit Çelik",
+          "emailLabel": "Email",
+          "email": "info@klarisai.app"
+        },
         "values": {
           "accessible": {
             "title": "Accessible",
@@ -331,6 +338,9 @@
       "heading": "Would you like to get in touch with us?",
       "description": "The Klaris team is happy to help you.",
       "content": "You can reach us anytime for questions about the app, feedback, or collaboration requests.",
+      "ownerLabel": "Authorized representative",
+      "ownerName": "Ahmet Yiğit Çelik",
+      "emailLabel": "Email",
       "email": "info@klarisai.app",
       "responseNote": "We make sure to respond to all your messages as soon as possible.",
       "supportText": "Would you like to contact our support team directly?",
@@ -380,4 +390,3 @@
     }
   }
 }
-

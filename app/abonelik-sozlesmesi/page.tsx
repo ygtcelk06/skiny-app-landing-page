@@ -44,7 +44,7 @@ export default function AbonelikSozlesmesi() {
                   <h3 className="text-lg font-medium mb-2">3.2 Ücretli Abonelik Paketleri</h3>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Sunulan paketler aşağıda belirtilecektir:</li>
-                    <li>Premium Paket: haftalık 29.99 TL veya yıllık 699.99 TL (fiyatlar vergiler dahil ve Türk Lirası üzerinden hesaplanmıştır)</li>
+                    <li>Premium Paket: haftalık 49.99 TL veya yıllık 999.99 TL (fiyatlar vergiler dahil ve Türk Lirası üzerinden hesaplanmıştır)</li>
                     <li>Paket içerikleri ve ücretlendirme, uygulama içinde ayrıca duyurulacaktır.</li>
                     <li>Hizmet Sağlayıcı, paket içeriklerinde ve ücretlendirmede değişiklik yapma hakkını saklı tutar.</li>
                   </ul>

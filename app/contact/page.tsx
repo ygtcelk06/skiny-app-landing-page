@@ -17,6 +17,9 @@ export default function Contact() {
       heading: t('heading'),
       description: t('description'),
       content: t('content'),
+      ownerLabel: t('ownerLabel'),
+      ownerName: t('ownerName'),
+      emailLabel: t('emailLabel'),
       email: t('email'),
       responseNote: t('responseNote'),
       supportText: t('supportText'),
@@ -57,11 +60,17 @@ export default function Contact() {
               </p>
 
               <div className="py-8">
-                <div className="inline-flex items-center space-x-3 text-xl font-medium text-[#323232]">
-                  <span>📩</span>
-                  <a href={`mailto:${translations.email}`} className="hover:text-black transition-colors">
-                    {translations.email}
-                  </a>
+                <div className="inline-flex flex-col items-start gap-3 text-left text-lg text-[#323232]">
+                  <p>
+                    <span className="font-medium">{translations.ownerLabel}:</span>{" "}
+                    {translations.ownerName}
+                  </p>
+                  <p>
+                    <span className="font-medium">{translations.emailLabel}:</span>{" "}
+                    <a href={`mailto:${translations.email}`} className="hover:text-black transition-colors">
+                      {translations.email}
+                    </a>
+                  </p>
                 </div>
               </div>
 
@@ -87,4 +96,3 @@ export default function Contact() {
     </main>
   );
 }
-

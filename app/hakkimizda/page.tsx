@@ -52,6 +52,20 @@ export default function AboutUs() {
           <p className="text-lg text-gray-600 leading-relaxed">
             Klaris olarak, cilt bakımının herkes için ulaşılabilir, güvenilir ve kişiselleştirilmiş olması gerektiğine inanıyoruz. Teknolojiyi, estetikle ve sağduyuyla birleştirerek, cildinizin en iyi haline ulaşmanız için buradayız.
           </p>
+          <div className="mx-auto max-w-xl bg-white p-6 rounded-2xl shadow-sm text-left">
+            <h3 className="text-xl font-semibold text-[#323232] mb-4">Yetkili Bilgileri</h3>
+            <div className="space-y-2 text-gray-600">
+              <p>
+                <span className="font-medium text-[#323232]">Yetkili:</span> Ahmet Yiğit Çelik
+              </p>
+              <p>
+                <span className="font-medium text-[#323232]">E-posta:</span>{" "}
+                <a href="mailto:info@klarisai.app" className="hover:text-black transition-colors">
+                  info@klarisai.app
+                </a>
+              </p>
+            </div>
+          </div>
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <div className="p-6 bg-white rounded-2xl shadow-sm">
               <h3 className="text-xl font-semibold mb-4">Ulaşılabilir</h3>

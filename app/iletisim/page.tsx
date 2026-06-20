@@ -26,11 +26,16 @@ export default function Iletisim() {
               </p>
 
               <div className="py-8">
-                <div className="inline-flex items-center space-x-3 text-xl font-medium text-[#323232]">
-                  <span>📩</span>
-                  <a href="mailto:info@klarisai.app" className="hover:text-black transition-colors">
-                    info@klarisai.app
-                  </a>
+                <div className="inline-flex flex-col items-start gap-3 text-left text-lg text-[#323232]">
+                  <p>
+                    <span className="font-medium">Yetkili:</span> Ahmet Yiğit Çelik
+                  </p>
+                  <p>
+                    <span className="font-medium">E-posta:</span>{" "}
+                    <a href="mailto:info@klarisai.app" className="hover:text-black transition-colors">
+                      info@klarisai.app
+                    </a>
+                  </p>
                 </div>
               </div>
 

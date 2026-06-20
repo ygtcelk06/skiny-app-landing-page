@@ -85,13 +85,13 @@
       "weekly": "Haftalık",
       "yearly": "Yıllık",
       "popular": "En Popüler",
-      "priceWeekly": "₺29,99",
-      "priceYearly": "₺499",
+      "priceWeekly": "₺49,99",
+      "priceYearly": "₺999,99",
       "period": "/hafta",
-      "yearlyBilling": "Yıllık ₺499 olarak faturalandırılır",
-      "originalPrice": "₺1.560",
-      "discountedPrice": "₺499",
-      "savings": "%68 tasarruf edersin!",
+      "yearlyBilling": "Yıllık ₺999,99 olarak faturalandırılır",
+      "originalPrice": "₺2.599,48",
+      "discountedPrice": "₺999,99",
+      "savings": "%{percentage} tasarruf edersin!",
       "features": [
         "Haftalık düzenli Pro analiz",
         "Pro yüz analizi – gelişmiş yapay zeka ile detaylı tarama",
@@ -309,6 +309,13 @@
       "mission": {
         "title": "Misyonumuz",
         "content": "Klaris olarak, cilt bakımının herkes için ulaşılabilir, güvenilir ve kişiselleştirilmiş olması gerektiğine inanıyoruz. Teknolojiyi, estetikle ve sağduyuyla birleştirerek, cildinizin en iyi haline ulaşmanız için buradayız.",
+        "ownerInfo": {
+          "title": "Yetkili Bilgileri",
+          "ownerLabel": "Yetkili",
+          "ownerName": "Ahmet Yiğit Çelik",
+          "emailLabel": "E-posta",
+          "email": "info@klarisai.app"
+        },
         "values": {
           "accessible": {
             "title": "Ulaşılabilir",
@@ -331,6 +338,9 @@
       "heading": "Bizimle iletişime geçmek ister misiniz?",
       "description": "Klaris ekibi olarak size yardımcı olmaktan memnuniyet duyarız.",
       "content": "Uygulamayla ilgili sorularınız, geri bildirimleriniz veya iş birliği talepleriniz için bize dilediğiniz zaman ulaşabilirsiniz.",
+      "ownerLabel": "Yetkili",
+      "ownerName": "Ahmet Yiğit Çelik",
+      "emailLabel": "E-posta",
       "email": "info@klarisai.app",
       "responseNote": "Tüm mesajlarınızı en kısa sürede yanıtlamaya özen gösteriyoruz.",
       "supportText": "Destek ekibimizle doğrudan iletişime geçmek ister misiniz?",
@@ -380,4 +390,3 @@
     }
   }
 }
-

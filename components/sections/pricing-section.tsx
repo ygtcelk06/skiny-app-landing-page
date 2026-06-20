@@ -53,9 +53,31 @@ export default function PricingSection() {
     return <div className="min-h-[400px]"></div>;
   }
 
-  // Haftalık fiyatı sayısal değere çevir (currency symbol'ü kaldır)
-  const weeklyPriceNum = parseFloat(translations.premium.priceWeekly.replace(/[^0-9.]/g, ''));
-  const yearlyPriceNum = parseFloat(translations.premium.priceYearly.replace(/[^0-9.]/g, ''));
+  const parsePrice = (price: string) => {
+    const normalizedPrice = price.replace(/[^\d.,]/g, "");
+    const lastCommaIndex = normalizedPrice.lastIndexOf(",");
+    const lastDotIndex = normalizedPrice.lastIndexOf(".");
+    const decimalSeparator = lastCommaIndex > lastDotIndex ? "," : ".";
+    const thousandsSeparator = decimalSeparator === "," ? "." : ",";
+
+    return parseFloat(
+      normalizedPrice
+        .replace(new RegExp(`\\${thousandsSeparator}`, "g"), "")
+        .replace(decimalSeparator, ".")
+    );
+  };
+
+  const formatPrice = (price: number) => {
+    const hasCommaDecimal = translations.premium.priceWeekly.includes(",");
+    const formattedPrice = price
+      .toFixed(2)
+      .replace(".", hasCommaDecimal ? "," : ".");
+
+    return `${currencySymbol}${formattedPrice}`;
+  };
+
+  const weeklyPriceNum = parsePrice(translations.premium.priceWeekly);
+  const yearlyPriceNum = parsePrice(translations.premium.priceYearly);
   const currencySymbol = translations.premium.priceWeekly.match(/[^\d.,]/)?.[0] || '$';
   
   // Haftalık * 52 hesapla (indirim hesaplaması için)
@@ -65,13 +87,15 @@ export default function PricingSection() {
 
   // Yıllık seçildiğinde haftalık eşdeğeri göster, değilse direkt yıllık fiyat
   const premiumPrice = isYearly 
-    ? `${currencySymbol}${(yearlyPriceNum / 52).toFixed(2)}` 
+    ? formatPrice(yearlyPriceNum / 52)
     : translations.premium.priceWeekly;
   const premiumPeriod = translations.premium.period;
   const yearlyBillingInfo = isYearly ? translations.premium.yearlyBilling : "";
-  const originalPrice = isYearly ? `${currencySymbol}${weeklyTimes52.toFixed(2)}` : "";
+  const originalPrice = isYearly ? formatPrice(weeklyTimes52) : "";
   const discountedPrice = isYearly ? translations.premium.discountedPrice : "";
-  const savingsText = isYearly ? `Save ${savingsPercentage}%!` : "";
+  const savingsText = isYearly
+    ? translations.premium.savings.replace("{percentage}", savingsPercentage.toString())
+    : "";
 
   return (
     <AnimatedSection

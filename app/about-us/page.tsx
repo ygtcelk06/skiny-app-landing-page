@@ -23,6 +23,13 @@ export default function AboutUs() {
       mission: {
         title: t('mission.title'),
         content: t('mission.content'),
+        ownerInfo: {
+          title: t('mission.ownerInfo.title'),
+          ownerLabel: t('mission.ownerInfo.ownerLabel'),
+          ownerName: t('mission.ownerInfo.ownerName'),
+          emailLabel: t('mission.ownerInfo.emailLabel'),
+          email: t('mission.ownerInfo.email'),
+        },
         values: {
           accessible: {
             title: t('mission.values.accessible.title'),
@@ -100,6 +107,30 @@ export default function AboutUs() {
           <p className="text-lg text-gray-600 leading-relaxed">
             {translations.mission.content}
           </p>
+          <div className="mx-auto max-w-xl bg-white p-6 rounded-2xl shadow-sm text-left">
+            <h3 className="text-xl font-semibold text-[#323232] mb-4">
+              {translations.mission.ownerInfo.title}
+            </h3>
+            <div className="space-y-2 text-gray-600">
+              <p>
+                <span className="font-medium text-[#323232]">
+                  {translations.mission.ownerInfo.ownerLabel}:
+                </span>{" "}
+                {translations.mission.ownerInfo.ownerName}
+              </p>
+              <p>
+                <span className="font-medium text-[#323232]">
+                  {translations.mission.ownerInfo.emailLabel}:
+                </span>{" "}
+                <a
+                  href={`mailto:${translations.mission.ownerInfo.email}`}
+                  className="hover:text-black transition-colors"
+                >
+                  {translations.mission.ownerInfo.email}
+                </a>
+              </p>
+            </div>
+          </div>
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <div className="p-6 bg-white rounded-2xl shadow-sm">
               <h3 className="text-xl font-semibold mb-4">{translations.mission.values.accessible.title}</h3>
@@ -119,4 +150,3 @@ export default function AboutUs() {
     </main>
   );
 }
-
